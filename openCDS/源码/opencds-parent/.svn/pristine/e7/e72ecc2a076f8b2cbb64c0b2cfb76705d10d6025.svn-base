@@ -1,0 +1,28 @@
+log4j.rootLogger=INFO, stdout, opencds
+log4j.logger.org.opencds=INFO
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+
+## Alternate Pattern to output the caller's file name and line number, but will slow production.
+# log4j.appender.stdout.layout.ConversionPattern=%d{ISO8601} %-5p [%t] %c %x - %m%n
+# log4j.appender.stdout.Threshold=WARN
+
+log4j.appender.opencds=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.opencds.File=C:/opencds-logs/opencds.log
+log4j.appender.opencds.Append=true
+log4j.appender.opencds.DatePattern='.'yyyy-MM-dd
+log4j.appended.opencds.ImmediateFlush=true 
+
+log4j.appender.opencds.layout=org.apache.log4j.PatternLayout
+log4j.appender.opencds.layout.ConversionPattern=%d{ISO8601} %-5p [%t] %c - %m%n
+log4j.appender.opencds.Threshold = INFO
+
+## Following appender can be substituted for above to include file and line # for debugging, but will slow production a lot
+# log4j.appender.opencds.layout.ConversionPattern=%d{ISO8601} %-5p [%t] (%F:%L) %c %x - %m%n
+# log4j.appender.opencds.Threshold = DEBUG
+# log4j.appender.opencds.Threshold = TRACE
+
+
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>org.opencds</groupId>
+	<artifactId>opencds-parent</artifactId>
+	<name>OpenCDS Parent for multi-module project</name>
+  	<version>1.1.5-FINAL</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>opencds-common</module>
+		<module>dss-java-stub</module>
+		<module>opencds-vmr-1_0</module>
+		<module>opencds-dss-components</module>
+		<module>opencds-decision-support-service</module>
+		<module>opencds-terminology-support</module>
+		<module>opencds-knowledge-repository</module>
+	</modules>
+    <build>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>2.0.2</version>
+               <configuration>
+                   <source>1.6</source>
+                   <target>1.6</target>
+               </configuration>
+           </plugin>
+       </plugins>
+    </build>
+</project>

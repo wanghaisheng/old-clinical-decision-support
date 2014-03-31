@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  	<parent>
+    	<artifactId>opencds-vmr-1_0</artifactId>
+        <groupId>org.opencds</groupId>
+        <version>1.1.5-FINAL</version>
+  	</parent>
+  	<artifactId>opencds-vmr-1_0-schema</artifactId>
+  	<name>OpenCDS VMR v1.0 External Schema</name>
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>java.net</id> -->
+<!-- 			<name>java.net Maven Repository</name> -->
+<!-- 			<url>https://maven-repository.dev.java.net/nonav/repository</url> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
+	<dependencies>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+	</dependencies>
+  <build>
+       <plugins>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.8.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaDirectory>${basedir}/src/main/resources/schema</schemaDirectory>
+					<schemaIncludes>
+						<includeSchema>datatypes.xsd</includeSchema>
+						<includeSchema>vmr.xsd</includeSchema>
+						<includeSchema>cdsInput.xsd</includeSchema>
+						<includeSchema>cdsOutput.xsd</includeSchema>
+						<includeSchema>cdsInputSpecification.xsd</includeSchema>
+					</schemaIncludes>
+					<generatePackage>org.opencds.vmr.v1_0.schema</generatePackage>
+					<generateDirectory>src/main/java</generateDirectory>
+					<removeOldOutput>true</removeOldOutput>
+				</configuration>
+			</plugin> 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<source>1.6</source>
+					<compile>1.6</compile>	
+					<target>1.6</target>								
+				</configuration>
+			</plugin>
+       </plugins>
+  </build>
+</project>

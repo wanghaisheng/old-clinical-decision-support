@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/jaxws 
+	http://cxf.apache.org/schemas/jaxws.xsd">
+
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<jaxws:endpoint 
+	  id="opencds-evaluate" 
+	  implementor="org.opencds.dss.evaluate.EvaluationImpl"
+	  address="/evaluate"
+	  serviceName="dss:DecisionSupportService"
+	  endpointName="dss:evaluate"
+	  xmlns:dss="http://www.omg.org/spec/CDSS/201105/dssWsdl"
+	  wsdlLocation="WEB-INF/wsdl/dss.wsdl">
+	</jaxws:endpoint>
+	  
+	<!--<jaxws:endpoint 
+	  id="opencds-metadata" 
+	  implementor="org.opencds.dss.metadata.MetadataDiscoveryImpl"
+	  address="/dss.omg.org"
+	  serviceName="dss:DecisionSupportService"
+	  endpointName="dss:metadata"
+	  xmlns:dss="http://www.omg.org/spec/CDSS/201105/dssWsdl"
+	  wsdlLocation="WEB-INF/wsdl/dss.wsdl">
+	</jaxws:endpoint>
+	  
+	--><!--<jaxws:endpoint 
+	  id="opencds-query" 
+	  implementor="org.opencds.dss.query.QueryImpl"
+	  address="/dss.omg.org"
+	  serviceName="dss:DecisionSupportService"
+	  endpointName="dss:query"
+	  xmlns:dss="http://www.omg.org/spec/CDSS/201105/dssWsdl"
+	  wsdlLocation="WEB-INF/wsdl/dss.wsdl">
+	</jaxws:endpoint>	
+-->	  
+</beans>
