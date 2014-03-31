@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="79F42931-D09E-4775-967F-FB03753412D3"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Chronic Obstructive Pulmonary Disease (COPD): Bronchodilator Therapy (NQF 0102)</title>
+   <text>Percentage of symptomatic patients aged 18 years and older with a diagnosis of COPD who were prescribed an inhaled bronchodilator</text>
+   <statusCode code="completed"/>
+   <setId root="5EC265ED-E84F-4616-B6FC-A0885E98B8FF"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© 2010 American Medical Association. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">Inhaled bronchodilator therapy is effective in treating and managing the symptoms of COPD, particularly, for those patients with moderate to very severe COPD, and improving a patient's quality of life.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Short-acting bronchodilators can increase exercise tolerance acutely in COPD (ATS and ERS). Bronchodilator medications are central to the symptomatic management of COPD (NHLBI/WHO). A combination of short-acting β2-agonist and an anticholinergic produces greater and more sustained improvements in FEV1 than either alone and does not produce evidence of tachphylaxis over 90 days of treatment (NHLBI/WHO). In patients with Stage II: Moderate COPD to Stage IV: Very Sever COPD whose symptoms are not adequately controlled with as-needed short-acting bronchodilators, adding regular treatment with a long-acting inhaled bronchodilator is recommended (NHLBI/WHO). Regular treatment with long-acting bronchodilators is more effective and convenient than treatment with short-acting bronchodilators, but more expensive (NHLBI/WHO).</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="834D294A-2ED7-4AC7-BBC8-3C2BF1939677"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="BC91526F-6BE0-4912-909F-8CEFB4C05E8D"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">American Thoracic Society (ATS), European Respiratory Society (ERS). Standards for the Diagnosis and Management of COPD. Available at: http://www.thoracic.org/copd/. Accessed September 2004.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">National Heart, Lung, and Blood Institute/World Health Organization. Global strategy for the diagnosis, management, and prevention of chronic obstructive pulmonary disease: Global Initiative for Chronic Obstructive Pulmonary Disease (GOLD). Updated 2004. Available at http://www.goldcopd.com. Accessed September 2004.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain">Prescribed:  Includes patients who are currently receiving mediation(s) that follow the treatment plan recommended at an encounter during the reporting period, even if the prescription for that medication was ordered prior to the encounter.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Diagnosis active: COPD" starts before or during ("Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period")</item>
+                     <item>AND:  &gt;= 2 count(s) of<list>
+                           <item>AND: "Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND:  MOST RECENT:"Diagnostic study result: FEV1/FVC Ratio (result value &lt; 70 %)"</item>
+                     <item>AND: <list>
+                           <item>OR: "Symptom active: COPD Symptoms Dyspnea"</item>
+                           <item>OR: "Symptom active: COPD Symptoms Wheezing"</item>
+                           <item>OR: "Symptom active: COPD Symptoms Cough/Sputum Production"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>OR: "Medication ordered: Inhaled Bronchodilator"</item>
+                           <item>OR: "Medication active: Inhaled Bronchodilator"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>OR: <list>
+                           <item>OR: "Medication allergy: Inhaled Bronchodilator"</item>
+                           <item>OR: "Medication adverse effects: Inhaled Bronchodilator"</item>
+                           <item>OR: "Medication intolerance: Inhaled Bronchodilator"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                     <item>OR: <list>
+                           <item>OR: <list>
+                                 <item>OR: "Medication ordered not done: Medical reason" for "Inhaled Bronchodilator RxNorm Code List"</item>
+                                 <item>OR: "Medication ordered not done: System reason" for "Inhaled Bronchodilator RxNorm Code List"</item>
+                                 <item>OR: "Medication ordered not done: Patient reason" for "Inhaled Bronchodilator RxNorm Code List"</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>OR: "Medication active not done: Medical reason" for "Inhaled Bronchodilator RxNorm Code List"</item>
+                                 <item>OR: "Medication active not done: System reason" for "Inhaled Bronchodilator RxNorm Code List"</item>
+                                 <item>OR: "Medication active not done: Patient reason" for "Inhaled Bronchodilator RxNorm Code List"</item>
+                              </list>
+                           </item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="7DC8066B-0994-4DCD-9B5A-1D470A6ACB82"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="DAE766D1-9558-4B70-B4C2-A76475E01787"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="71604507-8FC0-49EF-9240-F253C34F495E"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: COPD</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.702" displayName="COPD Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="91BFD8D6-C1B3-498C-9073-F7B1DF591E41"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <repeatNumber>
+                        <low value="2" inclusive="true"/>
+                     </repeatNumber>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="91BFD8D6-C1B3-498C-9073-F7B1DF591E41"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                 <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="5B21BA8F-BCBD-4342-86CC-F315E318DE31"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7DC8066B-0994-4DCD-9B5A-1D470A6ACB82"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <subsetCode code="RECENT"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnostic study result pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.11"/>
+                     <id root="9BB1CFE3-3E13-480B-8522-71E03E780687"/>
+                     <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.03.754" displayName="FEV1/FVC Ratio Code List GROUPING"/>
+                           <title>Diagnostic study result: FEV1/FVC Ratio (result value &lt; 70  %)</title>
+                           <statusCode code="completed"/>
+                           <value xsi:type="IVL_PQ">
+                              <high value="70" unit="%" inclusive="false"/>
+                           </value>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                           <id root="A4820225-03FF-4260-96F5-4B9B6CEEA68F"/>
+                           <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.03.739" displayName="COPD Symptoms Dyspnea Code List GROUPING"/>
+                                 <title>Symptom active: COPD Symptoms Dyspnea</title>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                           <id root="C5E2FD07-8792-4063-A100-22BE26FC0CA0"/>
+                           <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.03.743" displayName="COPD Symptoms Wheezing Code List GROUPING"/>
+                                 <title>Symptom active: COPD Symptoms Wheezing</title>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                           <id root="5266EDC8-483F-4094-80E4-3E3FE3AA53CE"/>
+                           <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.03.747" displayName="COPD Symptoms Cough/Sputum Production Code List GROUPING"/>
+                                 <title>Symptom active: COPD Symptoms Cough/Sputum Production</title>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="8F508999-8D4E-4FE3-8E4C-0B0AA5568128"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication ordered pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.17"/>
+                           <id root="F154CB66-1D5D-4799-B4A1-55AD3FCD22A0"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                 <title>Medication ordered: Inhaled Bronchodilator</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                           <id root="557959E7-9851-4C68-B45E-F06DB99DB942"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication active: Inhaled Bronchodilator</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exclusions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true" actionNegationInd="true">
+               <id root="AE307F81-D704-406B-8EEC-B027AE8A68E7"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="6D46998F-5F57-42B9-8FD5-0A57E0D57349"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication allergy pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.1"/>
+                           <id root="172AF545-95D2-4380-B817-926E67C0FE01"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug allergy"/>
+                                 <title>Medication allergy: Inhaled Bronchodilator</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication adverse effects pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.7"/>
+                           <id root="7F19BC8F-1879-4D72-BA88-20317CBC42DB"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="419511003" codeSystem="2.16.840.1.113883.6.96" displayName="Drug adverse effect"/>
+                                 <title>Medication adverse effects: Inhaled Bronchodilator</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication intolerance pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.15"/>
+                           <id root="EC58D8AF-17B5-42DE-9F1E-38FD03B5B42F"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="59037007" codeSystem="2.16.840.1.113883.6.96" displayName="Drug intolerance"/>
+                                 <title>Medication intolerance: Inhaled Bronchodilator</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication ordered pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.78"/>
+                                 <id root="F154CB66-1D5D-4799-B4A1-55AD3FCD22A0"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                       <title>Medication ordered not done: Medical reason</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication ordered pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.78"/>
+                                 <id root="F154CB66-1D5D-4799-B4A1-55AD3FCD22A0"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                       <title>Medication ordered not done: System reason</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.310" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication ordered pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.78"/>
+                                 <id root="F154CB66-1D5D-4799-B4A1-55AD3FCD22A0"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                       <title>Medication ordered not done: Patient reason</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.113"/>
+                                 <id root="557959E7-9851-4C68-B45E-F06DB99DB942"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication active not done: Medical reason</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.113"/>
+                                 <id root="557959E7-9851-4C68-B45E-F06DB99DB942"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication active not done: System reason</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.310" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.113"/>
+                                 <id root="557959E7-9851-4C68-B45E-F06DB99DB942"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication active not done: Patient reason</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="4692C6E2-2C02-4335-BF02-623DBE6F06D8"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: COPD"</content> using "COPD Code List GROUPING (2.16.840.1.113883.3.526.03.702)"</item>
+               <item>
+                  <content>"Diagnostic study result: FEV1/FVC Ratio"</content> using "FEV1/FVC Ratio Code List GROUPING (2.16.840.1.113883.3.526.03.754)"</item>
+               <item>
+                  <content>"Encounter: Encounter Office &amp; Outpatient Consult"</content> using "Encounter Office &amp; Outpatient Consult CPT Code List (2.16.840.1.113883.3.526.02.99)"</item>
+               <item>
+                  <content>"Medication active: Inhaled Bronchodilator"</content> using "Inhaled Bronchodilator RxNorm Code List (2.16.840.1.113883.3.526.02.703)"</item>
+               <item>
+                  <content>"Medication active not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Medication active not done: Patient reason"</content> using "Patient reason HL7 Code List (2.16.840.1.113883.3.526.02.311)"</item>
+               <item>
+                  <content>"Medication active not done: System reason"</content> using "System reason HL7 Code List (2.16.840.1.113883.3.526.02.310)"</item>
+               <item>
+                  <content>"Medication adverse effects: Inhaled Bronchodilator"</content> using "Inhaled Bronchodilator RxNorm Code List (2.16.840.1.113883.3.526.02.703)"</item>
+               <item>
+                  <content>"Medication allergy: Inhaled Bronchodilator"</content> using "Inhaled Bronchodilator RxNorm Code List (2.16.840.1.113883.3.526.02.703)"</item>
+               <item>
+                  <content>"Medication intolerance: Inhaled Bronchodilator"</content> using "Inhaled Bronchodilator RxNorm Code List (2.16.840.1.113883.3.526.02.703)"</item>
+               <item>
+                  <content>"Medication ordered: Inhaled Bronchodilator"</content> using "Inhaled Bronchodilator RxNorm Code List (2.16.840.1.113883.3.526.02.703)"</item>
+               <item>
+                  <content>"Medication ordered not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Medication ordered not done: Patient reason"</content> using "Patient reason HL7 Code List (2.16.840.1.113883.3.526.02.311)"</item>
+               <item>
+                  <content>"Medication ordered not done: System reason"</content> using "System reason HL7 Code List (2.16.840.1.113883.3.526.02.310)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Symptom active: COPD Symptoms Cough/Sputum Production"</content> using "COPD Symptoms Cough/Sputum Production Code List GROUPING (2.16.840.1.113883.3.526.03.747)"</item>
+               <item>
+                  <content>"Symptom active: COPD Symptoms Dyspnea"</content> using "COPD Symptoms Dyspnea Code List GROUPING (2.16.840.1.113883.3.526.03.739)"</item>
+               <item>
+                  <content>"Symptom active: COPD Symptoms Wheezing"</content> using "COPD Symptoms Wheezing Code List GROUPING (2.16.840.1.113883.3.526.03.743)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="DAE766D1-9558-4B70-B4C2-A76475E01787"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="71604507-8FC0-49EF-9240-F253C34F495E"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: COPD</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.702" displayName="COPD Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="5266EDC8-483F-4094-80E4-3E3FE3AA53CE"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.747" displayName="COPD Symptoms Cough/Sputum Production Code List GROUPING"/>
+                     <title>Symptom active: COPD Symptoms Cough/Sputum Production</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="A4820225-03FF-4260-96F5-4B9B6CEEA68F"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.739" displayName="COPD Symptoms Dyspnea Code List GROUPING"/>
+                     <title>Symptom active: COPD Symptoms Dyspnea</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="C5E2FD07-8792-4063-A100-22BE26FC0CA0"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.743" displayName="COPD Symptoms Wheezing Code List GROUPING"/>
+                     <title>Symptom active: COPD Symptoms Wheezing</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="91BFD8D6-C1B3-498C-9073-F7B1DF591E41"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                     <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnostic study result pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.11"/>
+               <id root="9BB1CFE3-3E13-480B-8522-71E03E780687"/>
+               <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.754" displayName="FEV1/FVC Ratio Code List GROUPING"/>
+                     <title>Diagnostic study result: FEV1/FVC Ratio</title>
+                     <statusCode code="completed"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.13"/>
+               <id root="557959E7-9851-4C68-B45E-F06DB99DB942"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active: Inhaled Bronchodilator</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication adverse effects pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.7"/>
+               <id root="7F19BC8F-1879-4D72-BA88-20317CBC42DB"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="419511003" codeSystem="2.16.840.1.113883.6.96" displayName="Drug adverse effect"/>
+                     <title>Medication adverse effects: Inhaled Bronchodilator</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication allergy pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.1"/>
+               <id root="172AF545-95D2-4380-B817-926E67C0FE01"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug allergy"/>
+                     <title>Medication allergy: Inhaled Bronchodilator</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication intolerance pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.15"/>
+               <id root="EC58D8AF-17B5-42DE-9F1E-38FD03B5B42F"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="59037007" codeSystem="2.16.840.1.113883.6.96" displayName="Drug intolerance"/>
+                     <title>Medication intolerance: Inhaled Bronchodilator</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication ordered pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.17"/>
+               <id root="F154CB66-1D5D-4799-B4A1-55AD3FCD22A0"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication ordered: Inhaled Bronchodilator</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.703" displayName="Inhaled Bronchodilator RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication ordered not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.78"/>
+               <id root="D12D9DE7-A574-49B6-B087-92061D3C5F0E"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication ordered not done: Medical reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication ordered not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.78"/>
+               <id root="0370BDC9-8D59-4A61-98D6-75887C58AEC1"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication ordered not done: Patient reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.311" displayName="Patient reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication ordered not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.78"/>
+               <id root="42B6035A-1B5D-4A98-A78C-668FA07E29E2"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication ordered not done: System reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.310" displayName="System reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.113"/>
+               <id root="661D9DE7-A574-49B6-B087-92061D3C5F0E"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active not done: Medical reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.113"/>
+               <id root="6610BDC9-8D59-4A61-98D6-75887C58AEC1"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active not done: Patient reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.311" displayName="Patient reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.113"/>
+               <id root="6616035A-1B5D-4A98-A78C-668FA07E29E2"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active not done: System reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.310" displayName="System reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

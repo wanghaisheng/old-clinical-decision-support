@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="59B24505-B9D1-48B8-BEB2-AF35219AA689"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Asthma Assessment (NQF 0001)</title>
+   <text>Percentage of patients aged 5 through 40 years with a diagnosis of asthma who were evaluated during at least one office visit within 12 months for the frequency (numeric) of daytime and nocturnal asthma symptoms.</text>
+   <statusCode code="completed"/>
+   <setId root="876C00EF-5669-424D-8998-391DF9C41C59"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">©2010 American Medical Association.  All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">Appropriate treatment of asthma patients requires accurate classification of asthma severity. Physician assessment of the frequency of asthma symptoms is the first step in classifying asthma severity.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">To determine whether the goals of therapy are being met, monitoring is recommended in the 6 areas listed below: 
+• Signs and symptoms (daytime; nocturnal awakening) of asthma
+• Pulmonary function (spirometry; peak flow monitoring)
+• Quality of life/functional status
+• History of asthma exacerbations
+• Pharmacotherapy (as-needed use of inhaled short-acting beta2-agonist, adherence to regimen of long-term-control medications)
+• Patient-provider communication and patient satisfaction (NAEPP/NHLBI)
+</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="10C877A9-33CA-4E6A-9A68-4CE4F163106B"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="ED68061B-FC87-4233-82F8-BEE563126211"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">National Asthma Education and Prevention Program Expert Panel Report 2: Guidelines for the diagnosis and management of asthma. National Heart, Lung, and Blood Institute, National Institutes of Health; July 1997. NIH Publication No. 97-4051. Available at: http://www.nhlbi.nih.gov/guidelines/asthma/asthgdln.htm. Accessed August 2002.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">National Asthma Education and Prevention Program Expert Panel Report 2 Update: Guidelines for the diagnosis and management of asthma – update on selected topics 2002. National Heart, Lung, and Blood Institute, National Institutes of Health; August 2002. NIH Publication No. 97-4051. Available at: http://www.nhlbi.nih.gov/guidelines/asthma/asthsumm.htm. Accessed September 2002.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>AND: "Patient characteristic: birth date"  &gt;= 5 year(s) starts before start of "Measurement period"</item>
+                           <item>AND: "Patient characteristic: birth date"  &lt;= 40 year(s) starts before start of "Measurement period"</item>
+                        </list>
+                     </item>
+                     <item>AND: "Diagnosis active: Asthma" starts before or during ("Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period")</item>
+                     <item>AND:  &gt;= 2 count(s) of<list>
+                           <item>AND: "Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>OR: <list>
+                                 <item>AND: "Symptom assessed: Asthma Daytime Symptoms Quantified"</item>
+                                 <item>AND: "Symptom assessed: Asthma Nighttime Symptoms Quantified"</item>
+                                 <item> starts before or during  ("Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period")</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>AND: "Symptom active: Asthma Daytime Symptoms"</item>
+                                 <item>AND: "Symptom active: Asthma Nighttime Symptoms"</item>
+                                 <item> starts before or during  ("Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period")</item>
+                              </list>
+                           </item>
+                           <item>OR: "Risk category / assessment: Asthma Symptom Assessment Tool" starts before or during ("Encounter: Encounter Office &amp; Outpatient Consult" during "Measurement period")</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="569B515C-2EC6-4C8E-AE23-1E2CA1D4E36E"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                           <id root="25EA2888-61BD-4C0D-89C3-99239D38230B"/>
+                           <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                                 <title>Patient characteristic: birth date</title>
+                                 <sourceOf typeCode="SBS">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <low value="5" unit="a" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                           <id root="25EA2888-61BD-4C0D-89C3-99239D38230B"/>
+                           <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                                 <title>Patient characteristic: birth date</title>
+                                 <sourceOf typeCode="SBS">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <high value="40" unit="a" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="2F5F6FBE-F2BC-45CC-A9DA-A2259F27AACA"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: Asthma</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.362" displayName="Asthma Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="418196C0-74FF-41AC-93DA-17221D59B214"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <repeatNumber>
+                        <low value="2" inclusive="true"/>
+                     </repeatNumber>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="418196C0-74FF-41AC-93DA-17221D59B214"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                 <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="ED3058CE-3D97-4D63-9A83-3606529B5044"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="569B515C-2EC6-4C8E-AE23-1E2CA1D4E36E"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="344CC2FB-FF49-4068-9149-917115D2D3CD"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom assessed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.70"/>
+                                 <id root="2855D7CE-5A5D-4D39-B323-1C1F421D9635"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.141" displayName="Asthma Daytime Symptoms Quantified SNOMED-CT Code List"/>
+                                       <title>Symptom assessed: Asthma Daytime Symptoms Quantified</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom assessed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.70"/>
+                                 <id root="34A0369A-9837-42A0-914F-24AAD060A5C2"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.142" displayName="Asthma Nighttime Symptoms Quantified SNOMED-CT Code List"/>
+                                       <title>Symptom assessed: Asthma Nighttime Symptoms Quantified</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="418196C0-74FF-41AC-93DA-17221D59B214"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="40C60005-0504-4F1A-AB1A-6599AC644719"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.440" displayName="Asthma Daytime Symptoms SNOMED-CT Code List"/>
+                                       <title>Symptom active: Asthma Daytime Symptoms</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="3DADC359-40D3-436A-88B0-724A701FF4F6"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.441" displayName="Asthma Nighttime Symptoms SNOMED-CT Code List"/>
+                                       <title>Symptom active: Asthma Nighttime Symptoms</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="418196C0-74FF-41AC-93DA-17221D59B214"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- risk category / assessment pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.21"/>
+                           <id root="F5B1EE63-7C99-4D4B-9959-D08E3DE14336"/>
+                           <code code="51848-0" displayName="Assessment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.143" displayName="Asthma Symptom Assessment Tool SNOMED-CT Code List"/>
+                                 <title>Risk category / assessment: Asthma Symptom Assessment Tool</title>
+                                 <statusCode code="completed"/>
+                                 <sourceOf typeCode="EAS" inversionInd="true">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="418196C0-74FF-41AC-93DA-17221D59B214"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                             <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                             <sourceOf typeCode="DURING">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="02B8DA17-966C-402D-B478-ED5D2790D525"/>
+                                                   <title>Measurement period</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: Asthma"</content> using "Asthma Code List GROUPING (2.16.840.1.113883.3.526.03.362)"</item>
+               <item>
+                  <content>"Encounter: Encounter Office &amp; Outpatient Consult"</content> using "Encounter Office &amp; Outpatient Consult CPT Code List (2.16.840.1.113883.3.526.02.99)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Risk category / assessment: Asthma Symptom Assessment Tool"</content> using "Asthma Symptom Assessment Tool SNOMED-CT Code List (2.16.840.1.113883.3.526.02.143)"</item>
+               <item>
+                  <content>"Symptom active: Asthma Daytime Symptoms"</content> using "Asthma Daytime Symptoms SNOMED-CT Code List (2.16.840.1.113883.3.526.02.440)"</item>
+               <item>
+                  <content>"Symptom active: Asthma Nighttime Symptoms"</content> using "Asthma Nighttime Symptoms SNOMED-CT Code List (2.16.840.1.113883.3.526.02.441)"</item>
+               <item>
+                  <content>"Symptom assessed: Asthma Daytime Symptoms Quantified"</content> using "Asthma Daytime Symptoms Quantified SNOMED-CT Code List (2.16.840.1.113883.3.526.02.141)"</item>
+               <item>
+                  <content>"Symptom assessed: Asthma Nighttime Symptoms Quantified"</content> using "Asthma Nighttime Symptoms Quantified SNOMED-CT Code List (2.16.840.1.113883.3.526.02.142)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="2F5F6FBE-F2BC-45CC-A9DA-A2259F27AACA"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Asthma</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.362" displayName="Asthma Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="40C60005-0504-4F1A-AB1A-6599AC644719"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.440" displayName="Asthma Daytime Symptoms SNOMED-CT Code List"/>
+                     <title>Symptom active: Asthma Daytime Symptoms</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom assessed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.70"/>
+               <id root="2855D7CE-5A5D-4D39-B323-1C1F421D9635"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.141" displayName="Asthma Daytime Symptoms Quantified SNOMED-CT Code List"/>
+                     <title>Symptom assessed: Asthma Daytime Symptoms Quantified</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="3DADC359-40D3-436A-88B0-724A701FF4F6"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.441" displayName="Asthma Nighttime Symptoms SNOMED-CT Code List"/>
+                     <title>Symptom active: Asthma Nighttime Symptoms</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom assessed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.70"/>
+               <id root="34A0369A-9837-42A0-914F-24AAD060A5C2"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.142" displayName="Asthma Nighttime Symptoms Quantified SNOMED-CT Code List"/>
+                     <title>Symptom assessed: Asthma Nighttime Symptoms Quantified</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- risk category / assessment pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.21"/>
+               <id root="F5B1EE63-7C99-4D4B-9959-D08E3DE14336"/>
+               <code code="51848-0" displayName="Assessment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.143" displayName="Asthma Symptom Assessment Tool SNOMED-CT Code List"/>
+                     <title>Risk category / assessment: Asthma Symptom Assessment Tool</title>
+                     <statusCode code="completed"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="25EA2888-61BD-4C0D-89C3-99239D38230B"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="418196C0-74FF-41AC-93DA-17221D59B214"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                     <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

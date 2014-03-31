@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="BBB31C44-1A16-4F9D-A06D-A29290FC6ADB"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Weight Assessment and Counseling for Children and Adolescents (NQF 0024)</title>
+   <text>The percentage of patients 2-17 years of age who had an outpatient visit with a PCP or OB/GYN and who had evidence of BMI percentile documentation, counseling for nutrition and counseling for physical activity during the measurement year.</text>
+   <statusCode code="completed"/>
+   <setId root="CDAE3B8A-DDBF-4B15-A585-A51F80DD5D5E"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.464"/>
+            <name>National Committee for Quality Assurance</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.464"/>
+            <name>National Committee for Quality Assurance</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© National Committee for Quality Assurance. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">Stratified by (i) age: 2-16,  (ii) age: 2-10, (iii) 11-16, where the total is the sum of the two numerators divided by the sum of the two denominators.
+
+Note: The upper age limit of 16 before the measurement year will address all patients reaching the age of 17 during the measurement year.
+</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">This measure assesses the percentage of age-appropriate patients who had an outpatient visit with a PCP or OB/GYN and who had evidence of a BMI percentile assessment, counseling for nutrition or counseling for physical activity. The prevalence of overweight and obesity has increased sharply for children over the last 30 years: from 5.0% to 13.9% for those aged 2–5 years; from 6.5% to 18.8% for those aged 6–11 years; and from 5.0% to 17.4% for those aged 12–19 years. This increasing prevalence has had significant economic ramifications, with economic costs correlated to obesity and related comorbidities estimated at over $70 billion, or 7% of the national health care budget. To address this problem and its long-term implications effectively, promotion of routine physical activity and healthy eating and lifestyle changes are essential (CDC 2007). This measure is important in efforts to improve long-term health outcomes and quality of life.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">U.S. Preventive Services Task Force (USPSTF): "I" Recommendation. Insufficient evidence to recommend for or against screening for overweight in children and adolescents reflects the paucity of strong evidence of the effectiveness of interventions for this problem in the clinical setting.
+
+The American Academy of Pediatrics (AAP): The child's height, weight and percentiles for age should be determined at the start of the physical examination. Because obesity is strongly linked to hypertension, BMI should be calculated from the height and weight, and the BMI percentile should be calculated. Poor growth may indicate an underlying chronic illness.
+
+The American Medical Association (AMA), Health Resources and Services Administration (HRSA), and Centers for Disease Control and Prevention (CDC): The Expert Committee recommends that physicians and allied healthcare providers perform, at a minimum, a yearly assessment of weight status in all children, and that this assessment include calculation of height, weight (measured appropriately), and body mass index (BMI) for age and plotting of those measures on standard growth charts.
+
+The American Academy of Pediatrics and the American College of Clinical Endocrinology (ACCE): The AAP and the ACCE recommend and encourage pediatric providers to screen children for obesity using BMI; examine overweight children for obesity-related diseases; initiate weight management practices to improve diet and physical activity habits; and increase frequency of visits to reinforce behavior changes.
+
+The Centers for Disease Control and Prevention (CDC): The CDC recommends using the percentile BMI for age and gender as the most appropriate and easily available method to screen for childhood overweight or at risk for overweight. BMI is calculated by dividing the weight in kilograms by the height in meters squared. Age and gender norms for BMI are readily accessible. BMI correlates with adiposity and with complications of childhood overweight such as hypercholesterolemia, hypertension and later development of cardiovascular disease. Although more precise measures of lean body mass and body fat such as dual x-ray absorptiometry (DEXA) may be appropriate for clinical studies, BMI norms are particularly helpful for screening in busy office practices and for population assessment.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="8367EAFF-CF2E-409F-9B7C-2967385C4DB3"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="F8F8A156-8023-42AE-8993-06EFF8850DF5"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">U.S. Preventive Services Task Force (USPSTF).  Screening and interventions for overweight in children and adolescents: recommendation statement. Rockville (MD): Agency for Healthcare Research and Quality (AHRQ); 2005. p. 11.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">National High Blood Pressure Education Program Working Group on High Blood Pressure in Children. The fourth report on the diagnosis, evaluation, and treatment of high blood pressure in children and adolescents. Pediatrics. 2004 Aug; 114(2 Suppl):555-76.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">AMA/HRSA/ CDC Expert Committee on the Assessment, Prevention and Treatment of Child and Adolescent Overweight and Obesity. Recommendations on the assessment, prevention and treatment of child and adolescent overweight and obesity. Chicago (IL): AMA. 2007 Jun.  1.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Dorsey, K.B., C. Wells, H.M. Krumholz, J.C. Concato. Diagnosis, evaluation, and treatment of childhood obesity in pediatric practice. Arch Pediatr Adolesc Med. 2005. July; 159:632-638.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Baker, S., S. Barlow, W. Cochran, G. Fuchs, W. Klish, N. Krebs, R. Strauss, A. Tershakovec, J. Udall. Overweight children and adolescents: a clinical report of the North American Society for Pediatric Gastroenterology, Hepatology and Nutrition. J Pediatr Gastroenterol Nutr. 2005. May; 40(5):533-43.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <paragraph>
+               <caption>Population Criteria 1</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 1 =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 2 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Patient characteristic: birth date"  &lt;= 16 year(s) starts before start of "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 1=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 1"</item>
+                     <item>AND: "Encounter: encounter outpatient w/ PCP &amp; obgyn" during "Measurement period"</item>
+                     <item>AND NOT:
+                  <list>
+                           <item>AND: <list>
+                                 <item>OR: "Diagnosis active: pregnancy"</item>
+                                 <item>OR: "Encounter: Encounter pregnancy"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 1.1 =</content>
+                  <list>
+                     <item>AND: "Physical exam finding: BMI percentile" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 1.2 =</content>
+                  <list>
+                     <item>AND: "Communication from provider to patient: counseling for nutrition" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 1.3 =</content>
+                  <list>
+                     <item>AND: "Communication from provider to patient: counseling for physical activity" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 1=</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+            <paragraph>
+               <caption>Population Criteria 2</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 2 =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 2 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Patient characteristic: birth date"  &lt;= 10 year(s) starts before start of "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 2=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 2"</item>
+                     <item>AND: "Encounter: encounter outpatient w/ PCP &amp; obgyn" during "Measurement period"</item>
+                     <item>AND NOT:
+                  <list>
+                           <item>AND: <list>
+                                 <item>OR: "Diagnosis active: pregnancy"</item>
+                                 <item>OR: "Encounter: Encounter pregnancy"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 2.1 =</content>
+                  <list>
+                     <item>AND: "Physical exam finding: BMI percentile" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 2.2 =</content>
+                  <list>
+                     <item>AND: "Communication from provider to patient: counseling for nutrition" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 2.3 =</content>
+                  <list>
+                     <item>AND: "Communication from provider to patient: counseling for physical activity" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 2=</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+            <paragraph>
+               <caption>Population Criteria 3</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 3 =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 11 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Patient characteristic: birth date"  &lt;= 16 year(s) starts before start of "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 3=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 3"</item>
+                     <item>AND: "Encounter: encounter outpatient w/ PCP &amp; obgyn" during "Measurement period"</item>
+                     <item>AND NOT:
+                  <list>
+                           <item>AND: <list>
+                                 <item>OR: "Diagnosis active: pregnancy"</item>
+                                 <item>OR: "Encounter: Encounter pregnancy"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 3.1 =</content>
+                  <list>
+                     <item>AND: "Physical exam finding: BMI percentile" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 3.2 =</content>
+                  <list>
+                     <item>AND: "Communication from provider to patient: counseling for nutrition" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 3.3 =</content>
+                  <list>
+                     <item>AND: "Communication from provider to patient: counseling for physical activity" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 3=</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: exclusions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true" actionNegationInd="true">
+               <id root="4eb86b23-9d52-4893-8140-69a267ab2ad1"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="ECEBEB8C-F77F-4061-A5CD-1AD297917688"/>
+                     <title>Initial Patient Population 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="1B486B67-51BB-4346-96B5-763D1AF72731"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: pregnancy</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.102" displayName="pregnancy Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="040BDB3D-2A10-4BF9-B36E-D7C46507B916"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.464.0001.240" displayName="Encounter pregnancy ICD-9-CM Code List"/>
+                                 <title>Encounter: Encounter pregnancy</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exclusions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true" actionNegationInd="true">
+               <id root="d066fff8-6576-40ad-a391-54989043e70a"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="D4FD7570-F18B-4F24-BD10-86ADFDAC8337"/>
+                     <title>Initial Patient Population 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="1B486B67-51BB-4346-96B5-763D1AF72731"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: pregnancy</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.102" displayName="pregnancy Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="040BDB3D-2A10-4BF9-B36E-D7C46507B916"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.464.0001.240" displayName="Encounter pregnancy ICD-9-CM Code List"/>
+                                 <title>Encounter: Encounter pregnancy</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exclusions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true" actionNegationInd="true">
+               <id root="275ae5e6-1c82-4d41-b72d-6272ece6586e"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7C03591B-6628-4E93-86F4-B842F665E846"/>
+                     <title>Initial Patient Population 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="1B486B67-51BB-4346-96B5-763D1AF72731"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: pregnancy</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.102" displayName="pregnancy Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="040BDB3D-2A10-4BF9-B36E-D7C46507B916"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.464.0001.240" displayName="Encounter pregnancy ICD-9-CM Code List"/>
+                                 <title>Encounter: Encounter pregnancy</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="1dbcabf6-5784-4550-ab90-fcfea65f20ee"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="F9FE1331-4970-4A26-9341-5022137F3078"/>
+                     <title>Denominator 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                     <id root="A348DC14-5178-442B-8AAF-9C8760734F6A"/>
+                     <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.173" displayName="BMI percentile Code List GROUPING"/>
+                           <title>Physical exam finding: BMI percentile</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="d6441a33-b8bb-4a18-9a6b-c26b384780dc"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="0882DDD2-DB8F-4BB9-AEF6-E25F81472DD6"/>
+                     <title>Denominator 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                     <id root="A348DC14-5178-442B-8AAF-9C8760734F6A"/>
+                     <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.173" displayName="BMI percentile Code List GROUPING"/>
+                           <title>Physical exam finding: BMI percentile</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="e31f26bd-d4d4-4101-af14-ae938be02a67"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7840155D-B934-4BC8-9092-1D21AB5C6280"/>
+                     <title>Denominator 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                     <id root="A348DC14-5178-442B-8AAF-9C8760734F6A"/>
+                     <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.173" displayName="BMI percentile Code List GROUPING"/>
+                           <title>Physical exam finding: BMI percentile</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="05291c3a-1b6f-47fe-82d0-9f97dc6aed78"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="F9FE1331-4970-4A26-9341-5022137F3078"/>
+                     <title>Denominator 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.31"/>
+                     <id root="33954DBE-712B-4312-87F6-22047434A7A3"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.196" displayName="counseling for nutrition Code List GROUPING"/>
+                           <title>Communication from provider to patient: counseling for nutrition</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <patientParticipant classCode="PAT"/>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="d05e2cc7-2216-4bf3-9d5d-26e25c878217"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="0882DDD2-DB8F-4BB9-AEF6-E25F81472DD6"/>
+                     <title>Denominator 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.31"/>
+                     <id root="33954DBE-712B-4312-87F6-22047434A7A3"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.196" displayName="counseling for nutrition Code List GROUPING"/>
+                           <title>Communication from provider to patient: counseling for nutrition</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <patientParticipant classCode="PAT"/>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="756a32a8-2bdb-491f-b4ee-bf59fd29ef93"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7840155D-B934-4BC8-9092-1D21AB5C6280"/>
+                     <title>Denominator 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.31"/>
+                     <id root="33954DBE-712B-4312-87F6-22047434A7A3"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.196" displayName="counseling for nutrition Code List GROUPING"/>
+                           <title>Communication from provider to patient: counseling for nutrition</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <patientParticipant classCode="PAT"/>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="5c021ad0-84c4-4c36-987c-c9c4d4b3a257"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="F9FE1331-4970-4A26-9341-5022137F3078"/>
+                     <title>Denominator 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.31"/>
+                     <id root="6BB3D30A-399B-4069-889B-D62A2B9D3B50"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.200" displayName="counseling for physical activity Code List GROUPING"/>
+                           <title>Communication from provider to patient: counseling for physical activity</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <patientParticipant classCode="PAT"/>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="881d97d4-fb43-46f7-9a5e-4c9c744f5b7a"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="0882DDD2-DB8F-4BB9-AEF6-E25F81472DD6"/>
+                     <title>Denominator 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.31"/>
+                     <id root="6BB3D30A-399B-4069-889B-D62A2B9D3B50"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.200" displayName="counseling for physical activity Code List GROUPING"/>
+                           <title>Communication from provider to patient: counseling for physical activity</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <patientParticipant classCode="PAT"/>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="070bdf53-1f7f-4cb7-baa2-46114b98273f"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7840155D-B934-4BC8-9092-1D21AB5C6280"/>
+                     <title>Denominator 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.31"/>
+                     <id root="6BB3D30A-399B-4069-889B-D62A2B9D3B50"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.200" displayName="counseling for physical activity Code List GROUPING"/>
+                           <title>Communication from provider to patient: counseling for physical activity</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <patientParticipant classCode="PAT"/>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="F9FE1331-4970-4A26-9341-5022137F3078"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="ECEBEB8C-F77F-4061-A5CD-1AD297917688"/>
+                     <title>Initial Patient Population 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="7480A440-578D-42BC-B58F-1AFCFD727D40"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.235" displayName="encounter outpatient w/ PCP &amp; obgyn Code List GROUPING"/>
+                           <title>Encounter: encounter outpatient w/ PCP &amp; obgyn</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="0882DDD2-DB8F-4BB9-AEF6-E25F81472DD6"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="D4FD7570-F18B-4F24-BD10-86ADFDAC8337"/>
+                     <title>Initial Patient Population 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="7480A440-578D-42BC-B58F-1AFCFD727D40"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.235" displayName="encounter outpatient w/ PCP &amp; obgyn Code List GROUPING"/>
+                           <title>Encounter: encounter outpatient w/ PCP &amp; obgyn</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="7840155D-B934-4BC8-9092-1D21AB5C6280"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7C03591B-6628-4E93-86F4-B842F665E846"/>
+                     <title>Initial Patient Population 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="7480A440-578D-42BC-B58F-1AFCFD727D40"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.235" displayName="encounter outpatient w/ PCP &amp; obgyn Code List GROUPING"/>
+                           <title>Encounter: encounter outpatient w/ PCP &amp; obgyn</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="ECEBEB8C-F77F-4061-A5CD-1AD297917688"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="2" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="16" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="D4FD7570-F18B-4F24-BD10-86ADFDAC8337"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="2" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="10" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="7C03591B-6628-4E93-86F4-B842F665E846"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="11" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="16" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="540CA726-19B8-43B0-A225-7FD252B99F1E"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Communication from provider to patient: counseling for nutrition"</content> using "counseling for nutrition Code List GROUPING (2.16.840.1.113883.3.464.0001.196)"</item>
+               <item>
+                  <content>"Communication from provider to patient: counseling for physical activity"</content> using "counseling for physical activity Code List GROUPING (2.16.840.1.113883.3.464.0001.200)"</item>
+               <item>
+                  <content>"Diagnosis active: pregnancy"</content> using "pregnancy Code List GROUPING (2.16.840.1.113883.3.464.0001.102)"</item>
+               <item>
+                  <content>"Encounter: encounter outpatient w/ PCP &amp; obgyn"</content> using "encounter outpatient w/ PCP &amp; obgyn Code List GROUPING (2.16.840.1.113883.3.464.0001.235)"</item>
+               <item>
+                  <content>"Encounter: Encounter pregnancy"</content> using "Encounter pregnancy ICD-9-CM Code List (2.16.840.1.113883.3.464.0001.240)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.464.0001.14)"</item>
+               <item>
+                  <content>"Physical exam finding: BMI percentile"</content> using "BMI percentile Code List GROUPING (2.16.840.1.113883.3.464.0001.173)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="B1DF7FE0-664F-4062-93F4-9D995EEDC822"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="A348DC14-5178-442B-8AAF-9C8760734F6A"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.173" displayName="BMI percentile Code List GROUPING"/>
+                     <title>Physical exam finding: BMI percentile</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.31"/>
+               <id root="33954DBE-712B-4312-87F6-22047434A7A3"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.196" displayName="counseling for nutrition Code List GROUPING"/>
+                     <title>Communication from provider to patient: counseling for nutrition</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <patientParticipant classCode="PAT"/>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication from provider to patient pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.31"/>
+               <id root="6BB3D30A-399B-4069-889B-D62A2B9D3B50"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.200" displayName="counseling for physical activity Code List GROUPING"/>
+                     <title>Communication from provider to patient: counseling for physical activity</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <patientParticipant classCode="PAT"/>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="7480A440-578D-42BC-B58F-1AFCFD727D40"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.235" displayName="encounter outpatient w/ PCP &amp; obgyn Code List GROUPING"/>
+                     <title>Encounter: encounter outpatient w/ PCP &amp; obgyn</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="040BDB3D-2A10-4BF9-B36E-D7C46507B916"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.240" displayName="Encounter pregnancy ICD-9-CM Code List"/>
+                     <title>Encounter: Encounter pregnancy</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="1B486B67-51BB-4346-96B5-763D1AF72731"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: pregnancy</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.102" displayName="pregnancy Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="2D6656C3-E94B-40AE-B025-E1AABC0FC1FC"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Perioperative Care: Venous Thromboembolism (VTE) Prophylaxis (when indicated in ALL patients) (NQF 0239)</title>
+   <text>Patient Age:  All patients age 18 years and older. Procedures:  surgical procedures for which VTE prophylaxis is indicated in all patients who had an order for LMWH, LDUH, adjusted-dose warfarin, fondaparinux or mechanical prophylaxis  given within 24 hours prior to incision time or 24 hours after surgery end time.</text>
+   <statusCode code="completed"/>
+   <setId root="05DCBF43-31A3-49D8-BF2A-B6844331E7EF"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© 2010 American Medical Association and/or National Committee for Quality Assurance. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">This measure addresses VTE risk based on surgical procedure.  VTE prophylaxis is appropriate for all patients undergoing these procedures regardless of individual patient thromboembolic risk factors.  Additional work is needed to determine if a physician-level measure for VTE prophylaxis can be developed to address individual patient thromboembolic risk factors, in addition to procedural risk, without creating data collection burden.  Duration of VTE prophylaxis is not specified in the measure due to varying guideline recommendations for different patient populations.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Recommend that mechanical methods of prophylaxis be used primarily in patients who are at high risk of bleeding (Grade 1C+) or as an adjunct to anticoagulant-based prophylaxis. (Grade 2A).  Recommend against the use of aspirin alone as prophylaxis against VTE for any patient group. (Grade 1A). Recommend consideration of renal impairment when deciding on doses of LMWH, fondaparinux, the direct thrombin inhibitors, and other antithrombotic drugs that are cleared by the kidneys, particularly in elderly patients and those who are at high risk for bleeding.  (Grade 1C+).  Moderate-risk general surgery patients are those patients undergoing a nonmajor procedure and are between the ages of 40 and 60 years or have additional risk factors, or those patients who are undergoing major operations and are &lt;40 years of age with no additional risk factors . Recommend prophylaxis with LDUH, 5,000 U bid or LMWH &lt;=3,400 U once daily (both Grade 1A).  Higher-risk general surgery patients are those undergoing nonmajor surgery and are &gt;60 years of age or have additional risk factors, or patients undergoing major surgery who are &gt;40 years of age or have additional risk factors. Recommend thromboprophylaxis with LDUH, 5,000 U tid or LMWH, &gt;3,400 U daily (both Grade 1A).  Recommend that thromboprophylaxis be used in all major gynecologic surgery patients (Grade 1A).  For patients undergoing major, open urologic procedures, recommend routine prophylaxis with LDUH twice daily or three times daily (Grade 1A).  Patients undergoing major orthopedic surgery, which includes hip and knee arthroplasty and hip fracture repair, represent a group that is at particularly high risk for VTE, and routine thromboprophylaxis has been the standard of care for &gt;15 years.  Elective total hip replacement: routine use of LMWH, fondaparinux, or adjusted-dose VKA (all Grade 1A).  Elective total knee arthroplasty: routine thromboprophylaxis using LMWH, fondaparinux, or adjusted-dose VKA (all Grade 1A).  Hip fracture surgery: routine use of fondaparinux (Grade 1A), LMWH (Grade 1C+), adjusted-dose VKA (Grade 2B), or LDUH (Grade 1B).  For major orthopedic surgical procedures, recommend that a decision about the timing of the initiation of pharmacologic prophylaxis be based on the efficacy-to-bleeding tradeoffs for that particular agent (Grade 1A). For LMWH, there are only small differences between starting preoperatively or postoperatively, both options acceptable (Grade 1A).  Recommend that thromboprophylaxis be routinely used in patients undergoing major neurosurgery (Grade 1A).  (ACCP)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="BB3FB12E-6EB1-4FF8-B640-A97602F2C736"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="C6BD34D4-55BF-42E1-9266-497079E82998"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="3436838A-ED27-47D5-A7AC-6A4E01A132DA"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Geerts WH, Pineo GF, Heit JA, Bergqvist D, Lassen MR, Colwell CW and Ray JG. Prevention of Venous Thromboembolism: The Seventh ACCP Conference on antithrombotic and thrombolytic therapy (ACCP). Chest 2004 Sep;126(3 Suppl):338S-400S.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain">LMWH – low molecular weight heparin.  
+LDUH – low-dose unfractionated heparin</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">For this measure, the source of the clinical data will be located in both the hospital EHR and the physician practice EHR.  The denominator is identified by the procedures that are performed by the eligible professional, whereas the clinical data required for the numerator and exceptions will be located in the hospital EHR.  In order to calculate the measure, there may be some abstraction required from the inpatient record to the ambulatory (physician) EHR before the measure can be calculated.  The intent of this measure is to assess whether or not providers ordered VTE  prophylaxis to be given within 24 hours prior to incision time or within 24 hours after procedure end time.  Although the eMeasure specifies "medication administered" or "device applied," this should also include the intent to administer the medication or apply the device in the absence of actual administration or application. For example, if the provider orders the medication to be administered at the appropriate time, yet it is not administered, the provider would still be compliant with the numerator.  Standing orders or verbal orders for VTE prophylaxis are also considered to be numerator compliant.  Anesthesia time is used as a proxy for procedure end time in this measure.</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>OR: <list>
+                                 <item>OR: "Medication administered: Chemical Venous Thromboembolism Prophylaxis"</item>
+                                 <item>OR: "Device applied: Mechanical Venous Thromboembolism Prophylaxis"</item>
+                                 <item>  &lt;= 24 hour starts before start of "Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis"</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>OR: "Medication administered: Chemical Venous Thromboembolism Prophylaxis"</item>
+                                 <item>OR: "Device applied: Mechanical Venous Thromboembolism Prophylaxis"</item>
+                                 <item>  &lt; 24 hour starts after end of  ("Procedure performed: Anesthesia administration"  &lt;= 2 hour(s) starts before or during "Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis")</item>
+                              </list>
+                           </item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>OR: <list>
+                           <item>OR: "Medication allergy: Chemical Venous Thromboembolism Prophylaxis"</item>
+                           <item>OR: "Medication adverse effects: Chemical Venous Thromboembolism Prophylaxis"</item>
+                           <item>OR: "Medication intolerance: Chemical Venous Thromboembolism Prophylaxis"</item>
+                           <item>OR: "Device intolerance: Mechanical Venous Thromboembolism Prophylaxis"</item>
+                           <item>OR: "Device adverse event: Mechanical Venous Thromboembolism Prophylaxis"</item>
+                           <item> starts before or during "Measurement period"</item>
+                        </list>
+                     </item>
+                     <item>OR: <list>
+                           <item>OR: "Medication administered not done: Medical reason" for "Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"</item>
+                           <item>OR: "Device applied not done: Medical reason" for "Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="4B2BE598-46D9-4615-95D2-5E8C19EB5733"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="7F17DB14-8CD0-47B5-A544-EE90EC652B5A"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="BB3FB12E-6EB1-4FF8-B640-A97602F2C736"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                     <id root="AD89A197-F214-4B51-8085-EB67D1F9FD87"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.03.812" displayName="Surgical Procedures requiring Venous Thromboembolism Prophylaxis Code List GROUPING"/>
+                           <title>Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="BB3FB12E-6EB1-4FF8-B640-A97602F2C736"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="844C34D6-5B78-4A0C-A8EE-F42C4354B31D"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="4B2BE598-46D9-4615-95D2-5E8C19EB5733"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="9F174E3A-26A3-4422-9D5F-758FFBF3E8F8"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                                 <id root="674CA74B-742C-4111-9657-E622D434CCAC"/>
+                                 <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication administered: Chemical Venous Thromboembolism Prophylaxis</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="4A8A7694-BC15-4FCC-A2B8-A5FCAB21B86E"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Device applied: Mechanical Venous Thromboembolism Prophylaxis</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="URG_PQ">
+                                 <high value="24" unit="hour" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="AD89A197-F214-4B51-8085-EB67D1F9FD87"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.03.812" displayName="Surgical Procedures requiring Venous Thromboembolism Prophylaxis Code List GROUPING"/>
+                                       <title>Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis</title>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                                 <id root="674CA74B-742C-4111-9657-E622D434CCAC"/>
+                                 <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication administered: Chemical Venous Thromboembolism Prophylaxis</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="4A8A7694-BC15-4FCC-A2B8-A5FCAB21B86E"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Device applied: Mechanical Venous Thromboembolism Prophylaxis</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="URG_PQ">
+                                 <high value="24" unit="hour" inclusive="false"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="E3D245C2-ACDA-4793-AEFA-D170FBDB58AC"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.03.855" displayName="Anesthesia administration Code List GROUPING"/>
+                                       <title>Procedure performed: Anesthesia administration</title>
+                                       <sourceOf typeCode="EAS" inversionInd="true">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="2" unit="h" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="AD89A197-F214-4B51-8085-EB67D1F9FD87"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.526.03.812" displayName="Surgical Procedures requiring Venous Thromboembolism Prophylaxis Code List GROUPING"/>
+                                                   <title>Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis</title>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="BB3FB12E-6EB1-4FF8-B640-A97602F2C736"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="0FEB6B48-F571-42A3-BA49-07694CAF16EE"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication allergy pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.1"/>
+                           <id root="FF1AA458-DE48-4129-9D37-6ACDFED8CB89"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug allergy"/>
+                                 <title>Medication allergy: Chemical Venous Thromboembolism Prophylaxis</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication adverse effects pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.7"/>
+                           <id root="CCE5F4C8-5CDF-48DA-BCEB-0DC8703E0E09"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="419511003" codeSystem="2.16.840.1.113883.6.96" displayName="Drug adverse effect"/>
+                                 <title>Medication adverse effects: Chemical Venous Thromboembolism Prophylaxis</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication intolerance pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.15"/>
+                           <id root="9EBB7679-43A1-4BAD-9860-5742CA1A420B"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="59037007" codeSystem="2.16.840.1.113883.6.96" displayName="Drug intolerance"/>
+                                 <title>Medication intolerance: Chemical Venous Thromboembolism Prophylaxis</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device intolerance pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.36"/>
+                           <id root="2041B5D5-ADA2-465B-A18D-D2FF58D23E90"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="INTOL-X" codeSystem="2.16.840.1.113883.3.560" displayName="Intolerance"/>
+                                 <title>Device intolerance: Mechanical Venous Thromboembolism Prophylaxis</title>
+                                 <participant typeCode="PRD">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="DEV" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device adverse event pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.34"/>
+                           <id root="24D5AF61-5C7F-4E18-B4E0-EB2D20C67D57"/>
+                           <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="281647001" codeSystem="2.16.840.1.113883.6.96" displayName="Adverse reaction"/>
+                                 <title>Device adverse event: Mechanical Venous Thromboembolism Prophylaxis</title>
+                                 <participant typeCode="PRD">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="DEV" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="EAS" inversionInd="true">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="BB3FB12E-6EB1-4FF8-B640-A97602F2C736"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication administered pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.114"/>
+                           <id root="674CA74B-742C-4111-9657-E622D434CCAC"/>
+                           <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication administered not done: Medical reason</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- device applied pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.110"/>
+                           <id root="4A8A7694-BC15-4FCC-A2B8-A5FCAB21B86E"/>
+                           <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                 <title>Device applied not done: Medical reason</title>
+                                 <participant typeCode="DEV">
+                                    <roleParticipant classCode="MANU">
+                                       <playingDevice classCode="DEV" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                                       </playingDevice>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                                    </observation>
+                                 </sourceOf>
+                              </procedure>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="BB3FB12E-6EB1-4FF8-B640-A97602F2C736"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Device adverse event: Mechanical Venous Thromboembolism Prophylaxis"</content> using "Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List (2.16.840.1.113883.3.526.02.807)"</item>
+               <item>
+                  <content>"Device applied: Mechanical Venous Thromboembolism Prophylaxis"</content> using "Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List (2.16.840.1.113883.3.526.02.807)"</item>
+               <item>
+                  <content>"Device applied not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Device intolerance: Mechanical Venous Thromboembolism Prophylaxis"</content> using "Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List (2.16.840.1.113883.3.526.02.807)"</item>
+               <item>
+                  <content>"Medication administered: Chemical Venous Thromboembolism Prophylaxis"</content> using "Chemical Venous Thromboembolism Prophylaxis RxNorm Code List (2.16.840.1.113883.3.526.02.806)"</item>
+               <item>
+                  <content>"Medication administered not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Medication adverse effects: Chemical Venous Thromboembolism Prophylaxis"</content> using "Chemical Venous Thromboembolism Prophylaxis RxNorm Code List (2.16.840.1.113883.3.526.02.806)"</item>
+               <item>
+                  <content>"Medication allergy: Chemical Venous Thromboembolism Prophylaxis"</content> using "Chemical Venous Thromboembolism Prophylaxis RxNorm Code List (2.16.840.1.113883.3.526.02.806)"</item>
+               <item>
+                  <content>"Medication intolerance: Chemical Venous Thromboembolism Prophylaxis"</content> using "Chemical Venous Thromboembolism Prophylaxis RxNorm Code List (2.16.840.1.113883.3.526.02.806)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Procedure performed: Anesthesia administration"</content> using "Anesthesia administration Code List GROUPING (2.16.840.1.113883.3.526.03.855)"</item>
+               <item>
+                  <content>"Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis"</content> using "Surgical Procedures requiring Venous Thromboembolism Prophylaxis Code List GROUPING (2.16.840.1.113883.3.526.03.812)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="7F17DB14-8CD0-47B5-A544-EE90EC652B5A"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.14"/>
+               <id root="674CA74B-742C-4111-9657-E622D434CCAC"/>
+               <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication administered: Chemical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication adverse effects pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.7"/>
+               <id root="CCE5F4C8-5CDF-48DA-BCEB-0DC8703E0E09"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="419511003" codeSystem="2.16.840.1.113883.6.96" displayName="Drug adverse effect"/>
+                     <title>Medication adverse effects: Chemical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication allergy pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.1"/>
+               <id root="FF1AA458-DE48-4129-9D37-6ACDFED8CB89"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug allergy"/>
+                     <title>Medication allergy: Chemical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication intolerance pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.15"/>
+               <id root="9EBB7679-43A1-4BAD-9860-5742CA1A420B"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="59037007" codeSystem="2.16.840.1.113883.6.96" displayName="Drug intolerance"/>
+                     <title>Medication intolerance: Chemical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.806" displayName="Chemical Venous Thromboembolism Prophylaxis RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device adverse event pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.34"/>
+               <id root="24D5AF61-5C7F-4E18-B4E0-EB2D20C67D57"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="281647001" codeSystem="2.16.840.1.113883.6.96" displayName="Adverse reaction"/>
+                     <title>Device adverse event: Mechanical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="PRD">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="4A8A7694-BC15-4FCC-A2B8-A5FCAB21B86E"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                     <title>Device applied: Mechanical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="DEV">
+                        <roleParticipant classCode="MANU">
+                           <playingDevice classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                           </playingDevice>
+                        </roleParticipant>
+                     </participant>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device intolerance pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.36"/>
+               <id root="2041B5D5-ADA2-465B-A18D-D2FF58D23E90"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="INTOL-X" codeSystem="2.16.840.1.113883.3.560" displayName="Intolerance"/>
+                     <title>Device intolerance: Mechanical Venous Thromboembolism Prophylaxis</title>
+                     <participant typeCode="PRD">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.807" displayName="Mechanical Venous Thromboembolism Prophylaxis SNOMED-CT Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.110"/>
+               <id root="0B940445-6A09-44AF-B018-33408F1397A0"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                     <title>Device applied not done: Medical reason</title>
+                     <participant typeCode="DEV">
+                        <roleParticipant classCode="MANU">
+                           <playingDevice classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                           </playingDevice>
+                        </roleParticipant>
+                     </participant>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.114"/>
+               <id root="65D5BE0A-52B8-4477-80E6-771E4976A647"/>
+               <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication administered not done: Medical reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="AD89A197-F214-4B51-8085-EB67D1F9FD87"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.812" displayName="Surgical Procedures requiring Venous Thromboembolism Prophylaxis Code List GROUPING"/>
+                     <title>Procedure performed: Surgical Procedures requiring Venous Thromboembolism Prophylaxis</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="E3D245C2-ACDA-4793-AEFA-D170FBDB58AC"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.855" displayName="Anesthesia administration Code List GROUPING"/>
+                     <title>Procedure performed: Anesthesia administration</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

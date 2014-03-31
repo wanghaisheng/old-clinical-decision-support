@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright © 2011 Brigham and Women's Hospital, Inc. All rights reserved.
+
+     Support Acknowledgment: This material is derived from work supported
+     under a contract with the Agency for Healthcare Research and Quality (AHRQ),
+     an agency of the Department of Health and Human Services (Contract No. HHSA290200810010).
+     AHRQ supports health services research that will improve the quality of health
+     care and promote evidence-based decision making.
+
+     THIS SOFTWARE IS PROVIDED BY THE BRIGHAM AND WOMEN'S HOSPITAL, INC.
+     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+     TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+     PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE
+     LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+     DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+     SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+     USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+ <xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="structured.xsd"/>
+	<xs:complexType name="CDSKnowledgeDocument">
+		<xs:annotation>
+			<xs:documentation>Defines a CDS knowledge base</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="metadata" type="KnowledgeEntityMetadata"/>
+			<xs:element name="definition" type="StructuredDefinition"  minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="knowledgeModule" type="CDSKnowledge" minOccurs="1" maxOccurs="unbounded">
+				<xs:key name="actionIdKey">
+					<xs:selector xpath="action"/>
+					<xs:field xpath="@actionId"/>
+				</xs:key>
+			 	<xs:keyref name="actionIdKeyRef" refer="actionIdKey">
+					<xs:selector xpath="presentationGroup/action"/>
+					<xs:field xpath="."/>
+				</xs:keyref>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="schemaVersion" type="xs:positiveInteger" use="required"/>
+	</xs:complexType>
+	<xs:element name="CDSKnowledgeDocument" type="CDSKnowledgeDocument">
+		<xs:annotation>
+			<xs:documentation>Root element of the CDS</xs:documentation>
+		</xs:annotation>
+		<xs:key name="knowledgeElementIdKey">
+			<xs:selector xpath="knowledgeElement"/>
+			<xs:field xpath="@knowledgeElementId"/>
+		</xs:key>
+	</xs:element>
+	<xs:complexType name="CDSKnowledge">
+		<xs:sequence>
+			<xs:element name="metadata" type="KnowledgeEntityMetadata" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="action" type="Action" maxOccurs="unbounded"/>
+			<xs:element name="presentationGroup" type="ActionGroup" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="behavior" type="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="knowledgeElementId" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ActionGroup">
+		<xs:complexContent>
+			<xs:extension base="KnowledgeEntity">
+				<xs:sequence minOccurs="0" maxOccurs="unbounded">
+					<xs:choice>
+						<xs:element name="presentationGroup" type="ActionGroup"/>
+						<!-- Need to change this to a reference -->
+						<xs:element name="action" type="xs:string" maxOccurs="unbounded"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="ConstraintType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Trigger"/>
+			<xs:enumeration value="ApplicableScenario"/>
+			<xs:enumeration value="PreSelection"/>
+			<xs:enumeration value="Visibility"/>
+			<xs:enumeration value="Mandatory"/>
+			<xs:enumeration value="ValueDerivation"/>
+			<xs:enumeration value="NumericEquivalent"/>
+			<xs:enumeration value="ValueRestriction"/>
+			<xs:enumeration value="MissingData"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Constraint" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="KnowledgeEntity">
+				<xs:sequence>
+				<!--	<xs:element name="appliesTo" type="xs:string" maxOccurs="unbounded"/> -->
+					<xs:element name="appliesTo" type="KnowledgeElementRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="constraintType" type="ConstraintType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConstraintCondition">
+		<xs:complexContent>
+			<xs:extension base="Constraint">
+				<xs:sequence>
+					<xs:element name="condition" type="LogicalCondition"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConstraintTerm">
+		<xs:complexContent>
+			<xs:extension base="Constraint">
+				<xs:sequence>
+					<xs:element name="applicability" type="Applicability" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConstraintTemplate" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Constraint">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConsequentAction">
+		<xs:complexContent>
+			<xs:extension base="ConstraintTemplate">
+				<xs:sequence>
+					<xs:element name="antecedent" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="consequent" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>			
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TriggerConstraint">
+		<xs:complexContent>
+			<xs:extension base="ConstraintTemplate">
+				<xs:sequence>
+					<xs:element name="eventType" type="xs:string"/>
+					<xs:element name="eventExpression" type="xs:string"/>
+				</xs:sequence>			
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="ActTriggerConstraint">
+		<xs:complexContent>
+			<xs:extension base="TriggerConstraint">
+				<xs:sequence>
+					<xs:element name="actionIdentifier" type="xs:string"/>
+					<xs:element name="actionType" type="xs:string"/>
+				</xs:sequence>			
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!--
+	<xs:complexType name="ValueConstraint">
+		<xs:complexContent>
+			<xs:extension base="ConstraintTemplate">
+				<xs:sequence>
+					<xs:element name="min" type="xs:anySimpleType" minOccurs="0"/>
+					<xs:element name="max" type="xs:anySimpleType" minOccurs="0"/>
+					<xs:element name="default" type="xs:anySimpleType" minOccurs="0"/>
+					
+				</xs:sequence>			
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	-->
+	<xs:complexType name="KnowledgeElementRef">
+		<xs:sequence>
+			<xs:element name="knowledgeElementType" type="KnowledgeElementType" maxOccurs="1" minOccurs="1"/>
+			<xs:element name="knowledgeElementId" type="xs:string" maxOccurs="1" minOccurs="0"/>
+			<xs:element name="attributeName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="KnowledgeElementType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="KnowledgeModule"/>
+			<xs:enumeration value="Action"/>
+			<xs:enumeration value="ActionAttribute"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="BBD7B8F2-A69A-46FA-A302-1494C26A57D9"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Major Depressive Disorder (MDD): Suicide Risk Assessment (NQF 0104)</title>
+   <text>Percentage of patients who had a suicide risk assessment completed at each visit.</text>
+   <statusCode code="completed"/>
+   <setId root="A8F1CA32-93E3-4C0A-811B-86EEF019D547"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© 2010 American Medical Association. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">Research has shown that patients with major depressive disorder are at a high risk for suicide, which makes this assessment an important aspect of care that should be assessed at each visit.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">A careful assessment of the patient's risk for suicide is crucial. An assessment of the presence of suicidal ideation is essential, including the degree to which the patient intends to act on any suicidal ideation and the extent to which the patient has made plans for or begun to prepare for suicide. (APA)
+The components of an evaluation for suicide risk [include an assessment of the following]:
+1) Presence of suicidal or homicidal ideation, intent, or plans
+2) Access to means for suicide and the lethality of those means
+3) Presence of psychotic symptoms, command hallucinations, or severe anxiety
+4) Presence of alcohol or substance abuse
+5) History and seriousness of previous attempts
+6) Family history or recent exposure to suicide (APA)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="7E5039F8-8EDB-47BF-A55E-925D514C8F03"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="6E6EA5B1-7579-48B1-8908-DE72FA9BBAE2"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="4FAFE270-D0CE-4D1A-9DA9-A0BC05C2667D"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">American Psychiatric Association (APA). Practice guidelines for the treatment of patients with major depressive disorder (revision). Am J Psychiatry. 2000;157(suppl 4): 1-45.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">A suicide risk assessment should be performed at every visit for major depressive disorder during the measurement period. For patients with multiple encounters, each encounter should count separately in the denominator.</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: <list>
+                           <item>AND: "Diagnosis active: Major Depressive Disorder New or Recurrent" starts before or during <list>
+                                 <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                                 <item>OR: "Encounter: Encounter Psychiatric &amp; Psychologic"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                           <item>AND:  &gt;= 2 count(s) of<list>
+                                 <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                                 <item>OR: "Encounter: Encounter Psychiatric &amp; Psychologic"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>OR: <list>
+                                 <item>OR: "Procedure performed: Suicide Risk Assessment"</item>
+                                 <item>OR: "Symptom assessed: Suicide Risk Findings"</item>
+                                 <item>OR: "Risk category / assessment: Suicide Risk Scale (result is present)"</item>
+                                 <item> during <list>
+                                       <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                                       <item>OR: "Encounter: Encounter Psychiatric &amp; Psychologic"</item>
+                                       <item> during "Measurement period"</item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="7D8DA67A-F8CD-4968-8C6C-BF8F29D8DFD0"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="304CA4CD-7275-4A88-945B-264AE2A84FF2"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="D91C1A2E-B9D1-4227-8EFA-28827D03CBC6"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="9762A1F3-81A1-4E5A-8DD6-6629E21A83D3"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: Major Depressive Disorder New or Recurrent</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.558" displayName="Major Depressive Disorder New or Recurrent Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="EAS" inversionInd="true">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <sourceOf typeCode="PRCN">
+                                          <conjunctionCode code="OR"/>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="83D3178B-76A5-4FA3-94D2-561318A59C6B"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                                   <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                       <sourceOf typeCode="PRCN">
+                                          <conjunctionCode code="OR"/>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="9EFF3D62-88A5-4B52-AB95-B79E985AF965"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.526.02.103" displayName="Encounter Psychiatric &amp; Psychologic CPT Code List"/>
+                                                   <title>Encounter: Encounter Psychiatric &amp; Psychologic</title>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <id root="D91C1A2E-B9D1-4227-8EFA-28827D03CBC6"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <repeatNumber>
+                              <low value="2" inclusive="true"/>
+                           </repeatNumber>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="83D3178B-76A5-4FA3-94D2-561318A59C6B"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="9EFF3D62-88A5-4B52-AB95-B79E985AF965"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.103" displayName="Encounter Psychiatric &amp; Psychologic CPT Code List"/>
+                                       <title>Encounter: Encounter Psychiatric &amp; Psychologic</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <id root="D91C1A2E-B9D1-4227-8EFA-28827D03CBC6"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="2E822438-2520-4996-8F7B-84890D6FECCD"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="7D8DA67A-F8CD-4968-8C6C-BF8F29D8DFD0"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="49DF85AC-E971-4D0F-A15B-19A878F8C953"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="EF82E82F-FFF9-4A29-8D49-F39ECB864EF5"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.352" displayName="Suicide Risk Assessment SNOMED-CT Code List"/>
+                                       <title>Procedure performed: Suicide Risk Assessment</title>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom assessed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.70"/>
+                                 <id root="C59F2A76-3C76-4DE2-B893-23A8BFB8FCBA"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.560" displayName="Suicide Risk Findings SNOMED-CT Code List"/>
+                                       <title>Symptom assessed: Suicide Risk Findings</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- risk category / assessment pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.21"/>
+                                 <id root="39AEE957-76B7-48C6-A5EA-B7762BA39A53"/>
+                                 <code code="51848-0" displayName="Assessment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.559" displayName="Suicide Risk Scale SNOMED-CT Code List"/>
+                                       <title>Risk category / assessment: Suicide Risk Scale (result is present)</title>
+                                       <statusCode code="completed"/>
+                                       <sourceOf typeCode="OUTC">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="ANYNonNull"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="83D3178B-76A5-4FA3-94D2-561318A59C6B"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                             <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="9EFF3D62-88A5-4B52-AB95-B79E985AF965"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.103" displayName="Encounter Psychiatric &amp; Psychologic CPT Code List"/>
+                                             <title>Encounter: Encounter Psychiatric &amp; Psychologic</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <id root="D91C1A2E-B9D1-4227-8EFA-28827D03CBC6"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: Major Depressive Disorder New or Recurrent"</content> using "Major Depressive Disorder New or Recurrent Code List GROUPING (2.16.840.1.113883.3.526.03.558)"</item>
+               <item>
+                  <content>"Encounter: Encounter Office &amp; Outpatient Consult"</content> using "Encounter Office &amp; Outpatient Consult CPT Code List (2.16.840.1.113883.3.526.02.99)"</item>
+               <item>
+                  <content>"Encounter: Encounter Psychiatric &amp; Psychologic"</content> using "Encounter Psychiatric &amp; Psychologic CPT Code List (2.16.840.1.113883.3.526.02.103)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Procedure performed: Suicide Risk Assessment"</content> using "Suicide Risk Assessment SNOMED-CT Code List (2.16.840.1.113883.3.526.02.352)"</item>
+               <item>
+                  <content>"Risk category / assessment: Suicide Risk Scale"</content> using "Suicide Risk Scale SNOMED-CT Code List (2.16.840.1.113883.3.526.02.559)"</item>
+               <item>
+                  <content>"Symptom assessed: Suicide Risk Findings"</content> using "Suicide Risk Findings SNOMED-CT Code List (2.16.840.1.113883.3.526.02.560)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="304CA4CD-7275-4A88-945B-264AE2A84FF2"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="83D3178B-76A5-4FA3-94D2-561318A59C6B"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                     <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="9EFF3D62-88A5-4B52-AB95-B79E985AF965"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.103" displayName="Encounter Psychiatric &amp; Psychologic CPT Code List"/>
+                     <title>Encounter: Encounter Psychiatric &amp; Psychologic</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="9762A1F3-81A1-4E5A-8DD6-6629E21A83D3"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Major Depressive Disorder New or Recurrent</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.558" displayName="Major Depressive Disorder New or Recurrent Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="EF82E82F-FFF9-4A29-8D49-F39ECB864EF5"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.352" displayName="Suicide Risk Assessment SNOMED-CT Code List"/>
+                     <title>Procedure performed: Suicide Risk Assessment</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom assessed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.70"/>
+               <id root="C59F2A76-3C76-4DE2-B893-23A8BFB8FCBA"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.560" displayName="Suicide Risk Findings SNOMED-CT Code List"/>
+                     <title>Symptom assessed: Suicide Risk Findings</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- risk category / assessment pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.21"/>
+               <id root="39AEE957-76B7-48C6-A5EA-B7762BA39A53"/>
+               <code code="51848-0" displayName="Assessment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.559" displayName="Suicide Risk Scale SNOMED-CT Code List"/>
+                     <title>Risk category / assessment: Suicide Risk Scale</title>
+                     <statusCode code="completed"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

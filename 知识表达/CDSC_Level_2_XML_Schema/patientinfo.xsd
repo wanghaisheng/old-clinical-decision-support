@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+     Copyright © 2011 Brigham and Women's Hospital, Inc. All rights reserved.
+
+     Support Acknowledgment: This material is derived from work supported
+     under a contract with the Agency for Healthcare Research and Quality (AHRQ),
+     an agency of the Department of Health and Human Services (Contract No. HHSA290200810010).
+     AHRQ supports health services research that will improve the quality of health
+     care and promote evidence-based decision making.
+
+     THIS SOFTWARE IS PROVIDED BY THE BRIGHAM AND WOMEN'S HOSPITAL, INC.
+     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+     TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+     PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE
+     LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+     DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+     SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+     USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  version="2">
+<!--	<xs:include schemaLocation="actionrequest.xsd"/> -->
+	<xs:include schemaLocation="datatype.xsd"/>
+	<xs:element name="Alert" type="Alert"/>
+	<xs:complexType name="Alert">
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="Allergy" type="Allergy"/>
+	<xs:complexType name="Allergy">
+		<xs:annotation>
+			<xs:documentation>allergy or intolerance conditions and the associated adverse reactions suffered by the patient.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="allergyStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>active, no longer active - SNOMED CT subset</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="adverseEventDate" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This is a date that expresses when this particular allergy or intolerance was known to be active for the patient</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="adverseEventType" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Describes the type of product and intolerance suffered by the patient. The type of product shall be classified with respect to whether the adverse event occurs in relationship with a medication, food, or environmental or other product. The adverse event should also be classified more specifically as an allergy, non-allergy intolerance, or just adverse reaction if that level of detail is not known</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allergyID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>id of the allergy event</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allergyModifier" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>modifier of allergy such as negation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the event was recorded</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="productCoded" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This value is a code describing the product that causes the intolerance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allergyClass" type="CD" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="reactionCoded" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This value is a code describing the reaction caused by the agent</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="severityCoded" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This value is a code describing the level severity of the allergy or intolerance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Encounter" type="Encounter"/>
+	<xs:complexType name="Encounter">
+		<xs:annotation>
+			<xs:documentation>data describing the interactions between the patient and clinicians. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="encounterRole" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Role of the provider of the encounter</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dischargeDispositionCode" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>code for how the patient was discharged, e.g., sent home, expired, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterDateTime" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date and time of the Encounter, including duration if pertinent</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An identifier for this encounter</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterLocation" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Location where the encounter took place</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterProvider" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name and other information for the person or organization that performed or hosted the encounter</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterType" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This is a coded value describing the type of the Encounter</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EntryRelationship" type="EntryRelationship"/>
+	<xs:complexType name="EntryRelationship">
+		<xs:annotation>
+			<xs:documentation>Used to establish relationship among problems or family history</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeCode" type="CD">
+				<xs:annotation>
+					<xs:documentation>type of relationship established</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Problem" type="Problem" maxOccurs="unbounded"/>
+			<xs:element name="FamilyHistory" type="FamilyHistory" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="FamilyHistory" type="FamilyHistory"/>
+	<xs:complexType name="FamilyHistory">
+		<xs:annotation>
+			<xs:documentation>data defining the patient's genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient's healthcare risk profile.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="familyHistoryID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>id of the family history event</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the family history event was recorded</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberAdministrativeSex" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Administrative Gender is used to refer to administrative sex rather than biological sex and therefore should easily be classified into female and male. Biological sex is recorded separately when necessary</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberAgeAtDeath" type="PIVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The age (real or approximate) of the family member at death</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberBiologicalSex" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The biological sex of the Family Member. To be used when Administrative Sex (male/female) is not adequate to describe the family member's sex</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberCauseOfDeath" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An indicator that a particular problem was the cause of death of the family member</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberDateOfBirth" type="TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Date of Birth of Family Member</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberEthnicity" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ethnicity is a term that extends the concept of race. The coding of ethnicity is aligned with public health and other Federal reporting standards of the CDC and the Census Bureau</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An identifier used to track the family member in communications between systems</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberRace" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Race is usually a single valued term that may be constant over that patient's lifetime. The coding of race is aligned with public health and other Federal reporting standards of the CDC and the Census Bureau</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyMemberRelationship" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Relationship of Family Member to Patient</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntryRelationship" type="EntryRelationship" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="familyMemberCondition" type="Condition" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Ingredient" type="Ingredient"/>
+	<xs:complexType name="Ingredient">
+		<xs:annotation>
+			<xs:documentation>describes the ingredient(s) of a specific product</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ingredientCode" type="CD">
+				<xs:annotation>
+					<xs:documentation>ingredient code (RxNorm) that make up the product</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ingredientStrength" type="Value">
+				<xs:annotation>
+					<xs:documentation>strength of the ingredient for the specified product</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="LaboratoryResult" type="LaboratoryResult"/>
+	<xs:complexType name="LaboratoryResult">
+		<xs:annotation>
+			<xs:documentation>current and relevant historical laboratory result observations for the patient. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="resultAvailabilityDateTime" type="TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>when the result became available</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the lab was performed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultDateTime" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>when the result was collected, when the specimen was obtained from the patient
+- The biologically relevant date/time for the observation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An identifier for this specific lab result</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultInterpretation" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An abbreviated interpretation of the observation, e.g., normal, abnormal, high, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultReferenceRange" type="IVL_PQ" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Reference range(s) for the observation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultType" type="CD">
+				<xs:annotation>
+					<xs:documentation>A coded representation of the observation performed - LOINC</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>status of result, preliminary, completed,... = ActStatus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultValue" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The value of the result, including units of measure if applicable</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Medication" type="Medication"/>
+	<xs:complexType name="Medication">
+		<xs:annotation>
+			<xs:documentation>patient's current prescription or non-prescription medications and pertinent medication history </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="medicationID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>id of the medication event</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codedProductName" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A code describing the product from a controlled vocabulary - NDF-RT  for class of medication or RxNorm for medication</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codedProductClass" type="CD" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="productConcentration" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The amount of active ingredient, or substance of interest, in a specified product dosage unit, mass or volume. For example 250 mg per 5 ml</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codedBrandName" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A code describing the product as a branded or trademarked entity from a controlled vocabulary -RxNorm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="productRoute" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>original route of the product, not the prescribed one</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ingredients" type="Ingredient" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="administrationDateTime" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>date and time when the medication was administered</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="administrationInfo" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>information if the medication has been prescribed or administered</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="administrationPerson" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>person who administered the medication</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dose" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>the amount of the product to be given. This may be a known, measurable unit (e.g., milliliters), an administration unit (e.g., tablet), or an amount of active ingredient (e.g., 250 mg). May define a variable dose, dose range or dose options based upon identified criteria - NCI thesaurus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="doseRestriction" type="RTO" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>defines a maximum or dose limit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="duration" type="PIVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>how long to administer 1 dosage (e.g., over 30 minutes)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the medication was prescribed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fills" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The number of times that the ordering provider has authorized the pharmacy to dispense this medication</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frequency" type="PIVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>defines how often the medication is to be administered as events per unit of time. Often expressed as the number of times per day (e.g., four times a day), but may also include event-related information (e.g., 1 hour before meals, in the morning, at bedtime). Complimentary to Interval, although equivalent expressions may have different implications (e.g., every 8 hours versus 3 times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="indicateMedicationStopped" type="PIVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Used to express a "hard stop," such as the last Sig sequence in a tapering dose, where the last sequence is 'then D/C' or where the therapy/drug is used to treat a condition and that treatment is for a fixed duration with a hard stop, such as antibiotic treatment, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="interval" type="PIVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>defines how the product is to be administered as an interval of time. For example, every 8 hours. Complimentary to Frequency, although equivalent expressions may have different implications (e.g., every 8 hours versus 3 times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orderDateTime" type="TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date, including time if available, when the ordering provider wrote the order/prescription</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orderingProvider" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The person that wrote this order/prescription (may include both a name and an identifier)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orderNumber" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The order identifier from the perspective of the ordering clinician. Also known as the 'placer number' versus the pharmacies prescription number (or 'filler number')</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="productForm" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The physical form of the product as presented to the patient. For example: tablet, capsule, liquid or ointment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="quantityOrdered" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The amount of product indicated by the ordering provider to be dispensed. For example, number of dosage units or volume of a liquid substance. Note: this is comprised of both a numeric value and a unit of measure</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="statusOfMedication" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If the medication is Active, Discharged, Chronic, Acute, etc (set defined by CCD from SNOMED CT)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="route" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>indicates how the medication is received by the patient (e.g., by mouth, intravenously, topically, et cetera) - code from FDA route of administration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="site" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The anatomic site where the medication is administered. Usually applicable to injected or topical products</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Organizer" type="Organizer"/>
+	<xs:complexType name="Organizer">
+		<xs:sequence>
+			<xs:element name="code" type="CD">
+				<xs:annotation>
+					<xs:documentation>detail about the organizer, such as the name of the battery or same individual</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="specimen" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>specimen of the result</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stautsCode" type="CD">
+				<xs:annotation>
+					<xs:documentation>status of the organizer for example completed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the procedure that the organizer refers to</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organizerID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the organizer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organizerType" type="CD">
+				<xs:annotation>
+					<xs:documentation>data element that is organizing, lab, vital signs, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Organizer" type="Organizer" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:choice>
+				<xs:element name="LaboratoryResult" type="LaboratoryResult" maxOccurs="unbounded"/>
+				<xs:element name="VitalSign" type="VitalSign" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Patient" type="Patient"/>
+	<xs:complexType name="Patient">
+		<xs:sequence>
+			<xs:element ref="personID" minOccurs="0"/>
+			<xs:element ref="personDateOfBirth" minOccurs="0"/>
+			<xs:element ref="gender" minOccurs="0"/>
+			<xs:element ref="Encounter" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="LaboratoryResult" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="FamilyHistory" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="SocialHistory" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Procedure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Problem" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Medication" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Alert" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ClinicalState" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="VitalSign" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Allergy" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Organizer" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Target" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ClinicalState" type="ClinicalState"/>
+	<xs:complexType name="ClinicalState">
+		<xs:annotation>
+			<xs:documentation>Disease State of patient </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="stateID" type="II" minOccurs="0"/>
+			<xs:element name="stateCode" type="CD">
+				<xs:annotation>
+					<xs:documentation>code for the disease state</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stateDate" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>time the state started and finished (optional)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stateStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>code for the disease state</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stateModifier" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>code for the disease state</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Problem" type="Problem"/>
+	<xs:complexType name="Problem">
+		<xs:annotation>
+			<xs:documentation>List of all relevant clinical problems</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="problemStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>e.g., active, inactive</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the problem was charted</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="problemCode" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This value is a code describing the problem according to a specific vocabulary of problems.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="problemCodeClass" type="CD" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="problemDate" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This is the range of time of which the problem was active for the patient</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="problemID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>id of the problem event</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="problemModifier" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>modifier of the problem e.g., negation of problem</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="problemType" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This is a fixed value indicating the level of medical judgment used to determine the existence of a problem, e.g., finding, symptom, diagnosis, clinical state</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="treatingProvider" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The provider or providers treating the patient for this condition </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntryRelationship" type="EntryRelationship" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Procedure" type="Procedure"/>
+	<xs:complexType name="Procedure">
+		<xs:annotation>
+			<xs:documentation>Procedures performed to the patient including laboratory orders</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="specimen" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>specimen for the procedure, e.g., blood in a lab order</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the procedure took place</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureDateTime" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date and time at which the procedure was started or the period during which the procedure was performed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An identifier for this Procedure</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureModifier" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>modifier to the procedure such as negation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureProvider" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Name and other information for the person or organization performed or hosted the Procedure</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureType" type="CD">
+				<xs:annotation>
+					<xs:documentation>This is a coded value describing the type of the Procedure</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>status of the procedure, e.g., completed, pending</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SocialHistory" type="SocialHistory"/>
+	<xs:complexType name="SocialHistory">
+		<xs:annotation>
+			<xs:documentation>Data defining the patient's occupational, personal (e.g. lifestyle), social, and environmental history and health risk factors, as well as administrative data such as marital status, race, ethnicity and religious affiliation. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="socialHistoryModifier" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>modifiers of the history such as negation </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id of the encounter when the social history event was charted</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="socialHistoryDate" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This is the range of time of which the social history event was active for the patient </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="socialHistoryID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ID of the social history event</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="socialHistoryObservedValue" type="Value">
+				<xs:annotation>
+					<xs:documentation>A value describing the social history</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="socialHistoryStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>if active, past</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="socialHistoryType" type="CD">
+				<xs:annotation>
+					<xs:documentation>This is a fixed value indicating the type of social history observation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="VitalSign" type="VitalSign"/>
+	<xs:complexType name="VitalSign">
+		<xs:annotation>
+			<xs:documentation>current and relevant historical vital signs for the patient. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="vsSite" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>body site of measure, e.g. left arm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encounterID" type="II" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>id for the encounter when the observation was recorded</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsDateTime" type="IVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The biologically relevant date/time for the observation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsID" type="II" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An identifier for this specific observation </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsInterpretation" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An abbreviated interpretation of the observation, e.g., normal, abnormal, high, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsPosition" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>position of the patient when the VS was measured</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsReferenceRange" type="IVL_PQ" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Reference range(s) for the observation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsStatus" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Status for this observation, e.g., complete, preliminary - code is derived from a limited set of values HL7 ActStatusNormal</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsType" type="CD">
+				<xs:annotation>
+					<xs:documentation>A coded representation of the observation performed - temp, SBP, DBP, RR, HR - LOINC</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vsValue" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The value of the result, including units of measure if applicable</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Condition" type="Condition"/>
+	<xs:complexType name="Condition">
+		<xs:sequence>
+			<xs:element name="conditionModifier" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>modifier of the condition such as negation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ageOnOnset" type="PIVL_TS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The age (real or approximate) of the family member at the onset of the illness</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="condition" type="CD">
+				<xs:annotation>
+					<xs:documentation>Condition is the generic term used in the model to designate conditions, problems , diagnoses, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Target" type="Target"/>
+	<xs:complexType name="Target">
+		<xs:annotation>
+			<xs:documentation>Goals assigned for a specific patient, for example the blood pressure target defined by the clinician for the patient</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="targetValue" type="Value">
+				<xs:annotation>
+					<xs:documentation>the target value for the specific target type, e.g., if the target type were SBP than the value could be 130</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="targetCategory" type="CD">
+				<xs:annotation>
+					<xs:documentation>Vital signs, lab, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="targetModifier" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>above, below,etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="targetType" type="CD">
+				<xs:annotation>
+					<xs:documentation>sbp, weight, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="personDateOfBirth" type="TS"/>
+	<xs:element name="personID" type="II"/>
+	<xs:element name="gender" type="CD"/>
+</xs:schema>

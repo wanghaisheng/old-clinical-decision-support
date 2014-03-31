@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Partners HealthCare System (Partners HealthCare System) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  version="2">
+	<xs:include schemaLocation="datatype.xsd"/>
+	<xs:include schemaLocation="semistructured.xsd"/>
+	<xs:include schemaLocation="patientinfo.xsd"/>
+	
+	<xs:complexType name="DataDeclaration">
+		<xs:complexContent>
+			<xs:extension base="KnowledgeEntity">
+				<xs:sequence>
+					<xs:element name="Data" type="Patient"/>
+					<xs:element name="expression" type="xs:string"/>
+					<xs:element name="dataIdentifier" type="xs:string"/>
+					<xs:element name="dataType" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="LogicalCondition" type="LogicalCondition">
+		<xs:annotation>
+			<xs:documentation>LogicalCondition is a formal, computable expression of a clinical scenario.</xs:documentation>
+		</xs:annotation></xs:element>
+	<xs:complexType name="LogicalCondition" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="KnowledgeEntity"/>
+		</xs:complexContent>
+	</xs:complexType>
+ 
+	<xs:complexType name="LogicalConditionSingle">
+        <xs:annotation>
+        	<xs:documentation>A simple condition composed of a single expression.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+			<xs:extension base="LogicalCondition">
+				<xs:sequence>
+					<xs:element name="definition" type="Definition" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="expression" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>A computable expression over the data items defined in data mapping and in syntax defined by the expression language</xs:documentation>
+						</xs:annotation></xs:element>
+					<xs:element name="expressionLanguage" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The syntax used in the expression</xs:documentation>
+						</xs:annotation></xs:element>
+ 					<xs:element name="dataMapping" type="DataDeclaration" minOccurs="0" maxOccurs="unbounded">
+ 						<xs:annotation>
+ 							<xs:documentation>The data items that are referenced in the expression in this logical condition</xs:documentation>
+ 						</xs:annotation></xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LogicalConditionSet">
+        <xs:annotation>
+        	<xs:documentation>A compound logical condition composed of other logical conditions.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+			<xs:extension base="LogicalCondition">
+				<xs:sequence>
+					<xs:element name="operator" type="CD">
+						<xs:annotation>
+							<xs:documentation>The operator defines how the logical conditions may be combined, i.e., conjunction, disjunction, negation by using and, or, or not operators respectively. The coding system used is specific to the CDSC.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="condition" type="LogicalCondition" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>One or more logical conditions that are combined in this LogicalConditionSet</xs:documentation>
+						</xs:annotation></xs:element>				
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="LogicalConditionSingle" type="LogicalConditionSingle"/>
+	<xs:element name="LogicalConditionSet" type="LogicalConditionSet"/>
+	<xs:complexType name="LogicalConditionConcrete">
+		<xs:choice>
+			<xs:element ref="LogicalConditionSingle"/>
+			<xs:element ref="LogicalConditionSet"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:element name="SubstanceAdministrationRequest" type="SubstanceAdministrationRequest"/>
+	<xs:complexType name="SubstanceAdministrationRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="codedProductName" type="CD" minOccurs="0"/>
+					<xs:element name="codedProductClass" type="CD" minOccurs="0"/>
+					<xs:element name="dose" type="Value" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>the amount of the product to be given.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="doseRestriction" type="Value" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>defines a maximum or dose limit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="frequency" type="PIVL_TS" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>defines how often the medication is to be administered as events per unit of time.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="indicateMedicationStopped" type="PIVL_TS" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Used to express a "hard stop," such as the last Sig sequence in a tapering dose, where the last sequence is 'then D/C' or where the therapy/drug is used to treat a condition and that treatment is for a fixed duration with a hard stop, such as antibiotic treatment, etc</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="route" type="CD" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>indicates how the medication is received by the patient (e.g., by mouth, intravenously, topically, et cetera)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="site" type="CD" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The anatomic site where the medication is administered. Usually applicable to injected or topical products</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="textAlternative" type="xs:string"/>
+					<xs:element name="productConcentration" type="Value" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SupplyRequest" type="SupplyRequest"/>
+	<xs:complexType name="SupplyRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="quantity" type="Value" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>quantity of the supply to be ordered or dispensed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supplyTypeCode" type="CD">
+						<xs:annotation>
+							<xs:documentation>code of the supply to be requested</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supplyDuration" type="PIVL_TS" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>how long the supply should be dispensed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="repeatValue" type="Value" minOccurs="0"/>
+					<xs:element name="textAlternative" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ControlAct" type="ControlAct"/>
+	<xs:complexType name="ControlAct">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="actionControlType" type="CD">
+						<xs:annotation>
+							<xs:documentation>modify, cancel</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="affectedPatientData" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>patient data that the advice refers to</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="modifications" type="ActionConcrete" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ClinicalStateRequest" type="ClinicalStateRequest"/>
+	<xs:complexType name="ClinicalStateRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="stateCode" type="CD"/>
+					<xs:element name="stateModifier" type="CD" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="stateStatus" type="CD" minOccurs="0"/>
+					<xs:element name="stateDateTime" type="IVL_TS" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ActionOrganizer" type="ActionOrganizer"/>
+	<xs:complexType name="ActionOrganizer">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="operator" type="CD">
+						<xs:annotation>
+							<xs:documentation>and, or, not</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element ref="ActionConcrete" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Action" type="Action"/>
+	<xs:complexType name="Action">
+		<xs:sequence>
+			<xs:element name="overrideReason" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This is an override reason to be added to any action. An override reason is an option in the display of a recommendation that allows the user receiving the recommendation to indicate to the CDS system, why they are choosing to not execute the recommended action.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="priorityCode" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>priorityof the request high, medium, low</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requestType" type="CD" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>instruction, recommendation, no action, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="selectionCriteria" type="LogicalConditionConcrete" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>signals a preferred action</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="severityCode" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>severity of the clniocal condition request: mild, medium, severe (severity domain defined in SNOMED CT)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MessageRequest" type="MessageRequest"/>
+	<xs:complexType name="MessageRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element ref="Message" maxOccurs="unbounded"/>
+					<xs:element name="displayOrderEnforced" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>if the rule author wants to enforce the order the messages are displayed.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="target" type="CD">
+						<xs:annotation>
+							<xs:documentation>person to who the message is targeted, eg. clinican or patient</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EncounterRequest" type="EncounterRequest"/>
+	<xs:complexType name="EncounterRequest">
+		<xs:annotation>
+			<xs:documentation>request of an encouter with a provider</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="encounterDateTime" type="PIVL_TS" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>when the encounter should take place</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="encounterProvider" type="CD" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>provider with whom the encounter should take place</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="encounterType" type="CD">
+						<xs:annotation>
+							<xs:documentation>follow up visit, hospital admission, referral</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="encounterLocation" type="CD" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>location where the encounter should take palce</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="textAlternative" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EventRequest" type="EventRequest"/>
+	<xs:complexType name="EventRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="eventDateTime" type="PIVL_TS">
+						<xs:annotation>
+							<xs:documentation>when the event should take place</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="eventType" type="CD">
+						<xs:annotation>
+							<xs:documentation>e.g, time drive event, data drive, activation of rule synchronously, activation of rule asynchronously, request user acknowledgement, request user input for more data</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="eventParameters" type="Parameter" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>parameters passed by the rules to the event manager</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="KnowledgeAssetRequest" type="KnowledgeAssetRequest"/>
+	<xs:complexType name="KnowledgeAssetRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="requestedAction" type="CD" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>action requested to be done to the asset print, display, execute</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="resource" type="KnowledgeResource">
+						<xs:annotation>
+							<xs:documentation>order set, rule set, patient education</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="target" type="CD" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>person to who the message is targeted, eg. clinican or patient</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
+					<xs:element name="textAlternative" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Message" type="Message"/>
+	<xs:complexType name="Message">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="freeTextMessage" type="Value">
+					<xs:annotation>
+						<xs:documentation>free text message (for each message, it is choice between free text or coded)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="codeMessage" type="CD">
+					<xs:annotation>
+						<xs:documentation>coded message (for each message, it is choice between free text or coded)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="messageCategory" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>alert, reminder, etc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="messageParameters" type="Parameter" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="displayOrderIndex" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>numeric index indicating the order of display</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ObservationRequest" type="ObservationRequest"/>
+	<xs:complexType name="ObservationRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="observationType" type="CD">
+						<xs:annotation>
+							<xs:documentation>type of obervation: note, alert, diagnosis, problem, allergy, lab interpretation, etc</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="observationCode" type="CD">
+						<xs:annotation>
+							<xs:documentation>the observation to be documented e.g., foot exam, mean arterial pressure, problem</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="observationValue" type="Value" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>value of the observation for example if the code is "edema", the value can be the value of the categorization of the edema, i.e, "3+", 130, SNOMED code for problem, RxNorm code for allergy</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="interpretationCode" type="CD" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>interpretation of the observation, high, low</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="observationDateTime" type="PIVL_TS" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>when it was observed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="observationDetails" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>any information in free text format that the rules may want to register in relation to the observation</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="statusCode" type="CD" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>e.g, suggested, confirmed, proposed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="targetDestination" type="CD" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>where in the medical chart should be charted, e.g., healthmaintenance, problem list, notes</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="targetSiteCode" type="CD" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>body location</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="textAlternative" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Parameter" type="Parameter"/>
+	<xs:complexType name="Parameter">
+		<xs:sequence>
+			<xs:element name="Code" type="CD"/>
+			<xs:element name="Value" type="Value"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ProcedureRequest" type="ProcedureRequest"/>
+	<xs:complexType name="ProcedureRequest">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="procedureCategoryCode" type="CD">
+						<xs:annotation>
+							<xs:documentation>code of the procedure: lab test, surgery, xray,</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="procedureTypeCode" type="CD" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>specific code for the type of procedure, e.g., Glucose, Xray, INR, etc</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="implementationTime" type="PIVL_TS" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>when it should be done</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="repeatValue" type="Value" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>how many times the procedure should be repeated</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="textAlternative" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ActionConcrete" type="ActionConcrete"/>
+	<xs:complexType name="ActionConcrete">
+		<xs:choice>
+			<xs:element ref="ActionOrganizer"/>
+			<xs:element ref="MessageRequest"/>
+			<xs:element ref="EventRequest"/>
+			<xs:element ref="EncounterRequest"/>
+			<xs:element ref="KnowledgeAssetRequest"/>
+			<xs:element ref="ObservationRequest"/>
+			<xs:element ref="ProcedureRequest"/>
+			<xs:element ref="SubstanceAdministrationRequest"/>
+			<xs:element ref="SupplyRequest"/>
+			<xs:element ref="ClinicalStateRequest"/>
+			<xs:element ref="ControlAct"/>
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>

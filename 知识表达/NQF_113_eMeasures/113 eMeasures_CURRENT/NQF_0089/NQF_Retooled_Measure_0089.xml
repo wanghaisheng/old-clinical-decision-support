@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="63244AC9-0A52-44FB-A73A-58BFB7F6F8F2"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Diabetic Retinopathy: Communication with the Physician Managing Ongoing Diabetes Care (NQF 0089)</title>
+   <text>Percentage of patients aged 18 years and older with a diagnosis of diabetic retinopathy who had a dilated macular or fundus exam performed with documented communication to the physician who manages the on-going care of the patient with diabetes mellitus regarding the findings of the macular or fundus exam at least once within 12 months</text>
+   <statusCode code="completed"/>
+   <setId root="C30F37DC-97CF-4BC2-BEA9-2076088BA073"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© 2010 American Medical Association and/or National Committee for Quality Assurance. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">The physician that manages the on-going care of the patient with diabetes should be aware of the patient’s dilated eye examination and severity of retinopathy to manage the on-going diabetes care. Such communication is important in assisting the physician to better manage the diabetes. Several studies have shown that better management of diabetes is directly related to lower rates of development of diabetic eye disease (Diabetes Control and Complications Trial – DCCT, UK Prospective Diabetes Study – UKPDS).</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">While it is clearly the responsibility of the ophthalmologist to manage eye disease, it is also the ophthalmologist’s responsibility to ensure that patients with diabetes are referred for appropriate management of their systemic condition. It is the realm of the patient’s family physician, internist or endocrinologist to manage the systemic diabetes. The ophthalmologist should communicate with the attending physician (Level A: III Recommendation) (AAO, 2003).</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="BA4C120E-AF19-4313-B972-62009C167398"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="EE01BD9A-4BD2-4F93-9F51-D3ACCCB055E4"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">American Academy of Ophthalmology. Preferred Practice Patterns Committee. Diabetic Retinopathy. 2003.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Diagnosis active: Diabetic Retinopathy" starts before or during <list>
+                           <item>OR: "Encounter: Encounter Domiciliary"</item>
+                           <item>OR: "Encounter: Encounter Nursing Facility"</item>
+                           <item>OR: "Encounter: Encounter Ophthalmological Services"</item>
+                           <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                     <item>AND:  &gt;= 2 count(s) of<list>
+                           <item>OR: "Encounter: Encounter Domiciliary"</item>
+                           <item>OR: "Encounter: Encounter Nursing Facility"</item>
+                           <item>OR: "Encounter: Encounter Ophthalmological Services"</item>
+                           <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: "Procedure performed: Macular or Fundus Exam" during <list>
+                           <item>OR: "Encounter: Encounter Domiciliary"</item>
+                           <item>OR: "Encounter: Encounter Nursing Facility"</item>
+                           <item>OR: "Encounter: Encounter Ophthalmological Services"</item>
+                           <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>AND: "Communication provider to provider: Macular Edema Findings"</item>
+                           <item>AND: "Communication provider to provider: Level of Severity of Retinopathy Findings"</item>
+                           <item> starts after start of <list>
+                                 <item>OR: "Encounter: Encounter Domiciliary"</item>
+                                 <item>OR: "Encounter: Encounter Nursing Facility"</item>
+                                 <item>OR: "Encounter: Encounter Ophthalmological Services"</item>
+                                 <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: "Communication provider to provider: Severity of Retinopathy and Macular Edema Findings" starts after start of <list>
+                           <item>OR: "Encounter: Encounter Domiciliary"</item>
+                           <item>OR: "Encounter: Encounter Nursing Facility"</item>
+                           <item>OR: "Encounter: Encounter Ophthalmological Services"</item>
+                           <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>OR: <list>
+                           <item>OR: <list>
+                                 <item>OR: "Communication provider to provider not done: Patient reason" for "Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"</item>
+                                 <item>OR: "Communication provider to provider not done: Medical reason" for "Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>OR: "Communication provider to provider not done: Patient reason" for "Macular Edema Findings SNOMED-CT Code List"</item>
+                                 <item>OR: "Communication provider to provider not done: Medical reason" for "Macular Edema Findings SNOMED-CT Code List"</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>OR: "Communication provider to provider not done: Patient reason" for "Level of Severity of Retinopathy Findings SNOMED-CT Code List"</item>
+                                 <item>OR: "Communication provider to provider not done: Medical reason" for "Level of Severity of Retinopathy Findings SNOMED-CT Code List"</item>
+                              </list>
+                           </item>
+                           <item> starts after start of <list>
+                                 <item>OR: "Encounter: Encounter Domiciliary"</item>
+                                 <item>OR: "Encounter: Encounter Nursing Facility"</item>
+                                 <item>OR: "Encounter: Encounter Ophthalmological Services"</item>
+                                 <item>OR: "Encounter: Encounter Office &amp; Outpatient Consult"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="D76F3225-84B6-41EC-8852-79CD54361D9E"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="CDD6F052-D750-45CD-ADD5-A1C80D932B30"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="0B1AAF2B-18FF-4ED3-9EBB-E28EEC09679A"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: Diabetic Retinopathy</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.327" displayName="Diabetic Retinopathy Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                                             <title>Encounter: Encounter Domiciliary</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                                             <title>Encounter: Encounter Nursing Facility</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                                             <title>Encounter: Encounter Ophthalmological Services</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                             <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <repeatNumber>
+                        <low value="2" inclusive="true"/>
+                     </repeatNumber>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                                 <title>Encounter: Encounter Domiciliary</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                                 <title>Encounter: Encounter Nursing Facility</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                                 <title>Encounter: Encounter Ophthalmological Services</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                 <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="1185862E-A195-48C4-97FA-DB674FB28CEE"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="D76F3225-84B6-41EC-8852-79CD54361D9E"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                     <id root="E41CABC3-E007-4C30-9C9E-D3675EF4A4C8"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.152" displayName="Macular or Fundus Exam SNOMED-CT Code List"/>
+                           <title>Procedure performed: Macular or Fundus Exam</title>
+                           <sourceOf typeCode="DURING">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                                             <title>Encounter: Encounter Domiciliary</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                                             <title>Encounter: Encounter Nursing Facility</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                                             <title>Encounter: Encounter Ophthalmological Services</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                             <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="C7DE1591-0ACA-4E8E-AE1B-1E62BF2C9C99"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.29"/>
+                           <id root="95E23F38-EC0C-41B2-828C-2394DF07A85C"/>
+                           <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.515" displayName="Macular Edema Findings SNOMED-CT Code List"/>
+                                 <title>Communication provider to provider: Macular Edema Findings</title>
+                                 <participant typeCode="AUT">
+                                    <roleParticipant classCode="ASSIGNED">
+                                       <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                    </roleParticipant>
+                                 </participant>
+                                 <participant typeCode="IRCP">
+                                    <signatureCode code="S"/>
+                                    <roleParticipant classCode="ASSIGNED">
+                                       <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                    </roleParticipant>
+                                 </participant>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.29"/>
+                           <id root="CEBC9910-9D38-4027-8C48-3D0CFCCDC8EE"/>
+                           <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.526.02.516" displayName="Level of Severity of Retinopathy Findings SNOMED-CT Code List"/>
+                                 <title>Communication provider to provider: Level of Severity of Retinopathy Findings</title>
+                                 <participant typeCode="AUT">
+                                    <roleParticipant classCode="ASSIGNED">
+                                       <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                    </roleParticipant>
+                                 </participant>
+                                 <participant typeCode="IRCP">
+                                    <signatureCode code="S"/>
+                                    <roleParticipant classCode="ASSIGNED">
+                                       <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                    </roleParticipant>
+                                 </participant>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="SAS">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                                       <title>Encounter: Encounter Domiciliary</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                                       <title>Encounter: Encounter Nursing Facility</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                                       <title>Encounter: Encounter Ophthalmological Services</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.29"/>
+                     <id root="D2E2C7F0-F3A5-4253-BBB8-2887E9DF6474"/>
+                     <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.514" displayName="Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"/>
+                           <title>Communication provider to provider: Severity of Retinopathy and Macular Edema Findings</title>
+                           <participant typeCode="AUT">
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <participant typeCode="IRCP">
+                              <signatureCode code="S"/>
+                              <roleParticipant classCode="ASSIGNED">
+                                 <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="SAS">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                                             <title>Encounter: Encounter Domiciliary</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                                             <title>Encounter: Encounter Nursing Facility</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                                             <title>Encounter: Encounter Ophthalmological Services</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                             <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="CE881819-8DC0-4E19-B15C-B45F18954CC1"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- communication provider to provider pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.129"/>
+                                 <id root="D2E2C7F0-F3A5-4253-BBB8-2887E9DF6474"/>
+                                 <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.514" displayName="Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"/>
+                                       <title>Communication provider to provider not done: Patient reason</title>
+                                       <participant typeCode="AUT">
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <participant typeCode="IRCP">
+                                          <signatureCode code="S"/>
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- communication provider to provider pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.129"/>
+                                 <id root="D2E2C7F0-F3A5-4253-BBB8-2887E9DF6474"/>
+                                 <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.514" displayName="Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"/>
+                                       <title>Communication provider to provider not done: Medical reason</title>
+                                       <participant typeCode="AUT">
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <participant typeCode="IRCP">
+                                          <signatureCode code="S"/>
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- communication provider to provider pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.129"/>
+                                 <id root="95E23F38-EC0C-41B2-828C-2394DF07A85C"/>
+                                 <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.515" displayName="Macular Edema Findings SNOMED-CT Code List"/>
+                                       <title>Communication provider to provider not done: Patient reason</title>
+                                       <participant typeCode="AUT">
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <participant typeCode="IRCP">
+                                          <signatureCode code="S"/>
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Macular Edema Findings SNOMED-CT Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- communication provider to provider pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.129"/>
+                                 <id root="95E23F38-EC0C-41B2-828C-2394DF07A85C"/>
+                                 <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.515" displayName="Macular Edema Findings SNOMED-CT Code List"/>
+                                       <title>Communication provider to provider not done: Medical reason</title>
+                                       <participant typeCode="AUT">
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <participant typeCode="IRCP">
+                                          <signatureCode code="S"/>
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Macular Edema Findings SNOMED-CT Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- communication provider to provider pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.129"/>
+                                 <id root="CEBC9910-9D38-4027-8C48-3D0CFCCDC8EE"/>
+                                 <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.516" displayName="Level of Severity of Retinopathy Findings SNOMED-CT Code List"/>
+                                       <title>Communication provider to provider not done: Patient reason</title>
+                                       <participant typeCode="AUT">
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <participant typeCode="IRCP">
+                                          <signatureCode code="S"/>
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Level of Severity of Retinopathy Findings SNOMED-CT Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- communication provider to provider pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.129"/>
+                                 <id root="CEBC9910-9D38-4027-8C48-3D0CFCCDC8EE"/>
+                                 <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.516" displayName="Level of Severity of Retinopathy Findings SNOMED-CT Code List"/>
+                                       <title>Communication provider to provider not done: Medical reason</title>
+                                       <participant typeCode="AUT">
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <participant typeCode="IRCP">
+                                          <signatureCode code="S"/>
+                                          <roleParticipant classCode="ASSIGNED">
+                                             <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="RSON">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Level of Severity of Retinopathy Findings SNOMED-CT Code List"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="SAS">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                                       <title>Encounter: Encounter Domiciliary</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                                       <title>Encounter: Encounter Nursing Facility</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                                       <title>Encounter: Encounter Ophthalmological Services</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                                       <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <id root="24A6A3B9-8874-4DE6-BC09-E0F8CD45D518"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Communication provider to provider: Level of Severity of Retinopathy Findings"</content> using "Level of Severity of Retinopathy Findings SNOMED-CT Code List (2.16.840.1.113883.3.526.02.516)"</item>
+               <item>
+                  <content>"Communication provider to provider: Macular Edema Findings"</content> using "Macular Edema Findings SNOMED-CT Code List (2.16.840.1.113883.3.526.02.515)"</item>
+               <item>
+                  <content>"Communication provider to provider: Severity of Retinopathy and Macular Edema Findings"</content> using "Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List (2.16.840.1.113883.3.526.02.514)"</item>
+               <item>
+                  <content>"Communication provider to provider not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Communication provider to provider not done: Patient reason"</content> using "Patient reason HL7 Code List (2.16.840.1.113883.3.526.02.311)"</item>
+               <item>
+                  <content>"Diagnosis active: Diabetic Retinopathy"</content> using "Diabetic Retinopathy Code List GROUPING (2.16.840.1.113883.3.526.03.327)"</item>
+               <item>
+                  <content>"Encounter: Encounter Domiciliary"</content> using "Encounter Domiciliary CPT Code List (2.16.840.1.113883.3.526.02.110)"</item>
+               <item>
+                  <content>"Encounter: Encounter Nursing Facility"</content> using "Encounter Nursing Facility CPT Code List (2.16.840.1.113883.3.526.02.28)"</item>
+               <item>
+                  <content>"Encounter: Encounter Office &amp; Outpatient Consult"</content> using "Encounter Office &amp; Outpatient Consult CPT Code List (2.16.840.1.113883.3.526.02.99)"</item>
+               <item>
+                  <content>"Encounter: Encounter Ophthalmological Services"</content> using "Encounter Ophthalmological Services CPT Code List (2.16.840.1.113883.3.526.02.111)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Procedure performed: Macular or Fundus Exam"</content> using "Macular or Fundus Exam SNOMED-CT Code List (2.16.840.1.113883.3.526.02.152)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="CDD6F052-D750-45CD-ADD5-A1C80D932B30"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="0B1AAF2B-18FF-4ED3-9EBB-E28EEC09679A"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Diabetic Retinopathy</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.327" displayName="Diabetic Retinopathy Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="258DE952-4EFB-413D-8C75-16721698E4F2"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.110" displayName="Encounter Domiciliary CPT Code List"/>
+                     <title>Encounter: Encounter Domiciliary</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="C537A529-585B-4F03-B191-957BAFE90A0D"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.28" displayName="Encounter Nursing Facility CPT Code List"/>
+                     <title>Encounter: Encounter Nursing Facility</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="431FDBB5-5D40-47ED-BE15-53FC8CDD25C6"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.99" displayName="Encounter Office &amp; Outpatient Consult CPT Code List"/>
+                     <title>Encounter: Encounter Office &amp; Outpatient Consult</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="2C221430-D31D-43C2-9DBC-2E458D48BF13"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.111" displayName="Encounter Ophthalmological Services CPT Code List"/>
+                     <title>Encounter: Encounter Ophthalmological Services</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.29"/>
+               <id root="CEBC9910-9D38-4027-8C48-3D0CFCCDC8EE"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.516" displayName="Level of Severity of Retinopathy Findings SNOMED-CT Code List"/>
+                     <title>Communication provider to provider: Level of Severity of Retinopathy Findings</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.29"/>
+               <id root="95E23F38-EC0C-41B2-828C-2394DF07A85C"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.515" displayName="Macular Edema Findings SNOMED-CT Code List"/>
+                     <title>Communication provider to provider: Macular Edema Findings</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="E41CABC3-E007-4C30-9C9E-D3675EF4A4C8"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.152" displayName="Macular or Fundus Exam SNOMED-CT Code List"/>
+                     <title>Procedure performed: Macular or Fundus Exam</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.29"/>
+               <id root="D2E2C7F0-F3A5-4253-BBB8-2887E9DF6474"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.514" displayName="Severity of Retinopathy and Macular Edema Findings SNOMED-CT Code List"/>
+                     <title>Communication provider to provider: Severity of Retinopathy and Macular Edema Findings</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.129"/>
+               <id root="10E92A41-0ED3-45BB-A876-1726748DDACE"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                     <title>Communication provider to provider not done: Medical reason</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- communication provider to provider not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.129"/>
+               <id root="699849C4-E567-471A-9BC8-7A9E84EB8117"/>
+               <code code="COMMGR_X" displayName="Communication Manager" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.311" displayName="Patient reason HL7 Code List"/>
+                     <title>Communication provider to provider not done: Patient reason</title>
+                     <participant typeCode="AUT">
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                     <participant typeCode="IRCP">
+                        <signatureCode code="S"/>
+                        <roleParticipant classCode="ASSIGNED">
+                           <code code="158965000" codeSystem="2.16.840.1.113883.6.96" displayName="Medical Practitioner"/>
+                        </roleParticipant>
+                     </participant>
+                  </act>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

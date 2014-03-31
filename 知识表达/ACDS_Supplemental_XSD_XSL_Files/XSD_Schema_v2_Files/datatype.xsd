@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Partners Healthcare System (Partners Healthcare System) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  version="2">
+	<xs:include schemaLocation="datatypes.xsd"/>
+	<xs:complexType name="GTS">
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:complexType name="Value">
+		<xs:annotation>
+			<xs:documentation>needs to discuss if limited to PQ or can be coded value or effective time</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="type" type="xs:string" use="optional"/>
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="unit" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="EffectiveTime">
+		<xs:sequence>
+			<xs:element name="dateTimeRange" type="IVL_TS" minOccurs="0"/>
+			<xs:element name="exactDateTime" type="TS" minOccurs="0"/>
+			<xs:element name="periodInterval" type="PIVL_TS" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IVL"/>
+</xs:schema>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="C759FD24-9777-4424-8F58-A33D50FC90E4"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Perioperative Care: Discontinuation of Prophylactic Antibiotics (Non-Cardiac Procedures) (NQF 0271)</title>
+   <text>Percentage of non-cardiac surgical patients aged 18 years and older undergoing procedures with the indications for prophylactic antibiotics AND who received a prophylactic antibiotic, who have an order for discontinuation of prophylactic antibiotics within 24 hours of surgical end time.</text>
+   <statusCode code="completed"/>
+   <setId root="1BA8D271-127E-4825-BCD3-93F1304A9F9D"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.526"/>
+            <name>American Medical Association - Physician Consortium for Performance Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© 2010 American Medical Association and/or National Committee for Quality Assurance. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">There is no evidence there is added benefit of prolonged prophylactic antibiotic use. Prolonged use may increase antibiotic resistant organisms.  Data elements required for the measure can be captured and the measure is actionable by the physician.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">At a minimum, antimicrobial coverage must be provided from the time of incision to closure of the incision.  For most procedures, the duration of antimicrobial prophylaxis should be 24 hours or less, with the exception of cardiothoracic procedures (up to 72 hours’ duration) and ophthalmic procedures (duration not clearly established). (ASHP)  Prophylactic antimicrobials should be discontinued within 24 hours after the operation. (SIPGWW)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="F70E7AE1-08BB-4025-9309-97E82BCA4261"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="C46C9A5F-5E59-4539-9235-19D68005C2FB"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="C5BF1A9A-58A3-4A32-9F8F-2A56B0C9319D"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">American Society of Health-System Pharmacists (ASHP). ASHP Therapeutic Guidelines on Antimicrobial Prophylaxis in Surgery. Am J Health Syst Pharm 1999; 56:1839-1888.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Bratzler DW, Houck PM for the Surgical Infection Prevention Guidelines Writers Workgroup (SIPGWW). Clinical Infectious Diseases 2004;38 (15 June): 1706-15.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">For this measure, the source of the clinical data will be located in both the hospital EHR and the physician practice EHR.  The denominator is identified by the procedures that are performed by the physician, whereas the clinical data required for the numerator and exceptions will be located in the hospital EHR.  In order to calculate the measure, there may be some abstraction required from the inpatient record to the ambulatory (physician) EHR before the measure can be calculated.  The intent of this measure is to assess whether or not the provider ordered the prophylactic antibiotic to be discontinued within 24 hours after the procedure end time.  Although the eMeasure specifies "medication administration end time," this should also include the intent to end the medication administration in the absence of actually stopping the medication administration. For example, if the provider orders the medication to be discontinued within 24 hours after procedure end time, yet the medication is not discontinued within that timeframe, the provider would still be compliant with the numerator.  Standing orders or verbal orders for prophylactic antibiotics to be discontinued within 24 hours after procedure end time are also considered to be numerator compliant.
+
+Numerator Guidance: Anesthesia end time is used as a proxy for surgical end time in this measure. 
+The anesthesia is related to the procedure by the fact that it started within 2 hours of the start of the surgery.
+
+Exclusion Guidance: There should be a documented reason why the antibiotic was not discontinued within 
+24 hours after anesthesia end time.</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: <list>
+                           <item>OR: "Medication administered: Prophylactic antibiotics"  &lt;= 240 minute(s) starts before start of "Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours"</item>
+                           <item>OR: "Medication administered: Prophylactic antibiotics" during "Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: "Medication administered: Prophylactic antibiotics"  &lt; 24 hour(s) ends after end of ("Procedure performed: Anesthesia administration"  &lt;= 2 hour(s) ends before start of ("Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours" during "Measurement period"))</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>OR: "Medication administered: Prophylactic antibiotics (reason: 'is present')"  &gt;= 24 hour(s) ends after end of ("Procedure performed: Anesthesia administration" ends before start of ("Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours" during "Measurement period"))</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="79EEC1FB-5FFC-41F7-8159-579B67CD5019"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="2B6E257C-BEEE-4541-87D3-14F5CFF80456"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="F70E7AE1-08BB-4025-9309-97E82BCA4261"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                     <id root="6FD932FE-8D14-4486-8725-479BCEC66CE7"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.824" displayName="Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours Code List GROUPING"/>
+                           <title>Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="F70E7AE1-08BB-4025-9309-97E82BCA4261"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="6C6F4230-C923-4B7F-81C4-C3E1F24396E9"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="79EEC1FB-5FFC-41F7-8159-579B67CD5019"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                           <id root="7AF601B0-7949-4390-9559-62186F04A1E5"/>
+                           <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication administered: Prophylactic antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.826" displayName="Prophylactic antibiotics RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="SBS">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <high value="240" unit="min" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="6FD932FE-8D14-4486-8725-479BCEC66CE7"/>
+                                       <title>Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours</title>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                           <id root="7AF601B0-7949-4390-9559-62186F04A1E5"/>
+                           <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication administered: Prophylactic antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.826" displayName="Prophylactic antibiotics RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="6FD932FE-8D14-4486-8725-479BCEC66CE7"/>
+                                       <title>Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours</title>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="F70E7AE1-08BB-4025-9309-97E82BCA4261"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="044997E2-FFA9-4FE6-AA1E-EE4F73387AB6"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                     <id root="7AF601B0-7949-4390-9559-62186F04A1E5"/>
+                     <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                           <title>Medication administered: Prophylactic antibiotics</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.826" displayName="Prophylactic antibiotics RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="EAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="24" unit="h" inclusive="false"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="79AA4A0C-2020-45B5-8E7B-2B422B47C3C4"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.03.855" displayName="Anesthesia administration Code List GROUPING"/>
+                                       <title>Procedure performed: Anesthesia administration</title>
+                                       <sourceOf typeCode="EBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="2" unit="h" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="6FD932FE-8D14-4486-8725-479BCEC66CE7"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.526.02.824" displayName="Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours Code List GROUPING"/>
+                                                   <title>Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F70E7AE1-08BB-4025-9309-97E82BCA4261"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </substanceAdministration>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="8D2E172C-C818-4DFA-8586-D8535F873E2A"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                     <id root="7AF601B0-7949-4390-9559-62186F04A1E5"/>
+                     <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                           <title>Medication administered: Prophylactic antibiotics (reason: 'is present')</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.826" displayName="Prophylactic antibiotics RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="410666004" codeSystem="2.16.840.1.113883.6.96" displayName="Reason"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="EAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="24" unit="h" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="79AA4A0C-2020-45B5-8E7B-2B422B47C3C4"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.526.03.855" displayName="Anesthesia administration Code List GROUPING"/>
+                                       <title>Procedure performed: Anesthesia administration</title>
+                                       <value xsi:type="IVL_PQ">
+                                          <high value="2" unit="houbbr" inclusive="true"/>
+                                       </value>
+                                       <sourceOf typeCode="EBS">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="6FD932FE-8D14-4486-8725-479BCEC66CE7"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.526.02.824" displayName="Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours Code List GROUPING"/>
+                                                   <title>Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F70E7AE1-08BB-4025-9309-97E82BCA4261"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </substanceAdministration>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Medication administered: Prophylactic antibiotics"</content> using "Prophylactic antibiotics RxNorm Code List (2.16.840.1.113883.3.526.02.826)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Procedure performed: Anesthesia administration"</content> using "Anesthesia administration Code List GROUPING (2.16.840.1.113883.3.526.03.855)"</item>
+               <item>
+                  <content>"Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours"</content> using "Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours Code List GROUPING (2.16.840.1.113883.3.526.02.824)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="79AA4A0C-2020-45B5-8E7B-2B422B47C3C4"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.03.855" displayName="Anesthesia administration Code List GROUPING"/>
+                     <title>Procedure performed: Anesthesia administration</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="2B6E257C-BEEE-4541-87D3-14F5CFF80456"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="6FD932FE-8D14-4486-8725-479BCEC66CE7"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.824" displayName="Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours Code List GROUPING"/>
+                     <title>Procedure performed: Non-Cardiac Surgical Procedures requiring Discontinuation of Prophylactic Antibiotics within 24 hours</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.14"/>
+               <id root="7AF601B0-7949-4390-9559-62186F04A1E5"/>
+               <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication administered: Prophylactic antibiotics</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.826" displayName="Prophylactic antibiotics RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Partners Healthcare System (Partners Healthcare System) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  version="2">
+  <xs:include schemaLocation="metadata.xsd"/>
+  <xs:include schemaLocation="semistructured.xsd"/>
+
+  <xs:element name="Guideline" type="Guideline"/>
+
+  <xs:element name="Module" type="Module"/>
+  <xs:element name="LogicalAction" type="LogicalAction"/>
+  <xs:complexType name="LogicalAction">
+    <xs:complexContent>
+      <xs:extension base="KnowledgeEntity">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActionAlternative" type="ActionAlternative"/>
+  <xs:complexType name="ActionAlternative">
+    <xs:sequence>
+      <xs:element name="selectionCriterionAgainst" type="ClinicalScenario" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="indicatedAction" type="ClinicalActionConcrete" maxOccurs="unbounded"/>
+      <xs:element name="selectionCriterionFor" type="ClinicalScenario" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recommendation" type="Recommendation"/>
+  <xs:complexType name="Recommendation">
+    <xs:complexContent>
+      <xs:extension base="KnowledgeEntity">
+        <xs:sequence>
+          <xs:element name="goal" type="xs:string" minOccurs="0"/>
+          <xs:element ref="Metadata" minOccurs="0"/>
+          <xs:element name="recommendedAction" type="ClinicalActionConcrete" maxOccurs="unbounded"/>
+          <xs:element ref="ApplicableScenario" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClinicalAction" type="ClinicalAction"/>
+  <xs:complexType name="ClinicalAction" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="KnowledgeEntity"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChoiceAction" type="ChoiceAction"/>
+  <xs:complexType name="ChoiceAction">
+    <xs:complexContent>
+      <xs:extension base="ClinicalAction">
+        <xs:sequence>
+          <xs:element name="choice" type="ActionAlternative" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Module">
+    <xs:complexContent>
+      <xs:extension base="KnowledgeEntity">
+        <xs:sequence>
+          <xs:element ref="Recommendation" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="ApplicableScenario" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="Guideline">
+    <xs:sequence>
+      <xs:element ref="Metadata"/>
+      <xs:element ref="ApplicableScenario" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="module" type="Module" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="SimpleAction" type="SimpleAction"/>
+  <xs:complexType name="SimpleAction">
+    <xs:complexContent>
+      <xs:extension base="ClinicalAction">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="Metadata" type="KnowledgeEntityMetadata"/>
+  <xs:element name="ApplicableScenario" type="ClinicalScenario"/>
+  <xs:element name="Simple" type="SimpleAction"/>
+  <xs:element name="Choice" type="ChoiceAction"/>
+
+  <xs:complexType name="ClinicalActionConcrete">
+    <xs:choice>
+      <xs:element ref="Simple"/>
+      <xs:element ref="Choice"/>
+    </xs:choice>
+  </xs:complexType>
+
+</xs:schema>

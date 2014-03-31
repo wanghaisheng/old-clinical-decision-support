@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="59726ED8-7CC7-48D3-BD2C-2BDC3371FBA6"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Ischemic Vascular Disease (IVD): Blood Pressure Management (NQF 0073)</title>
+   <text>The percentage of patients 18 years of age and older who were discharged alive for acute myocardial infarction (AMI), coronary artery bypass graft (CABG) or percutaneous transluminal coronary angioplasty (PTCA) from January 1st to November 1st of the year prior to the measurement year, or who had a diagnosis of ischemic vascular disease (IVD) during the measurement year and the year prior to the measurement year and whose most recent blood pressure is in control (&lt;140/90 mmHg).
+  </text>
+   <statusCode code="completed"/>
+   <setId root="3E5BDF4E-F5AF-4743-90A1-DB8769347EB7"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.464"/>
+            <name>National Committee for Quality Assurance</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.464"/>
+            <name>National Committee for Quality Assurance</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© National Committee for Quality Assurance. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">This measure evaluates the percentage of patients in a specific age demographic who had a diagnosis of IVD and demonstrated adequate blood pressure management. IVD and related conditions had an estimated cost burden of $393.5 billion in 2005 (AHA 2005). Hypertension is a risk factor for IVD and cerebrovascular disease (CVD). Fifty million or more Americans have high blood pressure that warrants treatment, according to the NHANES survey (JNC-7, 2003). Additionally, high blood pressure and its complications cost the U.S. economy more than $100 billion each year (NHLBI, 2004). The USPSTF recommends that clinicians screen adults 18 and older for high blood pressure (2007). Better control of blood pressure has been shown to result in a significant reduction of the probability of undesirable and costly outcomes. This measure facilitates the long-term management of blood pressure levels for patients with IVD.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">JNC-7: Treating SBP and DBP to targets that are &lt;140/90 mmHg is associated with a decrease in CVD complications.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="C1CDB0E0-7C02-4356-8951-591E527DA508"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="D85F8320-206B-429A-AA58-3847704B0856"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">24 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">U.S. Preventive Services Task Force. Screening for high blood pressure: U.S. Preventive Services Task Force reaffirmation recommendation statement. Ann Intern Med 2007 Dec 4;147(11):783-6.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Prevention, Detection, Evaluation, and Treatment of High Blood Pressure 
+The Seventh Report of the Joint National Committee on Prevention,
+Detection, Evaluation, and Treatment of High Blood Pressure
+NIH Publication  No. 035233 December 2003.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 17 year(s) starts before start of "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: <list>
+                           <item>OR: "Diagnosis active: ischemic vascular disease" during ("Encounter: Encounter acute inpt and outpt"  &lt;= 2 year(s) starts before or during "Measurement end date")</item>
+                           <item>OR: <list>
+                                 <item>AND: "Procedure performed: PTCA"  &gt;= 14 month(s) starts before or during "Measurement end date"</item>
+                                 <item>AND: "Procedure performed: PTCA"  &lt;= 24 month(s) starts before or during "Measurement end date"</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>AND: "Diagnosis active: acute myocardial infarction" during ("Encounter: encounter acute inpt"  &gt;= 14 month(s) starts before or during "Measurement end date")</item>
+                                 <item>AND: "Diagnosis active: acute myocardial infarction" during ("Encounter: encounter acute inpt"  &lt;= 24 month(s) starts before or during "Measurement end date")</item>
+                              </list>
+                           </item>
+                           <item>OR: <list>
+                                 <item>AND: "Procedure performed: CABG" during ("Encounter: encounter acute inpt"  &gt;= 14 month(s) starts before or during "Measurement end date")</item>
+                                 <item>AND: "Procedure performed: CABG" during ("Encounter: encounter acute inpt"  &lt;= 24 month(s) starts before or during "Measurement end date")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>AND: MINIMUM:"Physical exam finding: diastolic blood pressure (result value &lt; 90 mmHg)"</item>
+                           <item>AND: MINIMUM:"Physical exam finding: systolic blood pressure (result value &lt; 140 mmHg)"</item>
+                           <item> during  (MOST RECENT:"Encounter: Encounter acute inpt and outpt" during "Measurement period")</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="F9C7EFB4-8D92-4615-8B30-7939C0DB1CAB"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <subsetCode code="MIN"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                           <id root="0508EDDB-7B7D-4858-B7E6-434E67BE4D25"/>
+                           <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.464.0001.41" displayName="diastolic blood pressure SNOMED-CT Code List"/>
+                                 <title>Physical exam finding: diastolic blood pressure (result value &lt; 90  mmHg)</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <subsetCode code="MIN"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                           <id root="75B56E4A-F0D2-422A-AA0B-61D93A9BCF82"/>
+                           <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.464.0001.118" displayName="systolic blood pressure SNOMED-CT Code List"/>
+                                 <title>Physical exam finding: systolic blood pressure (result value &lt; 140  mmHg)</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <subsetCode code="RECENT"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="F10F8246-EC64-4A1E-9877-4C5418DC5E29"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.464.0001.44" displayName="Encounter acute inpt and outpt Code List GROUPING"/>
+                                 <title>Encounter: Encounter acute inpt and outpt</title>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="C1CDB0E0-7C02-4356-8951-591E527DA508"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="45NOMIN1-TOR4-5NOM-IN1T-ORD5NOMIN1TO"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="5914CEA3-987F-449C-B5C9-D2B500D79CF9"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="F43649E6-48B3-4CBF-BC40-02BEA393D83A"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: ischemic vascular disease</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.84" displayName="ischemic vascular disease Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="F10F8246-EC64-4A1E-9877-4C5418DC5E29"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.464.0001.44" displayName="Encounter acute inpt and outpt Code List GROUPING"/>
+                                             <title>Encounter: Encounter acute inpt and outpt</title>
+                                             <sourceOf typeCode="EAS" inversionInd="true">
+                                                <pauseQuantity xsi:type="IVL_PQ">
+                                                   <high value="2" unit="a" inclusive="true"/>
+                                                </pauseQuantity>
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                                   <title>Measurement end date</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="32712E1E-EA61-4165-8E87-573888E8BC47"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.464.0001.110" displayName="PTCA Code List GROUPING"/>
+                                       <title>Procedure performed: PTCA</title>
+                                       <sourceOf typeCode="EAS" inversionInd="true">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <low value="14" unit="m" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                             <title>Measurement end date</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="32712E1E-EA61-4165-8E87-573888E8BC47"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.464.0001.110" displayName="PTCA Code List GROUPING"/>
+                                       <title>Procedure performed: PTCA</title>
+                                       <sourceOf typeCode="EAS" inversionInd="true">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="24" unit="m" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                             <title>Measurement end date</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="E82A9EA5-86B4-4EDE-971B-5F2131686E7A"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: acute myocardial infarction</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.01" displayName="acute myocardial infarction Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="1BDF2BBA-2480-4584-9CC6-AC2202E1E4B3"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.464.0001.43" displayName="encounter acute inpt CPT Code List"/>
+                                                   <title>Encounter: encounter acute inpt</title>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <pauseQuantity xsi:type="IVL_PQ">
+                                                         <low value="14" unit="m" inclusive="true"/>
+                                                      </pauseQuantity>
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                                         <title>Measurement end date</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="E82A9EA5-86B4-4EDE-971B-5F2131686E7A"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: acute myocardial infarction</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.01" displayName="acute myocardial infarction Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="1BDF2BBA-2480-4584-9CC6-AC2202E1E4B3"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.464.0001.43" displayName="encounter acute inpt CPT Code List"/>
+                                                   <title>Encounter: encounter acute inpt</title>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <pauseQuantity xsi:type="IVL_PQ">
+                                                         <high value="24" unit="m" inclusive="true"/>
+                                                      </pauseQuantity>
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                                         <title>Measurement end date</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="C75C7061-F777-49B8-A797-A7C26B417473"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.464.0001.22" displayName="CABG Code List GROUPING"/>
+                                       <title>Procedure performed: CABG</title>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="1BDF2BBA-2480-4584-9CC6-AC2202E1E4B3"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.464.0001.43" displayName="encounter acute inpt CPT Code List"/>
+                                                   <title>Encounter: encounter acute inpt</title>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <pauseQuantity xsi:type="IVL_PQ">
+                                                         <low value="14" unit="m" inclusive="true"/>
+                                                      </pauseQuantity>
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                                         <title>Measurement end date</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="C75C7061-F777-49B8-A797-A7C26B417473"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.464.0001.22" displayName="CABG Code List GROUPING"/>
+                                       <title>Procedure performed: CABG</title>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="1BDF2BBA-2480-4584-9CC6-AC2202E1E4B3"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.464.0001.43" displayName="encounter acute inpt CPT Code List"/>
+                                                   <title>Encounter: encounter acute inpt</title>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <pauseQuantity xsi:type="IVL_PQ">
+                                                         <high value="24" unit="m" inclusive="true"/>
+                                                      </pauseQuantity>
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="4E978794-A18A-4E3C-8626-B6613AFF2B03"/>
+                                                         <title>Measurement end date</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="5914CEA3-987F-449C-B5C9-D2B500D79CF9"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="CDB64712-1B21-4043-8B61-21FFE76541C4"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="17" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="C1CDB0E0-7C02-4356-8951-591E527DA508"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: acute myocardial infarction"</content> using "acute myocardial infarction Code List GROUPING (2.16.840.1.113883.3.464.0001.01)"</item>
+               <item>
+                  <content>"Diagnosis active: ischemic vascular disease"</content> using "ischemic vascular disease Code List GROUPING (2.16.840.1.113883.3.464.0001.84)"</item>
+               <item>
+                  <content>"Encounter: encounter acute inpt"</content> using "encounter acute inpt CPT Code List (2.16.840.1.113883.3.464.0001.43)"</item>
+               <item>
+                  <content>"Encounter: Encounter acute inpt and outpt"</content> using "Encounter acute inpt and outpt Code List GROUPING (2.16.840.1.113883.3.464.0001.44)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.464.0001.14)"</item>
+               <item>
+                  <content>"Physical exam finding: diastolic blood pressure"</content> using "diastolic blood pressure SNOMED-CT Code List (2.16.840.1.113883.3.464.0001.41)"</item>
+               <item>
+                  <content>"Physical exam finding: systolic blood pressure"</content> using "systolic blood pressure SNOMED-CT Code List (2.16.840.1.113883.3.464.0001.118)"</item>
+               <item>
+                  <content>"Procedure performed: CABG"</content> using "CABG Code List GROUPING (2.16.840.1.113883.3.464.0001.22)"</item>
+               <item>
+                  <content>"Procedure performed: PTCA"</content> using "PTCA Code List GROUPING (2.16.840.1.113883.3.464.0001.110)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="E82A9EA5-86B4-4EDE-971B-5F2131686E7A"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: acute myocardial infarction</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.01" displayName="acute myocardial infarction Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="CDB64712-1B21-4043-8B61-21FFE76541C4"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="C75C7061-F777-49B8-A797-A7C26B417473"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.22" displayName="CABG Code List GROUPING"/>
+                     <title>Procedure performed: CABG</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="0508EDDB-7B7D-4858-B7E6-434E67BE4D25"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.41" displayName="diastolic blood pressure SNOMED-CT Code List"/>
+                     <title>Physical exam finding: diastolic blood pressure</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="1BDF2BBA-2480-4584-9CC6-AC2202E1E4B3"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.43" displayName="encounter acute inpt CPT Code List"/>
+                     <title>Encounter: encounter acute inpt</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="F10F8246-EC64-4A1E-9877-4C5418DC5E29"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.44" displayName="Encounter acute inpt and outpt Code List GROUPING"/>
+                     <title>Encounter: Encounter acute inpt and outpt</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="F43649E6-48B3-4CBF-BC40-02BEA393D83A"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: ischemic vascular disease</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.464.0001.84" displayName="ischemic vascular disease Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="32712E1E-EA61-4165-8E87-573888E8BC47"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.110" displayName="PTCA Code List GROUPING"/>
+                     <title>Procedure performed: PTCA</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="75B56E4A-F0D2-422A-AA0B-61D93A9BCF82"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.118" displayName="systolic blood pressure SNOMED-CT Code List"/>
+                     <title>Physical exam finding: systolic blood pressure</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

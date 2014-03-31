@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="7172D5B7-29FE-4B8F-9217-BABA7B86FA1D"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Treatment for Children with Upper Respiratory Infection (URI): Avoidance of Inappropriate Use (NQF 0069)</title>
+   <text>Percentage of children who were given a diagnosis of URI and were not dispensed an antibiotic prescription on or three days after the episode date.</text>
+   <statusCode code="completed"/>
+   <setId root="15971D14-BB2D-48A8-8B4C-AC9C67E1BC29"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.464"/>
+            <name>National Committee for Quality Assurance</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.464"/>
+            <name>National Committee for Quality Assurance</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain">© National Committee for Quality Assurance. All Rights Reserved</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">In 1998, there were approximately 84 million office visits for acute respiratory infections.  During this same period 45 million antibiotic prescriptions were issued. (Gonzales, 2001)  Thus slightly more than half of these visits resulted in an antibiotic prescription being issued.  During this same time period, 25 million patients (adults and children) sought care for non-specific URI (the common cold) and 30% received antibiotics. (Gonzales, 2001)  
+
+In 1997-98, for children less than 15 years old, 74% of ambulatory antibiotic prescriptions in the U.S. were for the treatment of acute respiratory infections: otitis media, sinusitis, pharyngitis, bronchitis and upper respiratory infections (CDC unpublished data). Inappropriate use of antibiotics remains a widespread problem in this population. Despite national campaigns to reduce inappropriate antibiotic use and ensuing reduction in antibiotic prescriptions, inappropriate antibiotic use remains high and is a cause for concern in the population. 
+
+URI, pharyngitis and bronchitis are conditions associated with the greatest amount of excess use of antibiotics. A total $1322 million was spent on antibiotic prescriptions for otitis media, pharyngitis, URI, sinusitis, and bronchitis in 1998. Of this $227 million was spent on antibiotics for patients with URI. (Note costs are estimated based on average pharmacy retail price, as provided by Source Prescription Database of NDC Health Information Service). (Gonzales, 2001)  Inappropriate antibiotic prescriptions for URI, pharyngitis, and bronchitis are estimated to amount to 55% (22.6 million) of all antibiotics prescribed for acute respiratory infections, costing $726 million in 1998. 
+
+The economic costs of antibiotic resistance resulting from misuse of antibiotics have also been estimated. The Office of Technology Assessment (OTA) calculated the direct costs of antibiotic resistance to hospitals alone to be $1.3 billion in 1992 dollars, or $1.9 billion in 2001 dollars (adjusted with the Medical Care Component of the Consumer Price Index). The costs of nosocomial infections (5 classes) were estimated at $4.5 billion in 1990 dollars ($7.7 billion in 2001 dollars) by the CDC. However, these figures underestimate the total cost of antibiotic resistance as they do not include the costs of antibiotic resistance in the community, the high costs of developing new antibiotics to replace old antibiotics that are ineffective against resistant bacteria, or the costs of death to society. (OTA, 1995)  The overall economic impact of resistance on society has been estimated at about $350 million to $35 billion annually, based on 150 million annual antibiotic prescriptions. (Phelps, 1989) 
+
+The measure would encourage appropriate use of antibiotics by physicians, which would lead to cost-effective prescribing behaviors, eliminating and reducing unnecessary antibiotic use and decreasing antibiotic resistance in the community. The reduction of antibiotic use would also lead to the decreased health care costs arising from the serious morbidity and mortality associated with increased antibiotic resistance in the community. (Feikin, 2000) The greater difficulty to treat drug-resistant pathogens results in more repeated health care visits, greater risk of disease complications, and increased health care costs. (Feikin, 2000; Dagan, 2000; Watanabe, 2000)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Guidelines for the Use of Antibiotics in Acute Upper Respiratory Tract Infections. American Family Physician 2006. 
+
+- A diagnosis of acute bacterial rhinosinusitis should be considered in patients with symptoms of a viral upper respiratory infection that have not improved after 10 days or that worsen after five to seven days. (C) 
+
+- Treatment of sinus infection with antibiotics in the first week of symptoms is not recommended. (C)
+
+- Telling patients not to fill an antibiotic prescription unless symptoms worsen or fail to improve after several days can reduce the inappropriate use of antibiotics. (B)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher scores indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="F311C9FB-9397-404D-8298-2026306A3F69"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="140F6430-1E36-4D8F-B011-A9A47CF04562"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Am Fam Physician. 2006 Sep 15;74(6):956-966.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Dagan R. Clinical significance of resistant organisms in otitis media. Pediatric Infectious Disease Journal 2000; 19(4):378-382.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Feikin DR, Schuchat A, Kolczak M, Barrett NL, Harrison LH, Lefkowitz L et al. Mortality from invasive pneumococcal pneumonia in the era of antibiotic resistance, 1995-1997. American Journal of Public Health 2000; 90(2):223-229.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Gonzales R., Malone D.C., Maselli JH., Sande M.A. Excessive antibiotic use for acute respiratory infections in the United States. Clinical Infectious Diseases 2001; 33:757-762.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">OTA impact of antibiotic-resistant bacteria: a report to the US Congress, 1995. OTA-H-629. 1995. Washington DC, Office of Technology Assessment.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Phelps C.E. Bug/drug resistance: sometimes more is less. Medical Care 1989; 27:194-203.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Watanabe H, Sato S, Kawakami K, Watanabe K, Oishi K, Rikitomi N et al. A comparative clinical study of pneumonia by penicillin-resistant and sensitive Streptococcus pneumoniae in a community hospital. Respirology 2000; 5(1):59-64.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 3 month(s) starts before start of "Measurement period"</item>
+                     <item>AND: "Patient characteristic: birth date"  &lt;= 17 year(s) starts before start of "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator=</content>
+                  <list>
+                     <item>AND: "Encounter: encounter ambulatory including pediatrics" during "Measurement period"</item>
+                     <item>AND: "Diagnosis active: URI" during ("Encounter: encounter ambulatory including pediatrics" during "Measurement period")</item>
+                     <item>AND NOT:
+                  <list>
+                           <item>OR: <list>
+                                 <item>OR: "Medication order: pharyngitis antibiotics"</item>
+                                 <item>OR: "Medication dispensed: pharyngitis antibiotics"</item>
+                                 <item>OR: "Medication active: pharyngitis antibiotics"</item>
+                                 <item>  &lt;= 30 days starts before start of  ("Diagnosis active: URI" during ("Encounter: encounter ambulatory including pediatrics" during "Measurement period"))</item>
+                              </list>
+                           </item>
+                           <item>OR: "Diagnosis active: URI Competing Diagnosis"  &lt;= 3 day(s) starts after start of ("Diagnosis active: URI" during ("Encounter: encounter ambulatory including pediatrics" during "Measurement period"))</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>OR: "Medication order: pharyngitis antibiotics"</item>
+                           <item>OR: "Medication dispensed: pharyngitis antibiotics"</item>
+                           <item>  &lt;= 3 days starts after start of  ("Diagnosis active: URI" during ("Encounter: encounter ambulatory including pediatrics" during "Measurement period"))</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="49748060-9F0B-4F1E-B48B-4ABE38AE3BA1"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="1570FBF6-FA54-4B64-A8CA-FC9152B55DE7"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="3" unit="m" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="1570FBF6-FA54-4B64-A8CA-FC9152B55DE7"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="17" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="84341C58-606C-4F24-B9CA-B87341ACBB6F"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="49748060-9F0B-4F1E-B48B-4ABE38AE3BA1"/>
+                     <title>Initial Patient Population 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="CFC56880-2899-4877-B552-35E5BAD74CFF"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.464.0001.231" displayName="encounter ambulatory including pediatrics Code List GROUPING"/>
+                           <title>Encounter: encounter ambulatory including pediatrics</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="3EDD7D25-5990-4C44-A35C-DBC62FF58810"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: URI</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1021" displayName="URI Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="CFC56880-2899-4877-B552-35E5BAD74CFF"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.464.0001.231" displayName="encounter ambulatory including pediatrics Code List GROUPING"/>
+                                       <title>Encounter: encounter ambulatory including pediatrics</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="D52A4BF5-6F06-4A87-A78C-A620B79DC3AF"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.17"/>
+                           <id root="F13B90AF-D4CA-41FC-A2BE-D1D71105DB4E"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                 <title>Medication order: pharyngitis antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication dispensed pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.8"/>
+                           <id root="CB6C047D-3AF7-4499-A056-D91AE80DC8C7"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <supply classCode="SPLY" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication dispensed: pharyngitis antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </supply>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="SAS">
+                        <pauseQuantity xsi:type="URG_PQ">
+                           <high value="3" unit="days" inclusive="true"/>
+                        </pauseQuantity>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="3EDD7D25-5990-4C44-A35C-DBC62FF58810"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: URI</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1021" displayName="URI Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="CFC56880-2899-4877-B552-35E5BAD74CFF"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.464.0001.231" displayName="encounter ambulatory including pediatrics Code List GROUPING"/>
+                                             <title>Encounter: encounter ambulatory including pediatrics</title>
+                                             <sourceOf typeCode="DURING">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                                   <title>Measurement period</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exclusions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true" actionNegationInd="true">
+               <id root="2BFCF659-F383-4F10-B6B9-F740245DAA8A"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.17"/>
+                           <id root="F13B90AF-D4CA-41FC-A2BE-D1D71105DB4E"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                 <title>Medication order: pharyngitis antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication dispensed pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.8"/>
+                           <id root="CB6C047D-3AF7-4499-A056-D91AE80DC8C7"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <supply classCode="SPLY" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication dispensed: pharyngitis antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                              </supply>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                           <id root="8784CD2F-B314-43E5-89D6-8C128C6F69FD"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication active: pharyngitis antibiotics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="SBS">
+                        <pauseQuantity xsi:type="URG_PQ">
+                           <high value="30" unit="days" inclusive="true"/>
+                        </pauseQuantity>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="3EDD7D25-5990-4C44-A35C-DBC62FF58810"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: URI</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1021" displayName="URI Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="DURING">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="CFC56880-2899-4877-B552-35E5BAD74CFF"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.464.0001.231" displayName="encounter ambulatory including pediatrics Code List GROUPING"/>
+                                             <title>Encounter: encounter ambulatory including pediatrics</title>
+                                             <sourceOf typeCode="DURING">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                                   <title>Measurement period</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="752E872F-6120-4100-9B3B-2DF3CBC1295E"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: URI Competing Diagnosis</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1017" displayName="URI Competing Diagnosis Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SAS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="3" unit="d" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="3EDD7D25-5990-4C44-A35C-DBC62FF58810"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: URI</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1021" displayName="URI Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="CFC56880-2899-4877-B552-35E5BAD74CFF"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.464.0001.231" displayName="encounter ambulatory including pediatrics Code List GROUPING"/>
+                                                   <title>Encounter: encounter ambulatory including pediatrics</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="1597DBEA-EF8D-4DD3-85BB-34ADB738EA37"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: URI"</content> using "URI Code List GROUPING (2.16.840.1.113883.3.464.0003.1021)"</item>
+               <item>
+                  <content>"Diagnosis active: URI Competing Diagnosis"</content> using "URI Competing Diagnosis Code List GROUPING (2.16.840.1.113883.3.464.0003.1017)"</item>
+               <item>
+                  <content>"Encounter: encounter ambulatory including pediatrics"</content> using "encounter ambulatory including pediatrics Code List GROUPING (2.16.840.1.113883.3.464.0001.231)"</item>
+               <item>
+                  <content>"Medication active: pharyngitis antibiotics"</content> using "pharyngitis antibiotics Code List GROUPING (2.16.840.1.113883.3.464.0001.373)"</item>
+               <item>
+                  <content>"Medication dispensed: pharyngitis antibiotics"</content> using "pharyngitis antibiotics Code List GROUPING (2.16.840.1.113883.3.464.0001.373)"</item>
+               <item>
+                  <content>"Medication order: pharyngitis antibiotics"</content> using "pharyngitis antibiotics Code List GROUPING (2.16.840.1.113883.3.464.0001.373)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.464.0001.14)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="1570FBF6-FA54-4B64-A8CA-FC9152B55DE7"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.14" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="CFC56880-2899-4877-B552-35E5BAD74CFF"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.464.0001.231" displayName="encounter ambulatory including pediatrics Code List GROUPING"/>
+                     <title>Encounter: encounter ambulatory including pediatrics</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.13"/>
+               <id root="8784CD2F-B314-43E5-89D6-8C128C6F69FD"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active: pharyngitis antibiotics</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication dispensed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.8"/>
+               <id root="CB6C047D-3AF7-4499-A056-D91AE80DC8C7"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <supply classCode="SPLY" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication dispensed: pharyngitis antibiotics</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </supply>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.17"/>
+               <id root="F13B90AF-D4CA-41FC-A2BE-D1D71105DB4E"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication order: pharyngitis antibiotics</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.464.0001.373" displayName="pharyngitis antibiotics Code List GROUPING"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="3EDD7D25-5990-4C44-A35C-DBC62FF58810"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: URI</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1021" displayName="URI Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="752E872F-6120-4100-9B3B-2DF3CBC1295E"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: URI Competing Diagnosis</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.464.0003.1017" displayName="URI Competing Diagnosis Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+     Copyright © 2011 Brigham and Women's Hospital, Inc. All rights reserved.
+
+     Support Acknowledgment: This material is derived from work supported
+     under a contract with the Agency for Healthcare Research and Quality (AHRQ),
+     an agency of the Department of Health and Human Services (Contract No. HHSA290200810010).
+     AHRQ supports health services research that will improve the quality of health
+     care and promote evidence-based decision making.
+
+     THIS SOFTWARE IS PROVIDED BY THE BRIGHAM AND WOMEN'S HOSPITAL, INC.
+     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+     TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+     PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE
+     LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+     DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+     SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+     USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  version="2">
+	<xs:include schemaLocation="base.xsd"/><!-- CGH: added -->
+	<xs:include schemaLocation="datatypes-base.xsd"/><!-- CGH: added -->
+	<xs:include schemaLocation="metadata.xsd"/>
+	<xs:include schemaLocation="patientinfo.xsd"/>
+	<xs:include schemaLocation="actionrequest.xsd"/>
+	<xs:include schemaLocation="semistructured.xsd"/>
+	<xs:element name="StructuredModule" type="StructuredModule"/>
+	<xs:complexType name="StructuredModule">
+		<xs:sequence>
+			<xs:element ref="Metadata"/>
+			<xs:element ref="ApplicableScenario" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="recommendation" type="StructuredRecommendation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- 	<xs:element name="LogicalConditionSingle" type="LogicalConditionSingle"/>
+ 	<xs:complexType name="LogicalConditionSingle">
+		<xs:annotation>
+			<xs:documentation>
+				An expression in the GELLO syntax specifying the
+				clinical condition in which the recommendation applies.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="LogicalCondition">
+				<xs:sequence>
+					<xs:element name="expressionLanguage" type="CD" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The syntax used in the expression</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="expression" type="xs:string"/>
+					<xs:element name="expressionLanguage" type="xs:string" minOccurs="0"/>
+					<xs:element name="dataMapping" type="DataDeclaration" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="LogicalConditionSet" type="LogicalConditionSet"/>
+	<xs:complexType name="LogicalConditionSet">
+		<xs:complexContent>
+			<xs:extension base="LogicalCondition">
+				<xs:sequence>
+					<xs:element name="operator" type="CD"/>
+					<xs:element ref="ApplicableScenario" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	 -->
+	<xs:element name="StructuredRecommendation" type="StructuredRecommendation"/>
+	<xs:complexType name="StructuredRecommendation">
+		<xs:sequence>
+			<xs:element ref="Metadata"/>
+			<xs:element ref="ApplicableScenario" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Advice" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Advice" type="Advice"/>
+	<xs:complexType name="Advice">
+		<xs:complexContent>
+			<xs:extension base="KnowledgeEntity">
+				<xs:sequence>
+					<xs:element name="evidenceBasis" type="Evidence" minOccurs="0"/>
+					<xs:element name="action" type="Action"  minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="ActionConcrete"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!--	<xs:element name="DataDeclaration" type="DataDeclaration"/>
+	<xs:complexType name="DataDeclaration">
+		<xs:complexContent>
+			<xs:extension base="KnowledgeEntity">
+				<xs:sequence>
+					<xs:element name="Data" type="Patient"/>
+					<xs:element name="expression" type="xs:string"/>
+					<xs:element name="dataIdentifier" type="xs:string"/>
+					<xs:element name="dataType" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	-->
+	<xs:element name="structuredDefinition" type="StructuredDefinition"/>
+	<xs:complexType name="StructuredDefinition" abstract="true">
+        <xs:annotation>
+        	<xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+			<xs:extension base="KnowledgeEntity">
+				<xs:sequence>
+					<xs:element name="term" type="xs:string" minOccurs="0"/>
+					<xs:element ref="structuredDefinition" minOccurs="0"/>			
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="valueSetDefinition" type="ValueSetDefinition"/>
+	<xs:complexType name="ValueSetDefinition">
+        <xs:annotation>
+        	<xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+			<xs:extension base="StructuredDefinition">
+				<xs:sequence>
+				<xs:element name="codes" type="CD" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="includesDefinition" type="IncludesDefinition"/>
+	<xs:complexType name="IncludesDefinition">
+		<xs:complexContent>
+			<xs:extension base="StructuredDefinition">
+				<xs:sequence>  
+			      <xs:element name="includes" type="xs:anyURI"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="logicalConditionDefinition" type="LogicalConditionDefinition"/>
+		<xs:complexType name="LogicalConditionDefinition">
+		<xs:complexContent>
+			<xs:extension base="StructuredDefinition">
+			<xs:sequence>
+			<xs:element name="condition" type="LogicalConditionConcrete"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StructuredGuideline"
+		type="StructuredGuideline" />
+	<xs:element name="StructuredCDSKnowledge"
+		type="StructuredGuideline" />
+	<xs:complexType name="StructuredGuideline">
+		<xs:sequence>
+    		<xs:element name="definitions" type="StructuredDefinition"  minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Metadata"/>
+			<xs:element ref="ApplicableScenario" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="module" type="StructuredModule" minOccurs="0" maxOccurs="unbounded"/>
+
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ApplicableScenario" type="LogicalConditionConcrete"/>
+
+	<xs:element name="Metadata" type="KnowledgeEntityMetadata"/>
+</xs:schema>

@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="C845A8AE-31F4-42EA-A5A0-B6604A17BCD3"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Diagnosis of attention deficit hyperactivity disorder (ADHD) in primary care for school age children and adolescents (NQF 0106)</title>
+   <text>Percentage of patients newly diagnosed with ADHD whose medical record contains documentation of DSM-IV-TR or DSM-PC criteria.</text>
+   <statusCode code="completed"/>
+   <setId root="77DC6DFE-EC28-4214-B403-EB7A3A663252"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.67.1.101"/>
+            <name>Iowa Foundation for Medical Care</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560.3.3"/>
+            <name>Institute for Clinical Systems Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">The general consensus of the scientific and profession communities is to use DSM-IV criteria. According to the ICSI ADHD in Primary Care Guideline recommendation, "Evaluate children/adolescents suspected of having ADHD based on DSM-IV/DSM-PC diagnostic criteria using consistent and appropriate diagnostic tools."</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Attention deficit hyperactivity disorder (ADHD) may have an impact on a child’s/adolescent’s experience within school, family, play or work. Approximately 8.7% of children 8-15 met DSM-IV criteria for ADHD in the National Health and Nutrition Examination Survey (NHANES) (Froehlich, 2007 [D]). It is a chronic condition that may be variably expressed depending on the child’s environment, as well as on the specific demands placed upon the child within that environment. The DSM-IV-TR/DSM-PC classifies ADHD into three subtypes depending on the prevalence of specific behaviors: Predominantly Inattentive, Predominantly Hyperactivity/Impulsive, and Combined Types.
+
+The evaluation of primary symptoms should include information from multiple sources such as parents, the child and school personnel. A comprehensive interview with parents or caregivers – including current symptoms and their previous history, past medical and developmental history, school and educational history, and family and psychosocial history – is most important. There is no single evaluation tool available to make a definitive diagnosis of ADHD. The diagnosis is based on a clinical picture of early onset, significant duration and pervasiveness, and causing functional impairment within the life of the child or adolescent. This can be facilitated through the use of semistructured interview or questionnaire, with behavior rating scales completed by the parents, other caregivers and school personnel.
+    </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Increase the use of DSM-IV-TR or DSM-PC criteria for diagnosing attention deficit hyperactivity disorder.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="6B4E1B3D-6D21-4BEE-A8C4-DF81A74D1BDF"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="EDF50729-3AE4-4802-AAA2-5B3DDCE7AA20"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Institute of Clinical Systems Improvement (ICSI). Diagnosis and management of attention deficit hyperactivity disorder in primary care for school age children and adolescents, 8th ed. Bloomington MN: Institute for Clinical Systems Improvement (ISCI), March 2010; p.4</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">CDC National Center for Birth Defects and Developmental Disabilities. Available at: http://www.cdc.gov/ncbddd/adhd/data.html. Accessed 8/20/09.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Biederman J, Faraone SV, Lapey K. Comorbodity of diagnosis in attention deficit hyperactivity disorder. Child Adolesc Psychiatr Clin North AM 1992; 1:335-60.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Faraone SV, Biederman J, Wozniak J, et al. Is comorbidity with ADHD a marker for juvenile-onset mania? J Am Acad Child Adolesc Psychiatry 1997; 36:1046-54.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Geller B, Zimerman B, Willians M, et al. DSM-IV mania symptoms in a prepubertal and early adolescent bipolar disorder phenotype compared to attention deficit hyperactivity and normal controls. J of Child Adol Psychopharmacology 2002; 12:11-24.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Giedd JN. Bipolar disorder and attention deficit hyperactivity disorder in children and adolescents. J Clin Psychiatry 2000; 61:31-34.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Jensen VK, Larrieu JA, Mack KK. Differential diagnosis between attention deficit hyperactivity disorder and pervasive developmental disorder-not otherwise specified. Clin Pediatr 1997; 36:555-61.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Spitzer RL, ed. In Diagnostic and Statistical Manual of Mental Disorders, 4th ed. Washington DC: American Psychiatric Press, 1994; 63-65.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Werry JS, Elkind GS, Reeves JC. Attention deficit, conduct, oppositional, and anxiety disorders in children: Ill. laboratory differences. J Abnorm Child Pshycol 1987; 15:409-28.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Wozniak J, Biederman J, Kiely K, et al. Mania-like symptoms suggestive of childhood-onset bipolar disorders in clinically referred children. J Am Acad Child Adolesc Psychiatry 1995;34:867-76.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Wolraich ML, Felice ME, Drotar DE, eds. In Classification of Child and Adolescent Mental Diagnoses in Primary Care: Diagnosis and Statistical Manual for Primary Care (DSM-PC) Child and Adolescent Version. Elk Grove, IL: American Academy of Pediatrics, 1996.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain">Newly diagnosed is defined as documented ADHD in past six months and no documentation of ADHD in the previous 6 - 12 months.
+
+Documented is defined as any evidence in the medical record that DSM-IV-TR or DSM-PC criteria were addressed.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">DSM-IV-TR or DSM-PC criteria include evaluation for: 1) symptoms, 2) onset, 3) duration, 4) pervasiveness and 5) impairment.
+
+For the data elements "Inattention" and "Hyperactivity/Impulsivity", six or more of the following symptoms must have persisted for at least six months to a degree that is maladaptive and inconsistent with developmental level.
+Inattention:
+1. Often fails to give close attention to details or makes careless mistakes in schoolwork, work or other activities
+2. Often has difficulty sustaining attention in tasks or play activities
+3. Often does not seem to listen when addressed directly
+4. Often does not follow through on instructions and fails to finish schoolwork, chores or duties in the workplace (not due to oppositional behavior or failure to understand instructions)
+5. Often has difficulty organizing tasks and activities
+6. Often avoids, dislikes or is reluctant to engage in tasks that require sustained mental effort (such as schoolwork or homework)
+7. Often loses things necessary for tasks or activities (e.g., toys, school assignments, pencils, books or tools)
+8. Is easily distracted by external stimuli
+9. Is often forgetful in daily activities
+Hyperactivity/Impulsivity:
+1. Often fidgets with hands or feet or squirms in seat
+2. Often leaves seat in classroom or in other situations in which remaining seated is expected
+3. Often runs about or climbs excessively in situations in which it is inappropriate (in adolescents or adults may be limited to subjective feelings of restlessness)
+4. Often has difficulty playing or engaging in leisure activities quietly
+5. Is often "on the go" or often acts if "driven by a motor"
+6. Often talks excessively
+7. Often blurts out answers before questions have been completed
+8. Often has difficulty awaiting turn
+9. Often interrupts or intrudes on others (e.g., butts into conversations or games)</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>AND: "Patient characteristic: birth date"  &gt;= 5 year(s) and &lt;= 18 year(s) starts before start of "Encounter: Office/Outpatient Visit"</item>
+                           <item>AND: "Diagnosis active: ADHD"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: CURRENT "Diagnosis active: ADHD"  &lt;= 6 month(s) starts before or during ("Encounter: Office/Outpatient Visit" during "Measurement period")</item>
+                     <item>AND: <list>
+                           <item>AND NOT: IMMEDIATE PRIOR "Diagnosis active: ADHD"  &gt; 6 month(s) starts before start of (CURRENT "Diagnosis active: ADHD"  &lt;= 6 month(s) starts before or during ("Encounter: Office/Outpatient Visit" during "Measurement period"))</item>
+                           <item>AND NOT: IMMEDIATE PRIOR "Diagnosis active: ADHD"  &lt;= 12 month(s) starts before start of (CURRENT "Diagnosis active: ADHD"  &lt;= 6 month(s) starts before or during ("Encounter: Office/Outpatient Visit" during "Measurement period"))</item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND NOT: <list>
+                                 <item>OR: "Diagnosis active: Pervasive Developmental Disorder"</item>
+                                 <item>OR: "Diagnosis active: Schizophrenia"</item>
+                                 <item>OR: "Diagnosis active: Other Psychotic Disorders"</item>
+                                 <item>OR: "Diagnosis active: Mood Disorders"</item>
+                                 <item>OR: "Diagnosis active: Personality Disorder"</item>
+                                 <item>OR: "Diagnosis active: Dissociative Disorders"</item>
+                                 <item> during "Measurement period"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>OR:  &gt;= 6 count(s) of<list>
+                                 <item>AND: "Symptom active: Hyperactivity/Impulsivity"  &lt; 7 year(s) starts before start of "Instance A of Symptom active: Hyperactivity/Impulsivity"</item>
+                                 <item>AND: "Instance A of Symptom active: Hyperactivity/Impulsivity (duration &gt;= 6 months)"</item>
+                              </list>
+                           </item>
+                           <item>OR:  &gt;= 6 count(s) of<list>
+                                 <item>AND: "Symptom active: Inattention"  &lt; 7 year(s) starts before start of "Instance A of Symptom active: Inattention"</item>
+                                 <item>AND: "Instance A of Symptom active: Inattention (duration &gt;= 6 months)"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>OR:  &gt;= 2 count(s) of<list>
+                                 <item>OR: "Symptom active: Inattention/Hyperactivity/Impulsivity (environment: 'school')"  &gt;= 6 month(s) starts before start of (CURRENT "Diagnosis active: ADHD" starts before or during ("Encounter: Office/Outpatient Visit" during "Measurement period"))</item>
+                                 <item>OR: "Symptom active: Inattention/Hyperactivity/Impulsivity (environment: 'work')"  &gt;= 6 month(s) starts before start of (CURRENT "Diagnosis active: ADHD" starts before or during ("Encounter: Office/Outpatient Visit" during "Measurement period"))</item>
+                                 <item>OR: "Symptom active: Inattention/Hyperactivity/Impulsivity (environment: 'home')"  &gt;= 6 month(s) starts before start of (CURRENT "Diagnosis active: ADHD" starts before or during ("Encounter: Office/Outpatient Visit" during "Measurement period"))</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="E69A7A09-B03A-4039-9B1E-64BCC4712CC0"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                           <id root="8A6302C3-C849-4765-B221-B0CAEC32AA6C"/>
+                           <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                                 <title>Patient characteristic: birth date</title>
+                                 <sourceOf typeCode="SBS">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <low value="5" unit="a" inclusive="true"/>
+                                       <high value="18" unit="a" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                       <title>Encounter: Office/Outpatient Visit</title>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: ADHD</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="3CD8C7C0-602B-4D0A-95FE-EE5A9CE89566"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="C6CB6DEF-7B53-42C1-975C-C3283A001FC4"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <sequenceNumber value="2"/>
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: ADHD</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="6" unit="m" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                       <title>Encounter: Office/Outpatient Visit</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <sequenceNumber value="1"/>
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: ADHD</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="SBS">
+                                    <sequenceNumber value="2"/>
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <low value="6" unit="m" inclusive="false"/>
+                                    </pauseQuantity>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                       <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                                       <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                             <title>Diagnosis active: ADHD</title>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                             <sourceOf typeCode="REFR">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                   <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="EAS" inversionInd="true">
+                                                <pauseQuantity xsi:type="IVL_PQ">
+                                                   <high value="6" unit="m" inclusive="true"/>
+                                                </pauseQuantity>
+                                                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                   <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                   <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                                   <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                   <sourceOf typeCode="COMP">
+                                                      <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                                         <title>Encounter: Office/Outpatient Visit</title>
+                                                         <sourceOf typeCode="DURING">
+                                                            <observation classCode="OBS" moodCode="EVN">
+                                                               <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                                               <title>Measurement period</title>
+                                                            </observation>
+                                                         </sourceOf>
+                                                      </encounter>
+                                                   </sourceOf>
+                                                </act>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <sequenceNumber value="1"/>
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: ADHD</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="SBS">
+                                    <sequenceNumber value="2"/>
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <high value="12" unit="m" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                       <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                                       <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                             <title>Diagnosis active: ADHD</title>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                             <sourceOf typeCode="REFR">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                   <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="EAS" inversionInd="true">
+                                                <pauseQuantity xsi:type="IVL_PQ">
+                                                   <high value="6" unit="m" inclusive="true"/>
+                                                </pauseQuantity>
+                                                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                   <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                   <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                                   <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                   <sourceOf typeCode="COMP">
+                                                      <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                                         <title>Encounter: Office/Outpatient Visit</title>
+                                                         <sourceOf typeCode="DURING">
+                                                            <observation classCode="OBS" moodCode="EVN">
+                                                               <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                                               <title>Measurement period</title>
+                                                            </observation>
+                                                         </sourceOf>
+                                                      </encounter>
+                                                   </sourceOf>
+                                                </act>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="D7581360-68FE-49B5-BA48-78CCCADA4A8B"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Pervasive Developmental Disorder</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.318" displayName="Pervasive Developmental Disorder Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="D0AA2901-A528-477D-86C1-0060C2DE02AC"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Schizophrenia</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.322" displayName="Schizophrenia Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="E5200B40-56CF-49CB-A81C-B27C2149A3CD"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Other Psychotic Disorders</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.326" displayName="Other Psychotic Disorders Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="5884215B-F4DD-4909-A745-F74F3BD2D5CA"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Mood Disorders</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.330" displayName="Mood Disorders Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="B5C7DC99-DFE2-483D-A93E-D6EBB52F9FCC"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Personality Disorder</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.246" displayName="Personality Disorder Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="C2A2CD6B-0E9B-4B03-B276-29C10B2734E7"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Dissociative Disorders</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.334" displayName="Dissociative Disorders Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="E69A7A09-B03A-4039-9B1E-64BCC4712CC0"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <repeatNumber>
+                              <low value="6" inclusive="true"/>
+                           </repeatNumber>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="1A9AB87A-2E15-4539-AC2A-E1BFD9DBB2A1"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.313" displayName="Hyperactivity/Impulsivity SNOMED-CT Code List"/>
+                                       <title>Symptom active: Hyperactivity/Impulsivity</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="7" unit="a" inclusive="false"/>
+                                          </pauseQuantity>
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="BE70C034-8846-4CCE-89FC-C652BB7913F8"/>
+                                             <title>Instance A of Symptom active: Hyperactivity/Impulsivity</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <id root="9F88C42C-917E-4D5A-A1D5-5F0B5A6238FC"/>
+                                 <title>Instance A of Symptom active: Hyperactivity/Impulsivity (duration &gt;= 6  months)</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <repeatNumber>
+                              <low value="6" inclusive="true"/>
+                           </repeatNumber>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="5B5F158A-4626-41D3-8986-6F1BA174C048"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.312" displayName="Inattention SNOMED-CT Code List"/>
+                                       <title>Symptom active: Inattention</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="7" unit="a" inclusive="false"/>
+                                          </pauseQuantity>
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="9AFCCAD2-9A88-4B30-8DAF-F58828D2B295"/>
+                                             <title>Instance A of Symptom active: Inattention</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <id root="0B8EA5AD-B6D1-4B80-8C23-9A1264A98839"/>
+                                 <title>Instance A of Symptom active: Inattention (duration &gt;= 6  months)</title>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <repeatNumber>
+                              <low value="2" inclusive="true"/>
+                           </repeatNumber>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="479B7E81-B34F-4E51-8A6F-05FA403CC03C"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.341" displayName="Inattention/Hyperactivity/Impulsivity SNOMED-CT Code List"/>
+                                       <title>Symptom active: Inattention/Hyperactivity/Impulsivity (environment: 'school')</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="285202004" codeSystem="2.16.840.1.113883.6.96" displayName="Environment"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.340" displayName="school"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="SBS">
+                                          <sequenceNumber value="2"/>
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <low value="6" unit="m" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                             <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                                             <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                                   <title>Diagnosis active: ADHD</title>
+                                                   <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                                   <sourceOf typeCode="REFR">
+                                                      <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                         <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                      </observation>
+                                                   </sourceOf>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                         <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                         <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                                         <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                         <sourceOf typeCode="COMP">
+                                                            <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                               <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                                               <title>Encounter: Office/Outpatient Visit</title>
+                                                               <sourceOf typeCode="DURING">
+                                                                  <observation classCode="OBS" moodCode="EVN">
+                                                                     <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                                                     <title>Measurement period</title>
+                                                                  </observation>
+                                                               </sourceOf>
+                                                            </encounter>
+                                                         </sourceOf>
+                                                      </act>
+                                                   </sourceOf>
+                                                </observation>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="479B7E81-B34F-4E51-8A6F-05FA403CC03C"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.341" displayName="Inattention/Hyperactivity/Impulsivity SNOMED-CT Code List"/>
+                                       <title>Symptom active: Inattention/Hyperactivity/Impulsivity (environment: 'work')</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="285202004" codeSystem="2.16.840.1.113883.6.96" displayName="Environment"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.339" displayName="work"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="SBS">
+                                          <sequenceNumber value="2"/>
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <low value="6" unit="m" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                             <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                                             <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                                   <title>Diagnosis active: ADHD</title>
+                                                   <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                                   <sourceOf typeCode="REFR">
+                                                      <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                         <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                      </observation>
+                                                   </sourceOf>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                         <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                         <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                                         <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                         <sourceOf typeCode="COMP">
+                                                            <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                               <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                                               <title>Encounter: Office/Outpatient Visit</title>
+                                                               <sourceOf typeCode="DURING">
+                                                                  <observation classCode="OBS" moodCode="EVN">
+                                                                     <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                                                     <title>Measurement period</title>
+                                                                  </observation>
+                                                               </sourceOf>
+                                                            </encounter>
+                                                         </sourceOf>
+                                                      </act>
+                                                   </sourceOf>
+                                                </observation>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.69"/>
+                                 <id root="479B7E81-B34F-4E51-8A6F-05FA403CC03C"/>
+                                 <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.341" displayName="Inattention/Hyperactivity/Impulsivity SNOMED-CT Code List"/>
+                                       <title>Symptom active: Inattention/Hyperactivity/Impulsivity (environment: 'home')</title>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="285202004" codeSystem="2.16.840.1.113883.6.96" displayName="Environment"/>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.338" displayName="home"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="SBS">
+                                          <sequenceNumber value="2"/>
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <low value="6" unit="m" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                             <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+                                             <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                                   <title>Diagnosis active: ADHD</title>
+                                                   <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                                   <sourceOf typeCode="REFR">
+                                                      <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                         <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                      </observation>
+                                                   </sourceOf>
+                                                   <sourceOf typeCode="EAS" inversionInd="true">
+                                                      <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                         <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                         <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+                                                         <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                         <sourceOf typeCode="COMP">
+                                                            <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                               <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                                               <title>Encounter: Office/Outpatient Visit</title>
+                                                               <sourceOf typeCode="DURING">
+                                                                  <observation classCode="OBS" moodCode="EVN">
+                                                                     <id root="DE2AAD98-3924-4135-B7F8-4DEF34D969B3"/>
+                                                                     <title>Measurement period</title>
+                                                                  </observation>
+                                                               </sourceOf>
+                                                            </encounter>
+                                                         </sourceOf>
+                                                      </act>
+                                                   </sourceOf>
+                                                </observation>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: ADHD"</content> using "ADHD Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.314)"</item>
+               <item>
+                  <content>"Diagnosis active: Dissociative Disorders"</content> using "Dissociative Disorders Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.334)"</item>
+               <item>
+                  <content>"Diagnosis active: Mood Disorders"</content> using "Mood Disorders Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.330)"</item>
+               <item>
+                  <content>"Diagnosis active: Other Psychotic Disorders"</content> using "Other Psychotic Disorders Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.326)"</item>
+               <item>
+                  <content>"Diagnosis active: Personality Disorder"</content> using "Personality Disorder Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.246)"</item>
+               <item>
+                  <content>"Diagnosis active: Pervasive Developmental Disorder"</content> using "Pervasive Developmental Disorder Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.318)"</item>
+               <item>
+                  <content>"Diagnosis active: Schizophrenia"</content> using "Schizophrenia Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.322)"</item>
+               <item>
+                  <content>"Encounter: Office/Outpatient Visit"</content> using "Office/Outpatient Visit CPT Code List (2.16.840.1.113883.3.67.1.101.1.5)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.67.1.101.1.24)"</item>
+               <item>
+                  <content>"Symptom active: Hyperactivity/Impulsivity"</content> using "Hyperactivity/Impulsivity SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.313)"</item>
+               <item>
+                  <content>"Symptom active: Inattention"</content> using "Inattention SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.312)"</item>
+               <item>
+                  <content>"Symptom active: Inattention/Hyperactivity/Impulsivity"</content> using "Inattention/Hyperactivity/Impulsivity SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.341)"</item>
+               <item>
+                  <content>Attribute: "Environment: School"</content> using "School SNOMED-CT Code List  (2.16.840.1.113883.3.67.1.101.1.340)"</item>
+               <item>
+                  <content>Attribute: "Environment: Work"</content> using "Work SNOMED-CT Code List  (2.16.840.1.113883.3.67.1.101.1.339)"</item>
+               <item>
+                  <content>Attribute: "Environment: Home"</content> using "Home SNOMED-CT Code List  (2.16.840.1.113883.3.67.1.101.1.338)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="D58C8A61-10A4-4265-842D-83F108A03C89"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: ADHD</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="8A6302C3-C849-4765-B221-B0CAEC32AA6C"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="C2A2CD6B-0E9B-4B03-B276-29C10B2734E7"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Dissociative Disorders</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.334" displayName="Dissociative Disorders Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="1A9AB87A-2E15-4539-AC2A-E1BFD9DBB2A1"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.313" displayName="Hyperactivity/Impulsivity SNOMED-CT Code List"/>
+                     <title>Symptom active: Hyperactivity/Impulsivity</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="5B5F158A-4626-41D3-8986-6F1BA174C048"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.312" displayName="Inattention SNOMED-CT Code List"/>
+                     <title>Symptom active: Inattention</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- symptom active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="479B7E81-B34F-4E51-8A6F-05FA403CC03C"/>
+               <code code="46691-2" codeSystem="2.16.840.1.113883.6.1" displayName="Symptoms"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.341" displayName="Inattention/Hyperactivity/Impulsivity SNOMED-CT Code List"/>
+                     <title>Symptom active: Inattention/Hyperactivity/Impulsivity</title>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="5884215B-F4DD-4909-A745-F74F3BD2D5CA"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Mood Disorders</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.330" displayName="Mood Disorders Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="329B698F-1061-4B25-898B-9E7288133279"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                     <title>Encounter: Office/Outpatient Visit</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="E5200B40-56CF-49CB-A81C-B27C2149A3CD"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Other Psychotic Disorders</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.326" displayName="Other Psychotic Disorders Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="B5C7DC99-DFE2-483D-A93E-D6EBB52F9FCC"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Personality Disorder</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.246" displayName="Personality Disorder Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="D7581360-68FE-49B5-BA48-78CCCADA4A8B"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Pervasive Developmental Disorder</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.318" displayName="Pervasive Developmental Disorder Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="D0AA2901-A528-477D-86C1-0060C2DE02AC"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Schizophrenia</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.322" displayName="Schizophrenia Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="9F88C42C-917E-4D5A-A1D5-5F0B5A6238FC"/>
+               <code>
+                  <originalText>Duration of Symptom active &gt;= 6  months</originalText>
+               </code>
+               <derivationExpr>var.effectiveTime.high - var.effectiveTime.low</derivationExpr>
+               <value xsi:type="IVL_PQ">
+                  <low value="6" unit="months" inclusive="true"/>
+               </value>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>var</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="BE70C034-8846-4CCE-89FC-C652BB7913F8"/>
+                     <effectiveTime>
+                        <low/>
+                        <high/>
+                     </effectiveTime>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="0B8EA5AD-B6D1-4B80-8C23-9A1264A98839"/>
+               <code>
+                  <originalText>Duration of Symptom active &gt;= 6  months</originalText>
+               </code>
+               <derivationExpr>var.effectiveTime.high - var.effectiveTime.low</derivationExpr>
+               <value xsi:type="IVL_PQ">
+                  <low value="6" unit="months" inclusive="true"/>
+               </value>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>var</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="9AFCCAD2-9A88-4B30-8DAF-F58828D2B295"/>
+                     <effectiveTime>
+                        <low/>
+                        <high/>
+                     </effectiveTime>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="BE70C034-8846-4CCE-89FC-C652BB7913F8"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hyperactivity/Impulsivity</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="5B5F158A-4626-41D3-8986-6F1BA174C048"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.69"/>
+               <id root="9AFCCAD2-9A88-4B30-8DAF-F58828D2B295"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Inattention</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="1A9AB87A-2E15-4539-AC2A-E1BFD9DBB2A1"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

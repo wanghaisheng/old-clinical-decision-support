@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="B1D48BE2-5C7C-4488-B5FA-F356337B9"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Beta-Blocker Prescribed at Discharge (NQF 0160)</title>
+   <text>Acute myocardial infarction (AMI) patients who are prescribed a beta-blocker at hospital discharge</text>
+   <statusCode code="completed"/>
+   <setId root="25FC6BA6-FCBC-45F0-B4F5-AAB14C76CB15"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.666"/>
+            <name>Oklahoma Foundation for Medical Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.666"/>
+            <name>Oklahoma Foundation for Medical Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">Long-term use of beta-blockers for patients who have suffered an acute myocardial infarction can reduce mortality and morbidity. Studies have demonstrated that the use of beta-blockers is associated with about a 20% reduction in this risk (Yusuf, 1988), and there is evidence of effectiveness in broad populations of patients with AMI (Krumholz, 1998). National guidelines strongly recommend long-term beta-blocker therapy for the secondary prevention of subsequent cardiovascular events in patients discharged after AMI (Antman, 2004; Anderson, 2007; and Smith 2006).</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">National guidelines strongly recommend long-term beta-blocker therapy for the secondary prevention of subsequent cardiovascular events in patients discharged after AMI</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="42F39967-7789-4DE8-9C66-7208726ECD75"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="9A435824-4F43-46BF-98C8-6890D1E45667"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="6532948B-2480-4B7C-AA9F-B1C04477509A"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Anderson JL, Adams CD, Antman EM, Bridges CR, Califf RM, Casey DE Jr, et al. ACC/AHA 2007 guidelines for the management of patients with unstable angina/non–ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Writing Committee to Revise the 2002 Guidelines for the Management of Patients With Unstable Angina/Non–ST-Elevation Myocardial Infarction): developed in collaboration with the American College of Emergency Physicians, American College of Physicians, Society for Academic Emergency Medicine, Society for Cardiovascular Angiography and Interventions, and Society of Thoracic Surgeons. J Am Coll Cardiol. 2007;50:e1–157.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Antman EM, Anbe DT, Armstrong PW, Bates ER, Green LA, Hand M, et al. ACC/AHA guidelines for the management of patients with ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Committee to Revise the 1999 Guidelines for the Management of Patients With Acute Myocardial Infarction). 2004.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Krumholz HM, Anderson JL, Bachelder BL, Fesmire FM, Fihn SD, Foody JM, et al. ACC/AHA 2008 performance measures for adults with ST-elevation and non–ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Performance Measures (Writing Committee to Develop Performance Measures for ST-Elevation and Non–ST-Elevation Myocardial Infarction). J Am Coll Cardiol. 2008;52:2046 –99.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Krumholz HM, Radford MJ, Wang Y, Chen J, Heiat A, Marciniak TA. National use and effectiveness of beta-blockers for the treatment of elderly patients after acute myocardial infarction: National Cooperative Cardiovascular Project. JAMA. 1998;280:623-629.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Smith SC, Allen J, Blair SN, Bonow RO, Brass LM, Fonarow GC, et al. AHA/ACC guidelines for secondary prevention for patients with coronary and other atherosclerotic vascular disease: 2006 update. J Am Coll Cardiol. 2006;47:2130 –9. doi:10.1016/j.jacc.2006.04.026.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Yusuf S, Wittes J, Friedman L. Overview of results of randomized clinical trials in heart disease. I. Treatments following myocardial infarction. JAMA. 1988; 260(14):2088:2093.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 = Jan – Mar, Q2 = Apr – Jun, Q3 = Jul – Sep, Q4 is Oct – Dec.
+			
+Patients for whom there are missing or inaccurate data (e.g., arrival time, medication administration, etc.) are considered to have failed the measure; the total number of patients with missing or erroneous (e.g., a time of 03:69 or a date of 10/26/2035) data (i.e., measure failures) must be reported with the results of the measure.
+			
+Exclusion element guidance: 
+
+The exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for acute myocardial infarction (AMI), ST elevation myocardial infarction (STEMI), non-ST elevation myocardial infarction (non-STEMI) or heart attack, the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions.
+
+Transfers to another hospital that is not part of the hospital's organization are excluded since care may have been delivered in the other setting.  The measure as specified for abstraction allowed determination of other hospital by hospital unique identifier. Transfers to those hospitals using the same hospital unique identifier are not considered transfers for the exclusion section of this measure, those using other facility numbers are considered exclusions.
+		</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Diagnosis active: Hospital Measures-AMI (ordinality: 'Hospital Measures-Principal')"</item>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before or during "Instance A of Encounter: Hospital Measures - Encounter Inpatient (admission)"</item>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter Inpatient (duration &lt;= 120 days)"</item>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: "Medication order: Beta Blocker Therapy" ends concurrent with "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)"</item>
+                     <item>AND: "Medication active: Beta Blocker Therapy (health record: 'discharge medications')" starts after start of "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>OR: "Patient characteristic: Clinical trial participant" during "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: "Intervention performed: Hospital Measures-Comfort measure only intervention" starts after start of "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: </item>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge status: 'Left against medical advice')"</item>
+                     <item>OR: "Transfer to: Hospital Measures-Home hospice care" starts after end of "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: "Transfer to: Hospital Measures-Inpatient hospice care" starts after end of "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge status: 'expired')"</item>
+                     <item>OR: <list>
+                           <item>AND: "Medication active not done: Medical reason" for "Beta Blocker Therapy RxNorm Code List"</item>
+                           <item> during "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)"</item>
+                        </list>
+                     </item>
+                     <item>OR: <list>
+                           <item>AND: "Medication active not done: Patient reason" for "Beta Blocker Therapy RxNorm Code List"</item>
+                           <item> during "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)"</item>
+                        </list>
+                     </item>
+                     <item>OR: <list>
+                           <item>AND: "Medication order not done: Medical reason" for "Beta Blocker Therapy RxNorm Code List"</item>
+                           <item> during "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)"</item>
+                        </list>
+                     </item>
+                     <item>OR: <list>
+                           <item>AND: "Medication order not done: Patient reason" for "Beta Blocker Therapy RxNorm Code List"</item>
+                           <item> during "Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)"</item>
+                        </list>
+                     </item>
+                     <item>OR: "Medication allergy: Beta Blocker Therapy" starts before or during "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: "Medication intolerance: Beta Blocker Therapy" starts before or during "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: "Medication adverse effects: Beta Blocker Therapy" starts before or during "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                     <item>OR: <list>
+                           <item>AND: "Diagnosis active: Hospital Measures-Atrioventricular Block 2nd or 3rd degree" starts after start of "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                           <item>AND: <list>
+                                 <item>AND NOT: <list>
+                                       <item>OR: "Diagnosis active: Cardiac Pacer in Situ" during "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                                       <item>OR: "Device applied: Cardiac Pacer" during "Instance A of Encounter: Hospital Measures - Encounter Inpatient"</item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="43FD5AEA-F170-4A00-89D7-F8FB715488FD"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="49630616-E541-48C7-8B2C-A46B90457659"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: Hospital Measures-AMI (ordinality: 'Hospital Measures-Principal')</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.624" displayName="Hospital Measures-AMI Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SUBJ">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.8001" displayName="Hospital Measures-Principal"/>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="A888D164-026F-478A-B546-9D105E29F58F"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (admission)</title>
+                                       <effectiveTime xsi:type="IVL_TS">
+                                          <low/>
+                                       </effectiveTime>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BAE6342D-C1C0-4206-AC22-E2C9890308EC"/>
+                     <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (duration &lt;= 120  days)</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <high/>
+                           </effectiveTime>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="B20279BF-F00B-45CA-9E52-6980E689442A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="2676F3D2-FBF9-4327-B0A1-307D8BA3D751"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="43FD5AEA-F170-4A00-89D7-F8FB715488FD"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="146ED56B-81B2-4BFD-81CF-4222BC80FC8F"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.17"/>
+                     <id root="20DF915B-8A3F-41D9-8785-906591193D84"/>
+                     <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                           <title>Medication order: Beta Blocker Therapy</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="ECW">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                                       <effectiveTime xsi:type="IVL_TS">
+                                          <high/>
+                                       </effectiveTime>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </substanceAdministration>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                     <id root="B09D0199-0A3D-4CAE-9746-DAF100ABD08E"/>
+                     <code code="18617-1" displayName="Discharge Summary" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                           <title>Medication active: Beta Blocker Therapy (health record: 'discharge medications')</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SAS">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                                       <effectiveTime xsi:type="IVL_TS">
+                                          <high/>
+                                       </effectiveTime>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </substanceAdministration>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="FAC8C8AA-A8B8-44A8-8FF1-2FE3A73EA0D7"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+                     <id root="DA976B22-BA4E-4F39-9658-219DBB0CAFD0"/>
+                     <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                           <title>Patient characteristic: Clinical trial participant</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.643" displayName="Clinical trial participant SNOMED-CT Code List"/>
+                           <sourceOf typeCode="DURING">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.46"/>
+                     <id root="063AF392-BC8A-4260-AAA0-0B64855CD8FF"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="1.3.6.1.4.1.33895.1.3.0.45" displayName="Hospital Measures-Comfort measure only intervention SNOMED-CT Code List"/>
+                           <title>Intervention performed: Hospital Measures-Comfort measure only intervention</title>
+                           <statusCode code="completed"/>
+                           <sourceOf typeCode="SAS">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!--  pattern -->
+                     <ERROR>
+                        <TYPE>missing qdsel</TYPE>
+                        <SOURCE>
+                           <qdsel xmlns="" id="187" rel="SAS" to="10001"/>
+                        </SOURCE>
+                        <DESCRIPTION>No qds element in the elementlookup section of the simple XML
+                     matching ID of "187"
+                  </DESCRIPTION>
+                     </ERROR>
+                     <ERROR>
+                        <TYPE>missing template</TYPE>
+                        <SOURCE>
+                           <qdsel xmlns="" id="187" rel="SAS" to="10001"/>
+                        </SOURCE>
+                        <DESCRIPTION>No template found matching the data type of
+                     "" for the code list
+                     ""
+                  </DESCRIPTION>
+                     </ERROR>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge status: 'Left against medical advice')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1106" displayName="Hospital Measures-Left against medical advice"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.72"/>
+                     <title>Transfer to: Hospital Measures-Home hospice care</title>
+                     <participant typeCode="DST">
+                        <roleParticipant classCode="LOCE">
+                           <code code="2.16.840.1.113883.3.666.05.648" displayName="Hospital Measures-Home hospice care SNOMED-CT Code List"/>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="SAE">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.72"/>
+                     <title>Transfer to: Hospital Measures-Inpatient hospice care</title>
+                     <participant typeCode="DST">
+                        <roleParticipant classCode="LOCE">
+                           <code code="2.16.840.1.113883.3.666.05.647" displayName="Hospital Measures-Inpatient hospice care SNOMED-CT Code List"/>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="SAE">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge status: 'expired')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1146" displayName="Hospital Measures-Expired"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.113"/>
+                           <id root="B09D0199-0A3D-4CAE-9746-DAF100ABD08E"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication active not done: Medical reason</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                                 <effectiveTime xsi:type="IVL_TS">
+                                    <high/>
+                                 </effectiveTime>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.113"/>
+                           <id root="B09D0199-0A3D-4CAE-9746-DAF100ABD08E"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Medication active not done: Patient reason</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                                 <effectiveTime xsi:type="IVL_TS">
+                                    <high/>
+                                 </effectiveTime>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication order pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.78"/>
+                           <id root="20DF915B-8A3F-41D9-8785-906591193D84"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                 <title>Medication order not done: Medical reason</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.313" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                                 <effectiveTime xsi:type="IVL_TS">
+                                    <high/>
+                                 </effectiveTime>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- medication order pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.78"/>
+                           <id root="20DF915B-8A3F-41D9-8785-906591193D84"/>
+                           <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                                 <title>Medication order not done: Patient reason</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.311" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                    </observation>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient (discharge)</title>
+                                 <effectiveTime xsi:type="IVL_TS">
+                                    <high/>
+                                 </effectiveTime>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication allergy pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.1"/>
+                     <id root="83D86180-39DF-453C-818B-313186C63B25"/>
+                     <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug allergy"/>
+                           <title>Medication allergy: Beta Blocker Therapy</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication intolerance pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.15"/>
+                     <id root="8B259D11-62A2-4171-AA63-166F10735A82"/>
+                     <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="59037007" codeSystem="2.16.840.1.113883.6.96" displayName="Drug intolerance"/>
+                           <title>Medication intolerance: Beta Blocker Therapy</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication adverse effects pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.7"/>
+                     <id root="CD051B71-97C1-4642-95C8-D156365DB203"/>
+                     <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="419511003" codeSystem="2.16.840.1.113883.6.96" displayName="Drug adverse effect"/>
+                           <title>Medication adverse effects: Beta Blocker Therapy</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="F7230251-AABE-435B-8F9E-689467601D66"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: Hospital Measures-Atrioventricular Block 2nd or 3rd degree</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.757" displayName="Hospital Measures-Atrioventricular Block 2nd or 3rd degree Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                                 <sourceOf typeCode="SAS">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                       <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                       <id root="17E082DD-6E3B-4689-A28B-2E473A8775A6"/>
+                                       <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                             <title>Diagnosis active: Cardiac Pacer in Situ</title>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.368" displayName="Cardiac Pacer in Situ Code List GROUPING"/>
+                                             <sourceOf typeCode="REFR">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                   <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="DURING">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                                   <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                       <id root="093DA113-4B81-42AC-A520-D8BF5843C3D4"/>
+                                       <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                             <title>Device applied: Cardiac Pacer</title>
+                                             <participant typeCode="DEV">
+                                                <roleParticipant classCode="MANU">
+                                                   <playingDevice classCode="DEV" determinerCode="KIND">
+                                                      <code code="2.16.840.1.113883.3.666.05.303" displayName="Cardiac Pacer Code List GROUPING"/>
+                                                   </playingDevice>
+                                                </roleParticipant>
+                                             </participant>
+                                             <sourceOf typeCode="DURING">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                                                   <title>Instance A of Encounter: Hospital Measures - Encounter Inpatient</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </procedure>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Device applied: Cardiac Pacer"</content> using "Cardiac Pacer Code List GROUPING (2.16.840.1.113883.3.666.05.303)"</item>
+               <item>
+                  <content>"Diagnosis active: Cardiac Pacer in Situ"</content> using "Cardiac Pacer in Situ Code List GROUPING (2.16.840.1.113883.3.526.03.368)"</item>
+               <item>
+                  <content>"Diagnosis active: Hospital Measures-AMI"</content> using "Hospital Measures-AMI Code List GROUPING (2.16.840.1.113883.3.666.05.624)"</item>
+               <item>
+                  <content>"Diagnosis active: Hospital Measures-Atrioventricular Block 2nd or 3rd degree"</content> using "Hospital Measures-Atrioventricular Block 2nd or 3rd degree Code List GROUPING (2.16.840.1.113883.3.666.05.757)"</item>
+               <item>
+                  <content>"Encounter: Hospital Measures-Encounter Inpatient"</content> using "Hospital Measures-Encounter Inpatient SNOMED-CT Code List (2.16.840.1.113883.3.666.05.625)"</item>
+               <item>
+                  <content>"Intervention performed: Hospital Measures-Comfort measure only intervention"</content> using "Hospital Measures-Comfort measure only intervention SNOMED-CT Code List (1.3.6.1.4.1.33895.1.3.0.45)"</item>
+               <item>
+                  <content>"Medication active: Beta Blocker Therapy"</content> using "Beta Blocker Therapy RxNorm Code List (2.16.840.1.113883.3.526.02.133)"</item>
+               <item>
+                  <content>"Medication active not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Medication active not done: Patient reason"</content> using "Patient reason Code List GROUPING (2.16.840.1.113883.3.526.02.311)"</item>
+               <item>
+                  <content>"Medication adverse effects: Beta Blocker Therapy"</content> using "Beta Blocker Therapy RxNorm Code List (2.16.840.1.113883.3.526.02.133)"</item>
+               <item>
+                  <content>"Medication allergy: Beta Blocker Therapy"</content> using "Beta Blocker Therapy RxNorm Code List (2.16.840.1.113883.3.526.02.133)"</item>
+               <item>
+                  <content>"Medication intolerance: Beta Blocker Therapy"</content> using "Beta Blocker Therapy RxNorm Code List (2.16.840.1.113883.3.526.02.133)"</item>
+               <item>
+                  <content>"Medication order: Beta Blocker Therapy"</content> using "Beta Blocker Therapy RxNorm Code List (2.16.840.1.113883.3.526.02.133)"</item>
+               <item>
+                  <content>"Medication order not done: Medical reason"</content> using "Medical reason HL7 Code List (2.16.840.1.113883.3.526.02.313)"</item>
+               <item>
+                  <content>"Medication order not done: Patient reason"</content> using "Patient reason Code List GROUPING (2.16.840.1.113883.3.526.02.311)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Patient characteristic: Clinical trial participant"</content> using "Clinical trial participant SNOMED-CT Code List (2.16.840.1.113883.3.526.02.643)"</item>
+               <item>
+                  <content>"Transfer to: Hospital Measures-Home hospice care"</content> using "Hospital Measures-Home hospice care SNOMED-CT Code List (2.16.840.1.113883.3.666.05.648)"</item>
+               <item>
+                  <content>"Transfer to: Hospital Measures-Inpatient hospice care"</content> using "Hospital Measures-Inpatient hospice care SNOMED-CT Code List (2.16.840.1.113883.3.666.05.647)"</item>
+               <item>
+                  <content>Attribute: "Discharge status: Left against medical advice"</content> using "Hospital Measures-Left against medical advice SNOMED-CT Code List  (2.16.840.1.113883.3.666.05.1106)"</item>
+               <item>
+                  <content>Attribute: "Discharge status: Expired"</content> using "Hospital Measures-Expired  Code List GROUPING (2.16.840.1.113883.3.666.05.1146)"</item>
+               <item>
+                  <content>Attribute: "Ordinality: Hospital Measures-Principal"</content> using "Hospital Measures-Principal SNOMED-CT Code List  (2.16.840.1.113883.3.526.02.8001)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication adverse effects pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.7"/>
+               <id root="CD051B71-97C1-4642-95C8-D156365DB203"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="419511003" codeSystem="2.16.840.1.113883.6.96" displayName="Drug adverse effect"/>
+                     <title>Medication adverse effects: Beta Blocker Therapy</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication allergy pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.1"/>
+               <id root="83D86180-39DF-453C-818B-313186C63B25"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug allergy"/>
+                     <title>Medication allergy: Beta Blocker Therapy</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication intolerance pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.15"/>
+               <id root="8B259D11-62A2-4171-AA63-166F10735A82"/>
+               <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="59037007" codeSystem="2.16.840.1.113883.6.96" displayName="Drug intolerance"/>
+                     <title>Medication intolerance: Beta Blocker Therapy</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="A888D164-026F-478A-B546-9D105E29F58F"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="093DA113-4B81-42AC-A520-D8BF5843C3D4"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                     <title>Device applied: Cardiac Pacer</title>
+                     <participant typeCode="DEV">
+                        <roleParticipant classCode="MANU">
+                           <playingDevice classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.666.05.303" displayName="Cardiac Pacer Code List GROUPING"/>
+                           </playingDevice>
+                        </roleParticipant>
+                     </participant>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="17E082DD-6E3B-4689-A28B-2E473A8775A6"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Cardiac Pacer in Situ</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.03.368" displayName="Cardiac Pacer in Situ Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+               <id root="DA976B22-BA4E-4F39-9658-219DBB0CAFD0"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                     <title>Patient characteristic: Clinical trial participant</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.643" displayName="Clinical trial participant SNOMED-CT Code List"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="49630616-E541-48C7-8B2C-A46B90457659"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Hospital Measures-AMI</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.624" displayName="Hospital Measures-AMI Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="F7230251-AABE-435B-8F9E-689467601D66"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Hospital Measures-Atrioventricular Block 2nd or 3rd degree</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.757" displayName="Hospital Measures-Atrioventricular Block 2nd or 3rd degree Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.46"/>
+               <id root="063AF392-BC8A-4260-AAA0-0B64855CD8FF"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="1.3.6.1.4.1.33895.1.3.0.45" displayName="Hospital Measures-Comfort measure only intervention SNOMED-CT Code List"/>
+                     <title>Intervention performed: Hospital Measures-Comfort measure only intervention</title>
+                     <statusCode code="completed"/>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="E21D1670-534A-4785-B7FC-CE90C6135EE8"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                     <title>Encounter: Hospital Measures-Encounter Inpatient</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.72"/>
+               <title>Transfer to: Hospital Measures-Home hospice care</title>
+               <participant typeCode="DST">
+                  <roleParticipant classCode="LOCE">
+                     <code code="2.16.840.1.113883.3.666.05.648" displayName="Hospital Measures-Home hospice care SNOMED-CT Code List"/>
+                  </roleParticipant>
+               </participant>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.72"/>
+               <title>Transfer to: Hospital Measures-Inpatient hospice care</title>
+               <participant typeCode="DST">
+                  <roleParticipant classCode="LOCE">
+                     <code code="2.16.840.1.113883.3.666.05.647" displayName="Hospital Measures-Inpatient hospice care SNOMED-CT Code List"/>
+                  </roleParticipant>
+               </participant>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.17"/>
+               <id root="20DF915B-8A3F-41D9-8785-906591193D84"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication order: Beta Blocker Therapy</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.13"/>
+               <id root="B09D0199-0A3D-4CAE-9746-DAF100ABD08E"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active: Beta Blocker Therapy</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.133" displayName="Beta Blocker Therapy RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.113"/>
+               <id root="661D9021-9D1A-494A-A3F7-00F2CED9F72E"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active not done: Medical reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.78"/>
+               <id root="662D9021-9D1A-494A-A3F7-00F2CED9F72E"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication order not done: Medical reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.313" displayName="Medical reason HL7 Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.113"/>
+               <id root="66194-94FA-43C6-91B7-1EA3B273B195"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active not done: Patient reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.311" displayName="Patient reason Code List GROUPING"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication order not done pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.78"/>
+               <id root="66294-94FA-43C6-91B7-1EA3B273B195"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO" isCriterionInd="true">
+                     <title>Medication order not done: Patient reason</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.526.02.311" displayName="Patient reason Code List GROUPING"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="BAE6342D-C1C0-4206-AC22-E2C9890308EC"/>
+               <code>
+                  <originalText>Duration of Encounter &lt;= 120  days</originalText>
+               </code>
+               <derivationExpr>var.effectiveTime.high - var.effectiveTime.low</derivationExpr>
+               <value xsi:type="IVL_PQ">
+                  <high value="120" unit="days" inclusive="true"/>
+               </value>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>var</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+                     <effectiveTime>
+                        <low/>
+                        <high/>
+                     </effectiveTime>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="786D1167-8282-4FDF-9D9D-1BF0C72773A0"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures - Encounter Inpatient</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="E21D1670-534A-4785-B7FC-CE90C6135EE8"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

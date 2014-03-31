@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="838518AC-21B6-4979-B1B5-6D625BDAEEC0"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Iatrogenic Pneumothorax (PDI 5) (NQF 0348)</title>
+   <text>Percent of medical and surgical discharges, age under 18 years, with ICD-9-CM code of iatrogenic pneumothorax in any secondary diagnosis field</text>
+   <statusCode code="completed"/>
+   <setId root="F1080C43-DEAA-4597-A98A-A9688A3162EB"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.67.1.101"/>
+            <name>Iowa Foundation for Medical Care</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560.3.5"/>
+            <name>Agency for Healthcare Research and Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="RATIO" codeSystem="2.16.840.1.113883.5.1063" displayName="Ratio"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="OUTCOME" codeSystem="2.16.840.1.113883.5.1063" displayName="Outcome"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">This indicator is intended to flag cases of pneumothorax caused by medical care, which is sustained following a procedure or due to barotraumas. Good technique when performing vascular access or thoracentesis may reduce the risk of this complication. For patients on ventilators, monitoring of pressures may also reduce the risk of this complication.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Using 1997 Healthcare Cost and Utilization Project (HCUP) data, the National Healthcare Quality Report cited rates of iatrogenic pneumothorax in the pediatric population (less than 19 years). These analyses showed that this patient safety event occurred frequently and at rates comparable to those in adults (e.g., 0.48 per 1,000 discharges at 0 to 17 years, 0.42 at 18 to 44 years, 0.43 at 45 to 64 years, and 0.74 at 65 or more years). Other groups have analyzed rates of this indicator using the publicly available indicator definition applied to a pediatric population; this definition differs slightly from the definition proposed for this measure. In 2000, Miller et al. found iatrogenic pneumothorax occurred at a rate of 0.3 per 1,000 discharges among 0 to 18 year old children. Also, iatrogenic pneumothorax was found to result, on average, 11.6 days increased length of stay, $61,991 increased charges, and 7.5 times higher odds of in-hospital mortality (after adjusting for age, gender, expected payer, up to 30 comorbidities, and multiple hospital characteristics, including ownership, teaching status, nursing expertise, urban location, bed size, pediatric volume, coding intensity, intensive care unit [ICU] bed percentage, and surgical discharge percentage). An analysis of National Association of Children's Hospitals and Related Institutions (NACHRI) data from 1999 to 2002 showed a range of rates (risk adjusted) from 0.74 per 1,000 discharges in 2002 to 0.82 per 1,000 discharges in 1999 (i.e., a slight downward trend over time).
+    
+In children, procedures like central line placement, thoracentesis, or Swan-Ganz catheter placement can be technically more complex than in older patients due to their smaller anatomy (though they are more likely to be performed in a monitored setting). Also, in comparison to adults, iatrogenic pneumothoraces in neonates are primarily due to bartrauma, with the very smallest infants being at greatest risk (as shown by our preliminary empirical analyses). In an older pediatric population, while barotraumas can occur, the risks for iatrogenic pneumothoraces are more clinically similar to a adult population (e.g., at risk while receiving a central line, catheter, or undergoing thoracentesis procedures).
+</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="6EE18933-BAC4-4FE9-B0E4-850C0AE8C207"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="48C3C81F-FF87-430E-AAB6-9A1AAE030D22"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Agency for Healthcare Research and Quality (AHRQ). National healthcare quality report. Rockville (MD): Agency for Healthcare Research and Quality (AHRQ); 2003.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Miller MR, Zhan C. Pediatric patient safety in hospitals: a national picture in 2000. Pediatrics 2004 Jun;113(6):1741-6. [23 references] PubMed</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Sedman A, Harris JM 2nd, Schulz K, Schwalenstocker E, Remus D, Scanlon M, Bahl V. Relevance of the Agency for Healthcare Research and Quality Patient Safety Indicators for children's hospitals. Pediatrics 2005 Jan;115(1):135-45. [17 references] PubMed</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Encounter: Inpatient Hospitalization" during "Measurement period"</item>
+                     <item>AND: "Patient characteristic: birth date"  &lt;= 18 year(s) starts before start of ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                     <item>AND: <list>
+                           <item>OR: "Diagnosis active: surgical discharge DRG"</item>
+                           <item>OR: "Diagnosis active: medical discharge DRG"</item>
+                           <item> during  ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: <list>
+                           <item>AND NOT: <list>
+                                 <item>OR: <list>
+                                       <item>AND: "Patient characteristic: birth date"  &lt;= 28 day(s) starts before start of ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                       <item>AND: "Physical exam finding: Birth weight (result value &lt; 500 grams)" starts before start of ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                    </list>
+                                 </item>
+                                 <item>OR: <list>
+                                       <item>OR: "Diagnosis active: Iatrogenic Pneumothorax (ordinality: 'principal')" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                       <item>OR: "Diagnosis active: Iatrogenic Pneumothorax (ordinality: 'On Admission')" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                    </list>
+                                 </item>
+                                 <item>OR: "Diagnosis active: Chest Trauma" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Diagnosis active: Pleural Effusion" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Procedure performed: Thoracic Surgery" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Procedure performed: Lung/Pleural Biopsy" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Procedure performed: Diaphragmatic Surgery Repair" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Procedure performed: Cardiac Surgery" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Diagnosis active: Newborn DRG" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                                 <item>OR: "Diagnosis active: Pregnancy/Newborn/Puerperium" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: "Diagnosis active: Iatrogenic Pneumothorax (ordinality: 'secondary')" during ("Encounter: Inpatient Hospitalization" during "Measurement period")</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="DFAB8F88-AB05-4263-B8EB-51FD78566EA3"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                           <title>Encounter: Inpatient Hospitalization</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="6BE06846-B7ED-464F-8685-09090B1D269E"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                       <title>Encounter: Inpatient Hospitalization</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="30A6C030-AAE7-4F13-BFE1-9B4AAFCECB84"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: surgical discharge DRG</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.282" displayName="surgical discharge DRG DRG Code List"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="06BAD993-75E5-4DD3-A3E7-1C8047A152AC"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: medical discharge DRG</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.283" displayName="medical discharge DRG DRG Code List"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                 <title>Encounter: Inpatient Hospitalization</title>
+                                 <sourceOf typeCode="DURING">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                       <title>Measurement period</title>
+                                    </observation>
+                                 </sourceOf>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="250F1577-972F-427F-A623-8B3E8CC28BFF"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="DFAB8F88-AB05-4263-B8EB-51FD78566EA3"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="AND"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                                       <id root="6BE06846-B7ED-464F-8685-09090B1D269E"/>
+                                       <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                                             <title>Patient characteristic: birth date</title>
+                                             <sourceOf typeCode="SBS">
+                                                <pauseQuantity xsi:type="IVL_PQ">
+                                                   <high value="28" unit="d" inclusive="true"/>
+                                                </pauseQuantity>
+                                                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                   <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                   <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                                   <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                   <sourceOf typeCode="COMP">
+                                                      <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                         <title>Encounter: Inpatient Hospitalization</title>
+                                                         <sourceOf typeCode="DURING">
+                                                            <observation classCode="OBS" moodCode="EVN">
+                                                               <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                               <title>Measurement period</title>
+                                                            </observation>
+                                                         </sourceOf>
+                                                      </encounter>
+                                                   </sourceOf>
+                                                </act>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="AND"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                                       <id root="9BFC2359-4FE7-4627-812F-36D792D172F9"/>
+                                       <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.67.1.101.1.293" displayName="Birth weight Code List GROUPING"/>
+                                             <title>Physical exam finding: Birth weight (result value &lt; 500  grams)</title>
+                                             <sourceOf typeCode="SBS">
+                                                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                   <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                   <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                                   <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                   <sourceOf typeCode="COMP">
+                                                      <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                         <title>Encounter: Inpatient Hospitalization</title>
+                                                         <sourceOf typeCode="DURING">
+                                                            <observation classCode="OBS" moodCode="EVN">
+                                                               <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                               <title>Measurement period</title>
+                                                            </observation>
+                                                         </sourceOf>
+                                                      </encounter>
+                                                   </sourceOf>
+                                                </act>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                       <id root="A048CC2F-3201-465F-8AD6-3665F20E396A"/>
+                                       <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                             <title>Diagnosis active: Iatrogenic Pneumothorax (ordinality: 'principal')</title>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.286" displayName="Iatrogenic Pneumothorax Code List GROUPING"/>
+                                             <sourceOf typeCode="REFR">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                   <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="SUBJ">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                                   <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.287" displayName="principal"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="DURING">
+                                                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                   <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                   <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                                   <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                   <sourceOf typeCode="COMP">
+                                                      <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                         <title>Encounter: Inpatient Hospitalization</title>
+                                                         <sourceOf typeCode="DURING">
+                                                            <observation classCode="OBS" moodCode="EVN">
+                                                               <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                               <title>Measurement period</title>
+                                                            </observation>
+                                                         </sourceOf>
+                                                      </encounter>
+                                                   </sourceOf>
+                                                </act>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                                 <sourceOf typeCode="PRCN">
+                                    <conjunctionCode code="OR"/>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                       <id root="A048CC2F-3201-465F-8AD6-3665F20E396A"/>
+                                       <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                             <title>Diagnosis active: Iatrogenic Pneumothorax (ordinality: 'On Admission')</title>
+                                             <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.286" displayName="Iatrogenic Pneumothorax Code List GROUPING"/>
+                                             <sourceOf typeCode="REFR">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                                   <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="SUBJ">
+                                                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                                   <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.290" displayName="On Admission"/>
+                                                </observation>
+                                             </sourceOf>
+                                             <sourceOf typeCode="DURING">
+                                                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                                   <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                                   <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                                   <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                                   <sourceOf typeCode="COMP">
+                                                      <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                         <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                         <title>Encounter: Inpatient Hospitalization</title>
+                                                         <sourceOf typeCode="DURING">
+                                                            <observation classCode="OBS" moodCode="EVN">
+                                                               <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                               <title>Measurement period</title>
+                                                            </observation>
+                                                         </sourceOf>
+                                                      </encounter>
+                                                   </sourceOf>
+                                                </act>
+                                             </sourceOf>
+                                          </observation>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="5AC76532-AB0B-4F0B-94C7-44F300B3458F"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Chest Trauma</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.297" displayName="Chest Trauma Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="F2D83B8A-5519-4021-A851-EA8457719E02"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Pleural Effusion</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.307" displayName="Pleural Effusion Code List GROUPING"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="1D520C1B-522D-4596-B064-96718EAAB4CF"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.301" displayName="Thoracic Surgery ICD-9-CM Code List"/>
+                                       <title>Procedure performed: Thoracic Surgery</title>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="A840D3F7-8ADD-4DE5-B468-24D555CFE667"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.302" displayName="Lung/Pleural Biopsy ICD-9-CM Code List"/>
+                                       <title>Procedure performed: Lung/Pleural Biopsy</title>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="CF92EDBF-5BDB-4891-80B9-A41FF6D73F31"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.303" displayName="Diaphragmatic Surgery Repair ICD-9-CM Code List"/>
+                                       <title>Procedure performed: Diaphragmatic Surgery Repair</title>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="C3292D3F-37CD-400E-BB79-CF05315A6A14"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.304" displayName="Cardiac Surgery ICD-9-CM Code List"/>
+                                       <title>Procedure performed: Cardiac Surgery</title>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="F7012480-D509-4A84-8FED-AE8033F85171"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Newborn DRG</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.305" displayName="Newborn DRG DRG Code List"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                                 <id root="D8264972-E97D-42DE-8BB1-1F6011E5174B"/>
+                                 <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                       <title>Diagnosis active: Pregnancy/Newborn/Puerperium</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.306" displayName="Pregnancy/Newborn/Puerperium DRG Code List"/>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                             <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                       <sourceOf typeCode="DURING">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                                   <title>Encounter: Inpatient Hospitalization</title>
+                                                   <sourceOf typeCode="DURING">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                                         <title>Measurement period</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="A36C3A14-3B7E-4B90-AC8F-D3981D20C671"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="A048CC2F-3201-465F-8AD6-3665F20E396A"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: Iatrogenic Pneumothorax (ordinality: 'secondary')</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.286" displayName="Iatrogenic Pneumothorax Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SUBJ">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.289" displayName="secondary"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                                       <title>Encounter: Inpatient Hospitalization</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="F0C9597B-1F99-424B-AEFB-09ED2DF46FE1"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: Chest Trauma"</content> using "Chest Trauma Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.297)"</item>
+               <item>
+                  <content>"Diagnosis active: Iatrogenic Pneumothorax"</content> using "Iatrogenic Pneumothorax Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.286)"</item>
+               <item>
+                  <content>"Diagnosis active: medical discharge DRG"</content> using "medical discharge DRG DRG Code List (2.16.840.1.113883.3.67.1.101.1.283)"</item>
+               <item>
+                  <content>"Diagnosis active: Newborn DRG"</content> using "Newborn DRG DRG Code List (2.16.840.1.113883.3.67.1.101.1.305)"</item>
+               <item>
+                  <content>"Diagnosis active: Pleural Effusion"</content> using "Pleural Effusion Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.307)"</item>
+               <item>
+                  <content>"Diagnosis active: Pregnancy/Newborn/Puerperium"</content> using "Pregnancy/Newborn/Puerperium DRG Code List (2.16.840.1.113883.3.67.1.101.1.306)"</item>
+               <item>
+                  <content>"Diagnosis active: surgical discharge DRG"</content> using "surgical discharge DRG DRG Code List (2.16.840.1.113883.3.67.1.101.1.282)"</item>
+               <item>
+                  <content>"Encounter: Inpatient Hospitalization"</content> using "Inpatient Hospitalization SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.106)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.67.1.101.1.24)"</item>
+               <item>
+                  <content>"Physical exam finding: Birth weight"</content> using "Birth weight Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.293)"</item>
+               <item>
+                  <content>"Procedure performed: Cardiac Surgery"</content> using "Cardiac Surgery ICD-9-CM Code List (2.16.840.1.113883.3.67.1.101.1.304)"</item>
+               <item>
+                  <content>"Procedure performed: Diaphragmatic Surgery Repair"</content> using "Diaphragmatic Surgery Repair ICD-9-CM Code List (2.16.840.1.113883.3.67.1.101.1.303)"</item>
+               <item>
+                  <content>"Procedure performed: Lung/Pleural Biopsy"</content> using "Lung/Pleural Biopsy ICD-9-CM Code List (2.16.840.1.113883.3.67.1.101.1.302)"</item>
+               <item>
+                  <content>"Procedure performed: Thoracic Surgery"</content> using "Thoracic Surgery ICD-9-CM Code List (2.16.840.1.113883.3.67.1.101.1.301)"</item>
+               <item>
+                  <content>Attribute: "Ordinality: Principal"</content> using "Principal 2.16.840.1.113883.3.67.1.101.1.287 Code List  (2.16.840.1.113883.3.67.1.101.1.287)"</item>
+               <item>
+                  <content>Attribute: "Ordinality: On Admission"</content> using "On Admission SNOMED-CT Code List  (2.16.840.1.113883.3.67.1.101.1.290)"</item>
+               <item>
+                  <content>Attribute: "Ordinality: Secondary"</content> using "Secondary SNOMED-CT Code List  (2.16.840.1.113883.3.67.1.101.1.289)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="6BE06846-B7ED-464F-8685-09090B1D269E"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="9BFC2359-4FE7-4627-812F-36D792D172F9"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.293" displayName="Birth weight Code List GROUPING"/>
+                     <title>Physical exam finding: Birth weight</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="C3292D3F-37CD-400E-BB79-CF05315A6A14"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.304" displayName="Cardiac Surgery ICD-9-CM Code List"/>
+                     <title>Procedure performed: Cardiac Surgery</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="5AC76532-AB0B-4F0B-94C7-44F300B3458F"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Chest Trauma</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.297" displayName="Chest Trauma Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="CF92EDBF-5BDB-4891-80B9-A41FF6D73F31"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.303" displayName="Diaphragmatic Surgery Repair ICD-9-CM Code List"/>
+                     <title>Procedure performed: Diaphragmatic Surgery Repair</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="A048CC2F-3201-465F-8AD6-3665F20E396A"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Iatrogenic Pneumothorax</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.286" displayName="Iatrogenic Pneumothorax Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="30960940-DE10-4BB8-AE10-D684ACE6EEF7"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.106" displayName="Inpatient Hospitalization SNOMED-CT Code List"/>
+                     <title>Encounter: Inpatient Hospitalization</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="A840D3F7-8ADD-4DE5-B468-24D555CFE667"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.302" displayName="Lung/Pleural Biopsy ICD-9-CM Code List"/>
+                     <title>Procedure performed: Lung/Pleural Biopsy</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="06BAD993-75E5-4DD3-A3E7-1C8047A152AC"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: medical discharge DRG</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.283" displayName="medical discharge DRG DRG Code List"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="F7012480-D509-4A84-8FED-AE8033F85171"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Newborn DRG</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.305" displayName="Newborn DRG DRG Code List"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="F2D83B8A-5519-4021-A851-EA8457719E02"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Pleural Effusion</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.307" displayName="Pleural Effusion Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="D8264972-E97D-42DE-8BB1-1F6011E5174B"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Pregnancy/Newborn/Puerperium</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.306" displayName="Pregnancy/Newborn/Puerperium DRG Code List"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="30A6C030-AAE7-4F13-BFE1-9B4AAFCECB84"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: surgical discharge DRG</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.282" displayName="surgical discharge DRG DRG Code List"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="1D520C1B-522D-4596-B064-96718EAAB4CF"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.301" displayName="Thoracic Surgery ICD-9-CM Code List"/>
+                     <title>Procedure performed: Thoracic Surgery</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

@@ -1,0 +1,2386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/eMeasure.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="6AFD1100-3A17-486A-A148-E01F065D229F"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Urinary catheter removed on Postoperative Day 1 (POD 1) or Postoperative Day 2 (POD 2) with day of surgery being day zero (NQF 0453)</title>
+   <text>Surgical patients with urinary catheter removed on Postoperative Day 1 or Postoperative Day 2 with day of surgery being day zero.</text>
+   <statusCode code="completed"/>
+   <setId root="DF040C64-91C5-4B7C-B957-C307D57FE59A"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.666"/>
+            <name>Oklahoma Foundation for Medical Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.666"/>
+            <name>Oklahoma Foundation for Medical Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">It is well-established that the risk of catheter-associated urinary tract infection (UTI) increases with increasing duration of indwelling urinary catheterization. In 2000, Saint reported the results of a pooled analysis of 10 prospective trials dating from 1983 to 1995 which estimated that bacteriuria will develop in 26% of patients after 2 to 10 days of catheterization (95% CI 23-25%). Additional pooled analyses demonstrated that 24% (95% CI 16% to 32%) of those patients will develop symptomatic UTI and bacteremia will develop in 3.6%. Among surgical patients, two studies of postoperative patients discharged to subacute care with urinary catheters were more likely to be readmitted to the hospital with a UTI compared with those who had catheters removed prior to hospital discharges (Wald, 2005 and Wald, 2008). Among selected major surgical patients in the Surgical Infection Project (SIP) cohort, Wald demonstrated (in press) that 85% had perioperative indwelling catheters placed and half of those patients had catheters for greater than 2 days postoperatively. These patients were twice as likely to develop UTIs prior to hospital discharge. On multivariate analysis, those who had indwelling bladder catheters for more than 2 days postoperatively were 21% more likely to develop UTI, significantly less likely to be discharged to home, and had a significant increase in mortality at 30 days. Additional analyses suggest that there is sizeable variation in the duration of postoperative catheterization among hospitals and that hospital factors may account for this variation. In 2006, Stephan reported the results of a multifaceted intervention study in orthopedic surgery patients in which protocols limiting the use and duration of postoperative catheterization played a large role. They reported a resultant 60% reduction in UTI incidence-density.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Minimizing the duration of indwelling urinary catheterization can reduce the risk of catheter-associated urinary tract infection.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Higher score indicates better quality</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="E45647C1-3182-432C-ABE8-9A9408410EA8"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="85E6BBF7-2A9A-462E-A51A-ED08AD4FCF7E"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="4E37310C-468D-40FB-B0EF-84EC021C5689"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Saint S. Clinical and economic consequences of nosocomial catheter-related bacteremia. Am J Infect Control 2000; 28: 68-75.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Stephan F, Sax H, Wachsmuth M, et al. Reduction of urinary tract infection and antibiotic use after surgery: a controlled, prospective before-after study. Clin Infect Dis. 2006; 42; 1544.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Wald HL, Ma A, Bratzler DW, Kramer AM. Indwelling Urinary Catheter Use in the Postoperative Period: Analysis of The National Surgical Infection Prevention Project Data. Arch Surg. In press.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Wald H, Epstein A, Kramer A. Extended Urinary Catheterization Among Hip Fracture Patients Discharged to Skilled Nursing Facilities. Med Care 2005; 43:1009-1017.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Wald HL, Epstein AM, Radcliff TA, Kramer AM. Extended Use of Urinary Catheters in Older Surgical Patients: A Patient Safety Problem? Infect Cont Hosp Epidemiol 2008; 29:116-124.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 = Jan – Mar, Q2 = Apr – Jun, Q3 = Jul – Sep, Q4 is Oct – Dec.
+
+Patients for whom there are missing or inaccurate data (e.g., arrival time, medication administration, etc.) are considered to have failed the measure; the total number of patients with missing or erroneous (e.g., a time of 03:69 or a date of 10/26/2035) data (i.e., measure failures) must be reported with the results of the measure.
+
+General guidance:
+
+The original measure excludes patients who have had a laparoscopic procedure unless the laparoscopic incision has been extended during the procedure.  ICD-10 allows definition of such extension with procedure codes; ICD-9 does not. For those using ICD-9 any laparoscopic procedure that extends the incision should be included. In this measure the code lists that describe types of surgical procedures remain only in ICD-9 or ICD-10 because the concepts that apply are limited to a very specific subset of all surgical procedures.
+
+Denominator element guidance:
+
+The denominator in this measure specifically excludes surgical procedures that may be associated with post-operative indwelling urinary catheter usage and that occur in close time proximity to the index major surgical procedure. Previous CABG and 'other cardiac surgery' procedures allow exclusion if performed within 4 days before or after the index major surgical procedure.  Other major surgical procedures allow exclusion if performed within 3 days before or after the index major surgical procedure. 
+
+Exclusion element guidance:
+
+The exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions. 
+
+The original specification for this measure allowed an exclusion for patients with pacemaker or implantable defibrillator insertions within 4 days of CABG or other cardiac procedures or 3 days for other surgery.  
+
+By convention, discharge date post "encounter inpatient" is used to describe the hospital discharge date.  Where logic needs to indicate discharge (or transfer) from one inpatient location to another, the logic uses "transfer from" or "transfer to" as the QDS data type.
+
+</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: "Patient characteristic: birth date"  &gt;= 18 year(s) starts before start of "Instance A of Encounter: Hospital Measures-Encounter Inpatient (admissiontime)"</item>
+                     <item>AND: "Instance A of Encounter: Hospital Measures-Encounter Inpatient (discharge)" during "Measurement period"</item>
+                     <item>AND: "Instance A of Encounter: Hospital Measures-Encounter Inpatient (duration &lt;= 120 days)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure (ordinality: 'principal')" during "Instance A of Encounter: Hospital Measures-Encounter Inpatient"</item>
+                     <item>AND: "Instance A of Procedure performed: Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters (ordinality: 'principal')"</item>
+                     <item>AND: "Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (insertiontime, anatomical structure: 'Urethra')" starts after start of "Instance A of Encounter: Hospital Measures-Encounter Inpatient (admissiontime)"</item>
+                     <item>AND: "Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (insertiontime, anatomical structure: 'Urethra')" starts after end of "Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia"</item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>AND NOT: "Physical exam finding: Hospital Measures-SCIP urinary diversion" starts before start of "Procedure performed: Hospital Measures-SCIP major surgical procedure"</item>
+                                 <item>AND NOT: "Procedure performed: Hospital Measures-SCIP urinary diversion procedures" starts before start of "Procedure performed: Hospital Measures-SCIP major surgical procedure"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND:  NOT "Instance A of Intervention performed: Hospital Measures-Intermittent catheterization" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure"</item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>AND NOT: "Instance B of Device applied: Hospital Measures-Indwelling urinary catheter (insertiontime, anatomical structure: 'Urethra')" starts before start of "Instance A of Encounter: Hospital Measures-Encounter Inpatient (admission)"</item>
+                                 <item>AND NOT: "Instance B of Device applied: Hospital Measures-Indwelling urinary catheter (removaltime, anatomical structure: 'Urethra')" starts before start of "Instance A of Encounter: Hospital Measures-Encounter Inpatient (admission)"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND:  NOT "Device applied: Hospital Measures-Suprapubic catheter" starts before or during "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure"</item>
+                     <item>AND:  NOT "Instance A of Encounter: Hospital Measures-Encounter Inpatient (discharge)"  &lt; 2 day(s) starts after end of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure"</item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>AND NOT: "Instance B of Procedure performed: Hospital Measures-CABG"  &lt;= 4 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                                 <item>AND NOT: "Instance B of Procedure performed: Hospital Measures-CABG"  &lt;= 4 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>AND NOT: "Instance B of Procedure performed: Hospital Measures-Other Cardiac Surgery"  &lt;= 4 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                                 <item>AND NOT: "Instance B of Procedure performed: Hospital Measures-Other Cardiac Surgery"  &lt;= 4 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts after end of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>AND NOT: IMMEDIATE PRIOR "Instance B of Procedure performed: Hospital Measures-SCIP major surgical procedure"  &lt;= 3 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                                 <item>AND NOT: IMMEDIATE PRIOR "Instance B of Procedure performed: Hospital Measures-Other Cardiac Surgery"  &lt;= 3 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>OR NOT: "Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator"  &lt;= 4 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-CABG")</item>
+                                 <item>OR NOT: "Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"  &lt;= 4 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-CABG")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>OR NOT: "Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator"  &lt;= 4 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-CABG")</item>
+                                 <item>OR NOT: "Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"  &lt;= 4 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-CABG")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>OR NOT: "Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator"  &lt;= 4 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery")</item>
+                                 <item>OR NOT: "Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"  &lt;= 4 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>OR NOT: "Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator"  &lt;= 4 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery")</item>
+                                 <item>OR NOT: "Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"  &lt;= 4 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>OR NOT: "Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator"  &lt;= 3 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                                 <item>OR NOT: "Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"  &lt;= 3 day(s) starts before start of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>OR NOT: "Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator"  &lt;= 3 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                                 <item>OR NOT: "Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"  &lt;= 3 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure")</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: "Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (removaltime, anatomical structure: 'Urethra')"  &lt;= 2 day(s) starts after end of "Procedure performed: Hospital Measures-Surgical procedure"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>OR: "Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (removaltime, anatomical structure: 'Urethra', reason is present)"  &gt; 2 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts after end of "Instance A of Procedure performed: Hospital Measures-Surgical procedure")</item>
+                     <item>OR: "Patient characteristic: Clinical trial participant" during "Instance A of Encounter: Hospital Measures-Encounter Inpatient"</item>
+                     <item>OR: <list>
+                           <item>AND: "Patient characteristic: Expired" starts after start of "Instance A of Encounter: Hospital Measures-Encounter Inpatient (incisiontime)"</item>
+                           <item>AND: "Patient characteristic: Expired"  &lt;= 6 hours starts after start of "Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia (endtime)"</item>
+                        </list>
+                     </item>
+                     <item>OR: <list>
+                           <item>OR: "Instance A of Medication administered: Hospital Measures-Diuretics"  &gt;= 2 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-Surgical procedure")</item>
+                           <item>OR: "Instance A of Encounter: Hospital Measures-Encounter Inpatient (facility location: 'ICU')"  &gt;= 2 day(s) starts after end of ("Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia" starts before start of "Instance A of Procedure performed: Hospital Measures-Surgical procedure")</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="85130E59-7C9F-470E-B725-6D37CC2B7F39"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                     <id root="9ADC0FCA-A523-4DED-96C3-63229D9E4335"/>
+                     <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                           <title>Patient characteristic: birth date</title>
+                           <sourceOf typeCode="SBS">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="18" unit="a" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="TBD"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (admissiontime)</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="TBD"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (discharge)</title>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <high/>
+                           </effectiveTime>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="3C07A5F7-7649-4B84-A72E-A67A12D2C3CC"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="63FEBB57-DCE4-42B7-BD37-C6AEFBDC827C"/>
+                     <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (duration &lt;= 120  days)</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="2C646D67-3B1E-48E5-9E67-397ECFA8CD17"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="85130E59-7C9F-470E-B725-6D37CC2B7F39"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.817" displayName="Hospital Measures-SCIP major surgical procedure ICD-9-CM Code List"/>
+                           <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure (ordinality: 'principal')</title>
+                           <sourceOf typeCode="SUBJ">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.8001" displayName="Hospital Measures-Principal"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="TBD"/>
+                                 <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient</title>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.819" displayName="Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters SNOMED-CT Code List"/>
+                           <title>Instance A of Procedure performed: Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters (ordinality: 'principal')</title>
+                           <sourceOf typeCode="SUBJ">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.8001" displayName="Hospital Measures-Principal"/>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                           <title>Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (insertiontime, anatomical structure: 'Urethra')</title>
+                           <participant typeCode="DEV">
+                              <roleParticipant classCode="MANU">
+                                 <playingDevice classCode="DEV" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                                 </playingDevice>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="SAS">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="TBD"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (admissiontime)</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                           <title>Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (insertiontime, anatomical structure: 'Urethra')</title>
+                           <participant typeCode="DEV">
+                              <roleParticipant classCode="MANU">
+                                 <playingDevice classCode="DEV" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                                 </playingDevice>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="SAE">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                                 <id root="BF7AAF99-8CD5-40CB-80A2-A705FB5A3E48"/>
+                                 <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.822" displayName="Hospital Measures-SCIP urinary diversion SNOMED-CT Code List"/>
+                                       <title>Physical exam finding: Hospital Measures-SCIP urinary diversion</title>
+                                       <sourceOf typeCode="SBS">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="4CB50A4D-1F5D-43D5-BE33-67E8167A25AC"/>
+                                             <title>Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="F49A55ED-735D-4F7C-B44B-01408FCD74E9"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1050" displayName="Hospital Measures-SCIP urinary diversion procedures SNOMED-CT Code List"/>
+                                       <title>Procedure performed: Hospital Measures-SCIP urinary diversion procedures</title>
+                                       <sourceOf typeCode="SBS">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="4CB50A4D-1F5D-43D5-BE33-67E8167A25AC"/>
+                                             <title>Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- intervention performed pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.46"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.825" displayName="Hospital Measures-Intermittent catheterization SNOMED-CT Code List"/>
+                           <title>Instance A of Intervention performed: Hospital Measures-Intermittent catheterization</title>
+                           <statusCode code="completed"/>
+                           <sourceOf typeCode="SBS">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="TBD"/>
+                                 <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance B of Device applied: Hospital Measures-Indwelling urinary catheter (insertiontime, anatomical structure: 'Urethra')</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SBS">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="TBD"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                                   <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (admission)</title>
+                                                   <effectiveTime xsi:type="IVL_TS">
+                                                      <low/>
+                                                   </effectiveTime>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance B of Device applied: Hospital Measures-Indwelling urinary catheter (removaltime, anatomical structure: 'Urethra')</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SBS">
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                             <id root="TBD"/>
+                                             <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                                   <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (admission)</title>
+                                                   <effectiveTime xsi:type="IVL_TS">
+                                                      <low/>
+                                                   </effectiveTime>
+                                                </encounter>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- device applied pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                     <id root="5AB3FD26-495E-4095-B894-337272505792"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                           <title>Device applied: Hospital Measures-Suprapubic catheter</title>
+                           <participant typeCode="DEV">
+                              <roleParticipant classCode="MANU">
+                                 <playingDevice classCode="DEV" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.666.05.827" displayName="Hospital Measures-Suprapubic catheter SNOMED-CT Code List"/>
+                                 </playingDevice>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="EAS" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="TBD"/>
+                                 <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                              </observation>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="TBD"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (discharge)</title>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <high/>
+                           </effectiveTime>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="2" unit="d" inclusive="false"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.817" displayName="Hospital Measures-SCIP major surgical procedure ICD-9-CM Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.694" displayName="Hospital Measures-CABG Code List GROUPING"/>
+                                       <title>Instance B of Procedure performed: Hospital Measures-CABG</title>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.694" displayName="Hospital Measures-CABG Code List GROUPING"/>
+                                       <title>Instance B of Procedure performed: Hospital Measures-CABG</title>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.701" displayName="Hospital Measures-Other Cardiac Surgery Code List GROUPING"/>
+                                       <title>Instance B of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.701" displayName="Hospital Measures-Other Cardiac Surgery Code List GROUPING"/>
+                                       <title>Instance B of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SAE">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <sequenceNumber value="1"/>
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.817" displayName="Hospital Measures-SCIP major surgical procedure ICD-9-CM Code List"/>
+                                       <title>Instance B of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="3" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <sequenceNumber value="1"/>
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.701" displayName="Hospital Measures-Other Cardiac Surgery Code List GROUPING"/>
+                                       <title>Instance B of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="3" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-CABG</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-CABG</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-CABG</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-CABG</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="4" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="3" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                                       <sourceOf typeCode="SBS">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="3" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                                       <title>Instance A of Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                                       <participant typeCode="DEV">
+                                          <roleParticipant classCode="MANU">
+                                             <playingDevice classCode="DEV" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                                             </playingDevice>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="3" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="OR"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                                       <sourceOf typeCode="SAE">
+                                          <pauseQuantity xsi:type="IVL_PQ">
+                                             <high value="3" unit="d" inclusive="true"/>
+                                          </pauseQuantity>
+                                          <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                             <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                             <id root="TBD"/>
+                                             <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <sourceOf typeCode="COMP">
+                                                <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                                   <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                                   <sourceOf typeCode="SBS">
+                                                      <observation classCode="OBS" moodCode="EVN">
+                                                         <id root="TBD"/>
+                                                         <title>Instance A of Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                                                      </observation>
+                                                   </sourceOf>
+                                                </procedure>
+                                             </sourceOf>
+                                          </act>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="748A60ED-D6E5-47A0-926B-2EBE5021939E"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                           <title>Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (removaltime, anatomical structure: 'Urethra')</title>
+                           <participant typeCode="DEV">
+                              <roleParticipant classCode="MANU">
+                                 <playingDevice classCode="DEV" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                                 </playingDevice>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="2" unit="d" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="3AEC013F-024D-4429-AF4F-393DEECEEC77"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.828" displayName="Hospital Measures-Surgical procedure SNOMED-CT Code List"/>
+                                       <title>Procedure performed: Hospital Measures-Surgical procedure</title>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="519055A1-E67B-48C7-837D-7AD001A1C433"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.10"/>
+                     <id root="TBD"/>
+                     <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                           <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                           <title>Instance A of Device applied: Hospital Measures-Indwelling urinary catheter (removaltime, anatomical structure: 'Urethra', reason is present)</title>
+                           <participant typeCode="DEV">
+                              <roleParticipant classCode="MANU">
+                                 <playingDevice classCode="DEV" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                                 </playingDevice>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <low value="2" unit="d" inclusive="false"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                 <id root="TBD"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                       <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                       <sourceOf typeCode="SAE">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="TBD"/>
+                                             <title>Instance A of Procedure performed: Hospital Measures-Surgical procedure</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </procedure>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+                     <id root="D425BFB6-56A6-417B-A687-6C0C1E4F8F77"/>
+                     <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                           <title>Patient characteristic: Clinical trial participant</title>
+                           <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.643" displayName="Clinical trial participant SNOMED-CT Code List"/>
+                           <sourceOf typeCode="DURING">
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="TBD"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                       <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+                           <id root="C42B7112-1D37-4CC9-9C66-9536931FCF99"/>
+                           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                 <title>Patient characteristic: Expired</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.730" displayName="Expired Code List GROUPING"/>
+                                 <sourceOf typeCode="SAS">
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                       <id root="TBD"/>
+                                       <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                             <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (incisiontime)</title>
+                                          </encounter>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+                           <id root="C42B7112-1D37-4CC9-9C66-9536931FCF99"/>
+                           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                 <title>Patient characteristic: Expired</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.730" displayName="Expired Code List GROUPING"/>
+                                 <sourceOf typeCode="SAS">
+                                    <pauseQuantity xsi:type="URG_PQ">
+                                       <high value="6" unit="hours" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                       <id root="TBD"/>
+                                       <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                             <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia (endtime)</title>
+                                          </procedure>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="OR"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.14"/>
+                           <id root="TBD"/>
+                           <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                 <title>Instance A of Medication administered: Hospital Measures-Diuretics</title>
+                                 <participant typeCode="CSM">
+                                    <roleParticipant classCode="MANU">
+                                       <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                          <code code="2.16.840.1.113883.3.666.05.829" displayName="Hospital Measures-Diuretics RxNorm Code List"/>
+                                       </playingMaterial>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="SAE">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <low value="2" unit="d" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                       <id root="TBD"/>
+                                       <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                             <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                             <sourceOf typeCode="SBS">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="TBD"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Surgical procedure</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </procedure>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </substanceAdministration>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="OR"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                           <id root="TBD"/>
+                           <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                                 <title>Instance A of Encounter: Hospital Measures-Encounter Inpatient (facility location: 'ICU')</title>
+                                 <participant typeCode="LOC">
+                                    <roleParticipant classCode="SDLOC">
+                                       <code code="2.16.840.1.113883.3.666.05.1083" displayName="Hospital Measures-ICU locations"/>
+                                    </roleParticipant>
+                                 </participant>
+                                 <sourceOf typeCode="SAE">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <low value="2" unit="d" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+                                       <templateId root="2.16.840.1.113883.3.560.1.6"/>
+                                       <id root="TBD"/>
+                                       <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                       <sourceOf typeCode="COMP">
+                                          <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                             <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                                             <title>Instance A of Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                                             <sourceOf typeCode="SBS">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                   <id root="TBD"/>
+                                                   <title>Instance A of Procedure performed: Hospital Measures-Surgical procedure</title>
+                                                </observation>
+                                             </sourceOf>
+                                          </procedure>
+                                       </sourceOf>
+                                    </act>
+                                 </sourceOf>
+                              </encounter>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Device applied: Hospital Measures-Indwelling urinary catheter"</content> using "Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List (2.16.840.1.113883.3.666.05.820)"</item>
+               <item>
+                  <content>"Device applied: Hospital Measures-Pacemaker or implantable defibrillator"</content> using "Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List (2.16.840.1.113883.3.666.05.1086)"</item>
+               <item>
+                  <content>"Device applied: Hospital Measures-Suprapubic catheter"</content> using "Hospital Measures-Suprapubic catheter SNOMED-CT Code List (2.16.840.1.113883.3.666.05.827)"</item>
+               <item>
+                  <content>"Encounter: Hospital Measures-Encounter Inpatient"</content> using "Hospital Measures-Encounter Inpatient SNOMED-CT Code List (2.16.840.1.113883.3.666.05.625)"</item>
+               <item>
+                  <content>"Intervention performed: Hospital Measures-Intermittent catheterization"</content> using "Hospital Measures-Intermittent catheterization SNOMED-CT Code List (2.16.840.1.113883.3.666.05.825)"</item>
+               <item>
+                  <content>"Medication administered: Hospital Measures-Diuretics"</content> using "Hospital Measures-Diuretics RxNorm Code List (2.16.840.1.113883.3.666.05.829)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.526.02.8)"</item>
+               <item>
+                  <content>"Patient characteristic: Clinical trial participant"</content> using "Clinical trial participant SNOMED-CT Code List (2.16.840.1.113883.3.526.02.643)"</item>
+               <item>
+                  <content>"Patient characteristic: Expired"</content> using "Expired Code List GROUPING (2.16.840.1.113883.3.666.05.730)"</item>
+               <item>
+                  <content>"Physical exam finding: Hospital Measures-SCIP urinary diversion"</content> using "Hospital Measures-SCIP urinary diversion SNOMED-CT Code List (2.16.840.1.113883.3.666.05.822)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-CABG"</content> using "Hospital Measures-CABG Code List GROUPING (2.16.840.1.113883.3.666.05.694)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia"</content> using "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List (1.3.6.1.4.1.33895.1.3.0.31)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-Other Cardiac Surgery"</content> using "Hospital Measures-Other Cardiac Surgery Code List GROUPING (2.16.840.1.113883.3.666.05.701)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure"</content> using "Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List (2.16.840.1.113883.3.666.05.1087)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-SCIP major surgical procedure"</content> using "Hospital Measures-SCIP major surgical procedure ICD-9-CM Code List (2.16.840.1.113883.3.666.05.817)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-SCIP urinary diversion procedures"</content> using "Hospital Measures-SCIP urinary diversion procedures SNOMED-CT Code List (2.16.840.1.113883.3.666.05.1050)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters"</content> using "Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters SNOMED-CT Code List (2.16.840.1.113883.3.666.05.819)"</item>
+               <item>
+                  <content>"Procedure performed: Hospital Measures-Surgical procedure"</content> using "Hospital Measures-Surgical procedure SNOMED-CT Code List (2.16.840.1.113883.3.666.05.828)"</item>
+               <item>
+                  <content>Attribute: "Ordinality: Principal"</content> using "Hospital Measures-Principal SNOMED-CT Code List  (2.16.840.1.113883.3.526.02.8001)"</item>
+               <item>
+                  <content>Attribute: "Facility location: ICU"</content> using "Hospital Measures-ICU locations HL7 Code List  (2.16.840.1.113883.3.666.05.1083)"</item>
+               <item>
+                  <content>Attribute: "Anatomical structure: Urethra"</content> using "Hospital Measures-Urethra SNOMED-CT Code List  (2.16.840.1.113883.3.666.05.1130)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="9ADC0FCA-A523-4DED-96C3-63229D9E4335"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.526.02.8" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+               <id root="D425BFB6-56A6-417B-A687-6C0C1E4F8F77"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                     <title>Patient characteristic: Clinical trial participant</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.643" displayName="Clinical trial participant SNOMED-CT Code List"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.1001"/>
+               <id root="C42B7112-1D37-4CC9-9C66-9536931FCF99"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                     <title>Patient characteristic: Expired</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.666.05.730" displayName="Expired Code List GROUPING"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="13F30513-2B03-4430-9A8F-A878ABB51CFC"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.694" displayName="Hospital Measures-CABG Code List GROUPING"/>
+                     <title>Procedure performed: Hospital Measures-CABG</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication administered pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.14"/>
+               <id root="AE508AA5-14B7-4581-8245-409F33D16CC5"/>
+               <code code="18610-6" displayName="Medication administered" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication administered: Hospital Measures-Diuretics</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.666.05.829" displayName="Hospital Measures-Diuretics RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="603D56E9-D7A1-441F-A5DD-5F3FD845A878"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                     <title>Encounter: Hospital Measures-Encounter Inpatient</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.46"/>
+               <id root="62C7AB7A-2EB5-44E7-A66C-57D4E248017B"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.825" displayName="Hospital Measures-Intermittent catheterization SNOMED-CT Code List"/>
+                     <title>Intervention performed: Hospital Measures-Intermittent catheterization</title>
+                     <statusCode code="completed"/>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="1C95D9D3-586D-49C9-9735-5C0FE330F247"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="1.3.6.1.4.1.33895.1.3.0.31" displayName="Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia SNOMED-CT Code List"/>
+                     <title>Procedure performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="0F909BA1-334C-49BE-A758-72F9EFE8C1C0"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.701" displayName="Hospital Measures-Other Cardiac Surgery Code List GROUPING"/>
+                     <title>Procedure performed: Hospital Measures-Other Cardiac Surgery</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="7FEE107A-5579-4496-8E90-F8AD9DF4598A"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                     <title>Device applied: Hospital Measures-Pacemaker or implantable defibrillator</title>
+                     <participant typeCode="DEV">
+                        <roleParticipant classCode="MANU">
+                           <playingDevice classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.666.05.1086" displayName="Hospital Measures-Pacemaker or implantable defibrillator ICD-9-CM Code List"/>
+                           </playingDevice>
+                        </roleParticipant>
+                     </participant>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="DB1CC104-2042-4B1D-A582-2A68359263B5"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.1087" displayName="Hospital Measures-Pacemaker or implantable defibrillator insertion procedure SNOMED-CT Code List"/>
+                     <title>Procedure performed: Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="4CB50A4D-1F5D-43D5-BE33-67E8167A25AC"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.817" displayName="Hospital Measures-SCIP major surgical procedure ICD-9-CM Code List"/>
+                     <title>Procedure performed: Hospital Measures-SCIP major surgical procedure</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="BF7AAF99-8CD5-40CB-80A2-A705FB5A3E48"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.822" displayName="Hospital Measures-SCIP urinary diversion SNOMED-CT Code List"/>
+                     <title>Physical exam finding: Hospital Measures-SCIP urinary diversion</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="F49A55ED-735D-4F7C-B44B-01408FCD74E9"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.1050" displayName="Hospital Measures-SCIP urinary diversion procedures SNOMED-CT Code List"/>
+                     <title>Procedure performed: Hospital Measures-SCIP urinary diversion procedures</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="5D9838D1-AC78-4D96-8593-63085515DF80"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.819" displayName="Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters SNOMED-CT Code List"/>
+                     <title>Procedure performed: Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="5AB3FD26-495E-4095-B894-337272505792"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                     <title>Device applied: Hospital Measures-Suprapubic catheter</title>
+                     <participant typeCode="DEV">
+                        <roleParticipant classCode="MANU">
+                           <playingDevice classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.666.05.827" displayName="Hospital Measures-Suprapubic catheter SNOMED-CT Code List"/>
+                           </playingDevice>
+                        </roleParticipant>
+                     </participant>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- procedure performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="3AEC013F-024D-4429-AF4F-393DEECEEC77"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.828" displayName="Hospital Measures-Surgical procedure SNOMED-CT Code List"/>
+                     <title>Procedure performed: Hospital Measures-Surgical procedure</title>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- device applied pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="5A56C1B8-4820-4D31-99EF-A10317E320EB"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="360030002" displayName="application of device" codeSystem="2.16.840.1.113883.6.96"/>
+                     <title>Device applied: Hospital Measures-Indwelling urinary catheter</title>
+                     <participant typeCode="DEV">
+                        <roleParticipant classCode="MANU">
+                           <playingDevice classCode="DEV" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.666.05.820" displayName="Hospital Measures-Indwelling urinary catheter SNOMED-CT Code List"/>
+                           </playingDevice>
+                        </roleParticipant>
+                     </participant>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="63FEBB57-DCE4-42B7-BD37-C6AEFBDC827C"/>
+               <code>
+                  <originalText>Duration of Encounter &lt;= 120  days</originalText>
+               </code>
+               <derivationExpr>var.effectiveTime.high - var.effectiveTime.low</derivationExpr>
+               <value xsi:type="IVL_PQ">
+                  <high value="120" unit="days" inclusive="true"/>
+               </value>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>var</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="TBD"/>
+                     <effectiveTime>
+                        <low/>
+                        <high/>
+                     </effectiveTime>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Encounter Inpatient</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="603D56E9-D7A1-441F-A5DD-5F3FD845A878"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-SCIP major surgical procedure</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="4CB50A4D-1F5D-43D5-BE33-67E8167A25AC"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="5D9838D1-AC78-4D96-8593-63085515DF80"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Indwelling urinary catheter</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="5A56C1B8-4820-4D31-99EF-A10317E320EB"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="1C95D9D3-586D-49C9-9735-5C0FE330F247"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.46"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Intermittent catheterization</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="62C7AB7A-2EB5-44E7-A66C-57D4E248017B"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Indwelling urinary catheter</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="5A56C1B8-4820-4D31-99EF-A10317E320EB"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-CABG</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="13F30513-2B03-4430-9A8F-A878ABB51CFC"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-CABG</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="13F30513-2B03-4430-9A8F-A878ABB51CFC"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Other Cardiac Surgery</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="0F909BA1-334C-49BE-A758-72F9EFE8C1C0"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Other Cardiac Surgery</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="0F909BA1-334C-49BE-A758-72F9EFE8C1C0"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-SCIP major surgical procedure</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="4CB50A4D-1F5D-43D5-BE33-67E8167A25AC"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.10"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Pacemaker or implantable defibrillator</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="7FEE107A-5579-4496-8E90-F8AD9DF4598A"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Pacemaker or implantable defibrillator insertion procedure</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="DB1CC104-2042-4B1D-A582-2A68359263B5"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.6"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Surgical procedure</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="3AEC013F-024D-4429-AF4F-393DEECEEC77"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.14"/>
+               <id root="TBD"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures-Diuretics</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="AE508AA5-14B7-4581-8245-409F33D16CC5"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

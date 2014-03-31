@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="DAD6B3EC-6BDB-43EA-A6B1-0D2DDC72254D"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Management of attention deficit hyperactivity disorder (ADHD) in primary care for school age children and adolescents (NQF 0107)</title>
+   <text>Percentage of patients treated psychostimulant with medication for the diagnosis of ADHD whose medical record contains documentation of a follow-up visit at least twice a year.</text>
+   <statusCode code="completed"/>
+   <setId root="95598DD3-A4E2-4C31-8375-5E1360B5BAC6"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.67.1.101"/>
+            <name>Iowa Foundation for Medical Care</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560.3.3"/>
+            <name>Institute for Clinical Systems Improvement</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="RATIO" codeSystem="2.16.840.1.113883.5.1063" displayName="Rate (percent)"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">Medication management for ADHD is associated with improved academic performance and short-term symptom relief.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Medication is an effective treatment for ADHD. Medication is superior to non-pharmacological interventions when delivered alone. The decision to use medication should be made in conjunction with parents following a thorough discussion of expected benefits and potential risks. Factors such as child’s age, severity of symptoms, and presence of comorbidity should also be considered and may involve decision-making regarding choice of medication. Once patient is stable, clinic visits should occur every three to six months, depending on individual case; there should be more frequent visits for patients with significant comorbidity.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">Improve the primary care use of FDA-approved ADHD medications with indications for management of patients with ADHD.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="7EB605D1-A337-471B-8D2A-2AC983F0F60D"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="92CCCDC7-DDE5-4C69-8F73-8AC59284C2F8"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="5AE17079-A9CC-4C08-8ADB-4E4D097A053B"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Institute for Clinical Systems Improvement (ICSI). Diagnosis and management of attention deficit hyperactivity disorder in primary care for school age children and adolescents, 8th ed. Bloomington MN: Institute for Clinical Systems Improvement (ICSI), March 2010; p.4</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Goldman LS, Genel M, Bezman RJ, et al. Diagnosis and treatment of attention deficit hyperactivity disorder in children and adolescents. JAMA 1998; 279:1100-07</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">MTA Cooperative Group. A 14-month randomized clinical trial of treatment strategies for attention deficit hyperactivity disorder. Arch Gen Psychiatry 1999; 56:1073-86</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Faraone SV, Wilens T. Does stimulant treatment lead to substance use disorders? J Clin Psychiatry 2003; 64:9-13</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">American Academy of Pediatrics Committee on Quality Improvement Subcommittee on Attention Deficit Hyperactivity Disorder. Clinical Practice Guideline: diagnosis and evaluation of the child with attention deficit hyperactivity disorder. Pediatr 2000; 105:1158-70</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Dulcan M. Practice parameters for the assessment and treatment of children, adolescents, and adults with attention deficit hyperactivity disorder. J Am Acad Child Adolesc Psychiatry 1997; 36(10 Supplement):0855-1215</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">National Institutes of Health Consensus Statement. Diagnosis and treatment of attention deficit hyperactivity disorder (ADHD). 1998; 16:1-37</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain">Care Plan: Each encounter should have a plan of management or care plan. At the minimum this should include a discussion regarding medication dosing and plan for next visit. In addition, the care plan may include school interventions, behavioral health and community resources.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1 B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012 CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>AND: "Patient characteristic: birth date"  &gt;= 5 year(s) starts before start of "Instance A of Encounter: Office/Outpatient Visit"</item>
+                           <item>AND: "Patient characteristic: birth date"  &lt;= 18 year(s) starts before start of "Instance A of Encounter: Office/Outpatient Visit"</item>
+                           <item>AND: "Diagnosis active: ADHD"</item>
+                           <item> during "Measurement period"</item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator =</content>
+                  <list>
+                     <item>AND: "Initial Patient Population"</item>
+                     <item>AND: "Medication active: Psychostimulants"  &lt;= 12 month(s) starts before start of (CURRENT "Encounter: Office/Outpatient Visit" during "Measurement period")</item>
+                     <item>AND: "Medication active: Psychostimulants" during (CURRENT "Encounter: Office/Outpatient Visit" during "Measurement period")</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator =</content>
+                  <list>
+                     <item>AND: <list>
+                           <item>AND: <list>
+                                 <item>AND: "Physical exam finding: Height"</item>
+                                 <item>AND: "Physical exam finding: Weight"</item>
+                                 <item>AND: "Intervention performed: Medication Reviewed"</item>
+                                 <item>AND: "Intervention performed: Assessment of School Progress"</item>
+                                 <item>AND: "Care goal: Plan of Care (related to: 'ADHD')"</item>
+                                 <item>AND: "Medication active: Psychostimulants"</item>
+                                 <item> during  (CURRENT "Encounter: Office/Outpatient Visit" during "Measurement period")</item>
+                              </list>
+                           </item>
+                           <item>  &lt;= 12 months ends after start of <list>
+                                 <item>AND: "Physical exam finding: Height"</item>
+                                 <item>AND: "Physical exam finding: Weight"</item>
+                                 <item>AND: "Intervention performed: Medication Reviewed"</item>
+                                 <item>AND: "Intervention performed: Assessment of School Progress"</item>
+                                 <item>AND: "Care goal: Plan of Care (related to: 'ADHD')"</item>
+                                 <item>AND: "Medication active: Psychostimulants"</item>
+                                 <item> during IMMEDIATE PRIOR "Encounter: Office/Outpatient Visit"</item>
+                              </list>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions =</content>
+                  <list>
+                     <item>None</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="5DA3D7DD-4ADC-412B-910F-F1049D659A90"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                           <id root="BAEE3C95-DE6F-4208-939F-3BC479466F2E"/>
+                           <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                                 <title>Patient characteristic: birth date</title>
+                                 <sourceOf typeCode="SBS">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <low value="5" unit="a" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="92D4B2EB-B95D-4EA0-B648-F7E968F5EBE6"/>
+                                       <title>Instance A of Encounter: Office/Outpatient Visit</title>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.25"/>
+                           <id root="BAEE3C95-DE6F-4208-939F-3BC479466F2E"/>
+                           <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                                 <title>Patient characteristic: birth date</title>
+                                 <sourceOf typeCode="SBS">
+                                    <pauseQuantity xsi:type="IVL_PQ">
+                                       <high value="18" unit="a" inclusive="true"/>
+                                    </pauseQuantity>
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="92D4B2EB-B95D-4EA0-B648-F7E968F5EBE6"/>
+                                       <title>Instance A of Encounter: Office/Outpatient Visit</title>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                           <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                           <id root="C3D765F2-0EEB-4614-B26F-422FCC580AD9"/>
+                           <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                           <sourceOf typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                                 <title>Diagnosis active: ADHD</title>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                                 <sourceOf typeCode="REFR">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                       <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                                    </observation>
+                                 </sourceOf>
+                              </observation>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="DURING">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <id root="7EB605D1-A337-471B-8D2A-2AC983F0F60D"/>
+                           <title>Measurement period</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="4A4CB4CF-B5EC-4300-BDE0-827210A7EFE5"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="5DA3D7DD-4ADC-412B-910F-F1049D659A90"/>
+                     <title>Initial Patient Population</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                     <id root="33278783-AC11-4078-B9FC-55334246FB77"/>
+                     <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                           <title>Medication active: Psychostimulants</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.67.1.101.1.351" displayName="Psychostimulants RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SBS">
+                              <sequenceNumber value="2"/>
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="12" unit="m" inclusive="true"/>
+                              </pauseQuantity>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="6D2C7A57-6CAE-4CE5-8847-3D9D926FA254"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                       <title>Encounter: Office/Outpatient Visit</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="7EB605D1-A337-471B-8D2A-2AC983F0F60D"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </substanceAdministration>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                     <id root="33278783-AC11-4078-B9FC-55334246FB77"/>
+                     <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                           <title>Medication active: Psychostimulants</title>
+                           <participant typeCode="CSM">
+                              <roleParticipant classCode="MANU">
+                                 <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                    <code code="2.16.840.1.113883.3.67.1.101.1.351" displayName="Psychostimulants RxNorm Code List"/>
+                                 </playingMaterial>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <sequenceNumber value="2"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="6D2C7A57-6CAE-4CE5-8847-3D9D926FA254"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                       <title>Encounter: Office/Outpatient Visit</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="7EB605D1-A337-471B-8D2A-2AC983F0F60D"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </substanceAdministration>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="75B4324D-71C6-4ABD-8A22-F6EBD245A305"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                     <sourceOf typeCode="PRCN">
+                        <conjunctionCode code="AND"/>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                                 <id root="E0AB1132-2DF1-41EA-81BC-23C4FCB6A577"/>
+                                 <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.346" displayName="Height Code List GROUPING"/>
+                                       <title>Physical exam finding: Height</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                                 <id root="96AA85D1-5A71-48A0-A1B5-A1932625DDA7"/>
+                                 <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.349" displayName="Weight Code List GROUPING"/>
+                                       <title>Physical exam finding: Weight</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.46"/>
+                                 <id root="F3397B64-3A7E-4E74-8B2F-11CD442A5ED2"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.342" displayName="Medication Reviewed SNOMED-CT Code List"/>
+                                       <title>Intervention performed: Medication Reviewed</title>
+                                       <statusCode code="completed"/>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.46"/>
+                                 <id root="D343B5D4-126A-421D-A13A-97B1C177F88E"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.343" displayName="Assessment of School Progress SNOMED-CT Code List"/>
+                                       <title>Intervention performed: Assessment of School Progress</title>
+                                       <statusCode code="completed"/>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- care goal pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.9"/>
+                                 <id root="11C4FA15-3DFF-4642-9F5A-8C84F34C28F6"/>
+                                 <code code="18776-5" displayName="Plan of care" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="GOL" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <title>Care goal: Plan of Care (related to: 'ADHD')</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.350" displayName="Plan of Care SNOMED-CT Code List">
+                                          <qualifier>
+                                             <name code="404684003" codeSystem="2.16.840.1.113883.6.96" displayName="Care goal"/>
+                                             <value code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD"/>
+                                          </qualifier>
+                                       </value>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                                 <id root="33278783-AC11-4078-B9FC-55334246FB77"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication active: Psychostimulants</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.67.1.101.1.351" displayName="Psychostimulants RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <sequenceNumber value="2"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="6D2C7A57-6CAE-4CE5-8847-3D9D926FA254"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                       <title>Encounter: Office/Outpatient Visit</title>
+                                       <sourceOf typeCode="DURING">
+                                          <observation classCode="OBS" moodCode="EVN">
+                                             <id root="7EB605D1-A337-471B-8D2A-2AC983F0F60D"/>
+                                             <title>Measurement period</title>
+                                          </observation>
+                                       </sourceOf>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                     <sourceOf typeCode="EAS">
+                        <pauseQuantity xsi:type="URG_PQ">
+                           <high value="12" unit="months" inclusive="true"/>
+                        </pauseQuantity>
+                        <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                                 <id root="E0AB1132-2DF1-41EA-81BC-23C4FCB6A577"/>
+                                 <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.346" displayName="Height Code List GROUPING"/>
+                                       <title>Physical exam finding: Height</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.18"/>
+                                 <id root="96AA85D1-5A71-48A0-A1B5-A1932625DDA7"/>
+                                 <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.349" displayName="Weight Code List GROUPING"/>
+                                       <title>Physical exam finding: Weight</title>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.46"/>
+                                 <id root="F3397B64-3A7E-4E74-8B2F-11CD442A5ED2"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.342" displayName="Medication Reviewed SNOMED-CT Code List"/>
+                                       <title>Intervention performed: Medication Reviewed</title>
+                                       <statusCode code="completed"/>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.46"/>
+                                 <id root="D343B5D4-126A-421D-A13A-97B1C177F88E"/>
+                                 <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.343" displayName="Assessment of School Progress SNOMED-CT Code List"/>
+                                       <title>Intervention performed: Assessment of School Progress</title>
+                                       <statusCode code="completed"/>
+                                    </procedure>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- care goal pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.9"/>
+                                 <id root="11C4FA15-3DFF-4642-9F5A-8C84F34C28F6"/>
+                                 <code code="18776-5" displayName="Plan of care" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="GOL" isCriterionInd="true">
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                       <title>Care goal: Plan of Care (related to: 'ADHD')</title>
+                                       <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.350" displayName="Plan of Care SNOMED-CT Code List">
+                                          <qualifier>
+                                             <name code="404684003" codeSystem="2.16.840.1.113883.6.96" displayName="Care goal"/>
+                                             <value code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD"/>
+                                          </qualifier>
+                                       </value>
+                                    </observation>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="PRCN">
+                              <conjunctionCode code="AND"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.13"/>
+                                 <id root="33278783-AC11-4078-B9FC-55334246FB77"/>
+                                 <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                                       <title>Medication active: Psychostimulants</title>
+                                       <participant typeCode="CSM">
+                                          <roleParticipant classCode="MANU">
+                                             <playingMaterial classCode="MMAT" determinerCode="KIND">
+                                                <code code="2.16.840.1.113883.3.67.1.101.1.351" displayName="Psychostimulants RxNorm Code List"/>
+                                             </playingMaterial>
+                                          </roleParticipant>
+                                       </participant>
+                                       <sourceOf typeCode="REFR">
+                                          <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                             <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                                             <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                                          </observation>
+                                       </sourceOf>
+                                    </substanceAdministration>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <sequenceNumber value="1"/>
+                              <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                                 <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                                 <id root="6D2C7A57-6CAE-4CE5-8847-3D9D926FA254"/>
+                                 <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                                 <sourceOf typeCode="COMP">
+                                    <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                                       <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                                       <title>Encounter: Office/Outpatient Visit</title>
+                                    </encounter>
+                                 </sourceOf>
+                              </act>
+                           </sourceOf>
+                        </act>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Care goal: Plan of Care"</content> using "Plan of Care SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.350)"</item>
+               <item>
+                  <content>"Diagnosis active: ADHD"</content> using "ADHD Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.314)"</item>
+               <item>
+                  <content>"Encounter: Office/Outpatient Visit"</content> using "Office/Outpatient Visit CPT Code List (2.16.840.1.113883.3.67.1.101.1.5)"</item>
+               <item>
+                  <content>"Intervention performed: Assessment of School Progress"</content> using "Assessment of School Progress SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.343)"</item>
+               <item>
+                  <content>"Intervention performed: Medication Reviewed"</content> using "Medication Reviewed SNOMED-CT Code List (2.16.840.1.113883.3.67.1.101.1.342)"</item>
+               <item>
+                  <content>"Medication active: Psychostimulants"</content> using "Psychostimulants RxNorm Code List (2.16.840.1.113883.3.67.1.101.1.351)"</item>
+               <item>
+                  <content>"Patient characteristic: birth date" (age)</content> using "birth date HL7 Code List (2.16.840.1.113883.3.67.1.101.1.24)"</item>
+               <item>
+                  <content>"Physical exam finding: Height"</content> using "Height Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.346)"</item>
+               <item>
+                  <content>"Physical exam finding: Weight"</content> using "Weight Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.349)"</item>
+               <item>
+                  <content>Attribute: "Related to: ADHD"</content> using "ADHD  Code List GROUPING (2.16.840.1.113883.3.67.1.101.1.314)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="C3D765F2-0EEB-4614-B26F-422FCC580AD9"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: ADHD</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.314" displayName="ADHD Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- patient characteristic pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.25"/>
+               <id root="BAEE3C95-DE6F-4208-939F-3BC479466F2E"/>
+               <code code="45970-1" displayName="Demographics" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.24" displayName="birth date HL7 Code List"/>
+                     <title>Patient characteristic: birth date</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="E0AB1132-2DF1-41EA-81BC-23C4FCB6A577"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.346" displayName="Height Code List GROUPING"/>
+                     <title>Physical exam finding: Height</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="6D2C7A57-6CAE-4CE5-8847-3D9D926FA254"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.5" displayName="Office/Outpatient Visit CPT Code List"/>
+                     <title>Encounter: Office/Outpatient Visit</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- care goal pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.9"/>
+               <id root="11C4FA15-3DFF-4642-9F5A-8C84F34C28F6"/>
+               <code code="18776-5" displayName="Plan of care" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="GOL" isCriterionInd="true">
+                     <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                     <title>Care goal: Plan of Care</title>
+                     <value xsi:type="CD" code="2.16.840.1.113883.3.67.1.101.1.350" displayName="Plan of Care SNOMED-CT Code List"/>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- medication active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.13"/>
+               <id root="33278783-AC11-4078-B9FC-55334246FB77"/>
+               <code code="10160-0" displayName="Medications" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <substanceAdministration classCode="SBADM" moodCode="EVN" isCriterionInd="true">
+                     <title>Medication active: Psychostimulants</title>
+                     <participant typeCode="CSM">
+                        <roleParticipant classCode="MANU">
+                           <playingMaterial classCode="MMAT" determinerCode="KIND">
+                              <code code="2.16.840.1.113883.3.67.1.101.1.351" displayName="Psychostimulants RxNorm Code List"/>
+                           </playingMaterial>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"/>
+                           <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </substanceAdministration>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- physical exam finding pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.18"/>
+               <id root="96AA85D1-5A71-48A0-A1B5-A1932625DDA7"/>
+               <code code="29545-1" codeSystem="2.16.840.1.113883.6.1" displayName="Physical Examination"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.349" displayName="Weight Code List GROUPING"/>
+                     <title>Physical exam finding: Weight</title>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.46"/>
+               <id root="D343B5D4-126A-421D-A13A-97B1C177F88E"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.343" displayName="Assessment of School Progress SNOMED-CT Code List"/>
+                     <title>Intervention performed: Assessment of School Progress</title>
+                     <statusCode code="completed"/>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- intervention performed pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.46"/>
+               <id root="F3397B64-3A7E-4E74-8B2F-11CD442A5ED2"/>
+               <code code="47519-4" displayName="Procedures" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <procedure classCode="PROC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.67.1.101.1.342" displayName="Medication Reviewed SNOMED-CT Code List"/>
+                     <title>Intervention performed: Medication Reviewed</title>
+                     <statusCode code="completed"/>
+                  </procedure>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="92D4B2EB-B95D-4EA0-B648-F7E968F5EBE6"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Office/Outpatient Visit</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="6D2C7A57-6CAE-4CE5-8847-3D9D926FA254"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>

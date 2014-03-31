@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+     Copyright © 2011 Brigham and Women's Hospital, Inc. All rights reserved.
+
+     Support Acknowledgment: This material is derived from work supported
+     under a contract with the Agency for Healthcare Research and Quality (AHRQ),
+     an agency of the Department of Health and Human Services (Contract No. HHSA290200810010).
+     AHRQ supports health services research that will improve the quality of health
+     care and promote evidence-based decision making.
+
+     THIS SOFTWARE IS PROVIDED BY THE BRIGHAM AND WOMEN'S HOSPITAL, INC.
+     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+     TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+     PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE
+     LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+     DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+     SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+     USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2">
+	<xs:include schemaLocation="base.xsd"/>
+	<xs:element name="Applicability" type="Applicability"/>
+	<xs:complexType name="Applicability">
+		<xs:sequence>
+			<xs:element name="focus" type="CoverageType"/>
+			<xs:element name="code" type="CD" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Recommended coding system is MeSH</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="type" type="ApplicabilityType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="CDSKnowledgeType">
+		<xs:annotation>
+			<xs:documentation>Different types of modalities of CDS knowledge that are supported in the schema</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+<!-- 	1) Alert or Reminder 2) Dictionary or Value Set 3) Documentation Template/Form  4) Order Refinement  5) Order Set  6) Reference Information  7) Relevant Data Presentation  8) Report
+ -->
+ 			<xs:enumeration value="Recommendation"/>
+ 			<xs:enumeration value="Dictionary or Value Set"/>
+			<xs:enumeration value="Alert or Reminder"/>
+			<xs:enumeration value="Reference Information"/>
+			<xs:enumeration value="Relevant Data Presentation"/>
+			<xs:enumeration value="Order Set"/>
+			<xs:enumeration value="Order Refinement"/>
+			<xs:enumeration value="Documentation Template or Form"/>
+			<xs:enumeration value="Report"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Implementation">
+		<xs:annotation>
+			<xs:documentation>How this knowledge could be implemented</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="knowledgeType" type="CDSKnowledgeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TestMethod">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="externalReview"/>
+			<xs:enumeration value="formalAppraisal"/>
+			<xs:enumeration value="pilotTesting"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="DevelopmentApproach" type="DevelopmentApproach"/>
+	<xs:complexType name="DevelopmentApproach">
+		<xs:sequence>
+			<xs:element name="evidenceQualityRatingScheme" type="xs:string" minOccurs="0"/>
+			<xs:element name="recommendationStrengthRatingScheme" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ResourceRelation" type="ResourceRelation"/>
+	<xs:complexType name="ResourceRelation">
+		<xs:sequence>
+			<xs:element name="resource" type="KnowledgeResource"/>
+			<xs:element name="type" type="ResourceRelationshipType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ContributorRoleType">
+		<xs:annotation>
+			<xs:documentation>Role types of contributors in the development of the knowledge entity.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Developer"/>
+			<xs:enumeration value="FinancialSponsor"/>
+			<xs:enumeration value="Endorser"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Evidence" type="Evidence"/>
+	<xs:complexType name="Evidence">
+		<xs:sequence>
+			<xs:element name="qualityOfEvidence" type="xs:string"/>
+			<xs:element name="strengthOfRecommendation" type="xs:string"/>
+			<xs:element name="supportingReference" type="KnowledgeResource" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KnowledgeEntityMetadata">
+		<xs:sequence>
+			<xs:element name="coverage" type="Applicability" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="contributor" type="ContributionByOrganization" minOccurs="0" maxOccurs="unbounded"/>
+	<!--ADELA -->
+			<xs:element name="identity" type="Identity"  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="stateChangeEvent" type="Event" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="evidenceBasis" type="Evidence" minOccurs="0"/>
+			<xs:element name="testing" type="Test" minOccurs="0"/>
+			<xs:element name="developmentApproach" type="DevelopmentApproach" minOccurs="0"/>
+			<xs:element name="revisionPlan" type="RevisionPlan" minOccurs="0"/>
+			<xs:element name="implementation" type="Implementation" minOccurs="0"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="KnowledgeEntityMetadata" type="KnowledgeEntityMetadata"/>
+	<xs:simpleType name="CoverageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="patient"/>
+			<xs:enumeration value="careSetting"/>
+			<xs:enumeration value="clinicalFocus"/>
+			<xs:enumeration value="user"/>
+			<xs:enumeration value="subTopic">
+				<xs:annotation>
+					<xs:documentation>See infobutton specification</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="taskContext">
+				<xs:annotation>
+					<xs:documentation>See infobutton specification</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>		
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Identity" type="Identity"/>
+	<xs:complexType name="Identity">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="identifier" type="AssignedIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="relatedResource" type="ResourceRelation" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="artifactVersion" type="VersionIdentifier" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The version number for the knowledge entity.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="schemaVersion" type="VersionIdentifier" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The version number for the schema used to encode the knowledge entity</xs:documentation>
+				</xs:annotation></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Organization" type="Organization"/>
+	<xs:complexType name="Organization">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="RevisionPlan" type="RevisionPlan"/>
+	<xs:complexType name="RevisionPlan">
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="expiration" type="xs:date"/>
+			<xs:element name="scheduledReview" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Test" type="Test"/>
+	<xs:complexType name="Test">
+		<xs:annotation>
+			<xs:documentation>QA tests of a knowledge artifact.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="results" type="xs:string" minOccurs="0"/>
+			<xs:element name="testPlan" type="xs:string" minOccurs="0"/>
+			<xs:element name="method" type="TestMethod"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ResourceRelationshipType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="versionOf"/>
+			<xs:enumeration value="derivedFrom"/>
+			<xs:enumeration value="similarTo"/>
+			<xs:enumeration value="adaptedFrom"/>
+			<xs:enumeration value="associatedResource"/>
+			<xs:enumeration value="dependsOn"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Event" type="Event"/>
+	<xs:complexType name="Event">
+		<xs:annotation>
+			<xs:documentation>A state-change event in the life cycle of a knowledge entity</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="occurrenceTime" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The time and date at which the stated is being assigned to the knowledge entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="state" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The state being assigned to the knowledge entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ContributionByOrganization" type="ContributionByOrganization"/>
+	<xs:complexType name="ContributionByOrganization">
+		<xs:annotation>
+			<xs:documentation>Any entity that contributes in any form to the development of the knowledge entity.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="conflictOfInterestStatement" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A description of any conflict of interest the organization has in its contribution to the development of the knowledge entity</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the contributions made by the organization. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="roleType" type="ContributorRoleType" minOccurs="0"/>
+			<xs:element name="organization" type="Organization"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ApplicabilityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="inclusion"/>
+			<xs:enumeration value="exclusion"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

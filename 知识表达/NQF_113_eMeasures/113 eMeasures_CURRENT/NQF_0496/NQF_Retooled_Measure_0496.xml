@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="HQMFreader.xsl"?>
+<QualityMeasureDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+         
+      <!--
+         **************************************************************   
+         Measure Header Section
+         **************************************************************
+      --><typeId root="2.16.840.1.113883.1.3" extension="POQM_HD000001"/>
+   <id root="979B4013-8444-450E-BAAF-168A479BC1A8"/>
+   <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" displayName="Health Quality Measure Document"/>
+   <title>Median Time from ED Arrival to ED Departure for Discharged ED Patients (NQF 0496)</title>
+   <text>Median time from emergency department arrival to time of departure from the emergency room for patients discharged from the emergency department.</text>
+   <statusCode code="completed"/>
+   <setId root="Pending"/>
+   <versionNumber value="1"/>
+   <author typeCode="AUT">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.666"/>
+            <name>Oklahoma Foundation for Medical Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </author>
+   <custodian>
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.666"/>
+            <name>Oklahoma Foundation for Medical Quality</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </custodian>
+   <verifier typeCode="VRF">
+      <assignedPerson classCode="ASSIGNED">
+         <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.560"/>
+            <name>National Quality Forum</name>
+            <contactParty classCode="CON" nullFlavor="UNK"/>
+         </representedOrganization>
+      </assignedPerson>
+   </verifier>
+   <subjectOf>
+      <measureAttribute>
+         <code code="COPY" codeSystem="2.16.840.1.113883.5.4" displayName="Copyright"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRSCORE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure scoring"/>
+         <value xsi:type="CD" code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" displayName="Proportion"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRTYPE" codeSystem="2.16.840.1.113883.5.4" displayName="Measure type"/>
+         <value xsi:type="CD" code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" displayName="Process"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="STRAT" codeSystem="2.16.840.1.113883.5.4" displayName="Stratification"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRADJ" codeSystem="2.16.840.1.113883.5.4" displayName="Risk Adjustment"/>
+         <value xsi:type="ED" mediaType="text/plain">None</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" displayName="Data Aggregation"/>
+         <value xsi:type="ED" mediaType="text/plain"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="RAT" codeSystem="2.16.840.1.113883.5.4" displayName="Rationale"/>
+         <value xsi:type="ED" mediaType="text/plain">In recent times, EDs have experienced significant overcrowding. Although once only a problem in large, urban, teaching hospitals, the phenomenon has spread to other suburban and rural healthcare organizations. According to a 2002 national U.S. survey, more than 90 percent of large hospitals report EDs operating "at" or "over" capacity. Overcrowding and heavy emergency resource demand have led to a number of problems, including ambulance refusals, prolonged patient waiting times, increased suffering for those who wait, rushed and unpleasant treatment environments, and potentially poor patient outcomes. Approximately one third of hospitals in the U.S. report increases in ambulance diversion in a given year, whereas up to half report crowded conditions in the ED. In a recent national survey, 40 percent of hospital leaders viewed ED crowding as a symptom of workforce shortages. ED crowding may result in delays in the administration of medication such as antibiotics for pneumonia and has been associated with perceptions of compromised emergency care. For patients with non-ST-segment-elevation myocardial infarction, long ED stays were associated with decreased use of guideline-recommended therapies and a higher risk of recurrent myocardial infarction. When EDs are overwhelmed, their ability to respond to community emergencies and disasters may be compromised.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="CRS" codeSystem="2.16.840.1.113883.3.560" displayName="Clinical Recommendation Statement"/>
+         <value xsi:type="ED" mediaType="text/plain">Reducing the time patients remain in the emergency department (ED) can improve access to treatment and increase quality of care. Reducing this time potentially improves access to care specific to the patient condition and increases the capability to provide additional treatment.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="IDUR" codeSystem="2.16.840.1.113883.3.560" displayName="Improvement notation"/>
+         <value xsi:type="ED" mediaType="text/plain">A decrease in the median value indicates less time in the emergency department and enhances throughput.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.74"/>
+         <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+         <code code="MSRTP" displayName="Measurement period" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="EXPR_PQ" value="12" unit="m">
+            <expression mediaType="text/plain">measureEndDate - measureStartDate</expression>
+         </value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureStartDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="29356BA1-D94B-4DE5-8AB6-C8B34BE6A9AB"/>
+         <code code="MSRSD" displayName="Measurement start date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00000101"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <localVariableName>measureEndDate</localVariableName>
+      <measureAttribute>
+         <templateId root="2.16.840.1.113883.3.560.1.75"/>
+         <id root="4E87FFB6-064F-4E3E-85ED-E0ECD40770B7"/>
+         <code code="MSRED" displayName="Measurement end date" codeSystem="2.16.840.1.113883.3.560"/>
+         <value xsi:type="TS" value="00001231"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="MSRMD" codeSystem="2.16.840.1.113883.3.560" displayName="Measurement duration"/>
+         <value xsi:type="ED" mediaType="text/plain">12 month(s)</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Diercks DB, et al. Prolonged emergency department stays of non-ST-segment-elevation myocardial infarction patients are associated with worse adherence to the American College of Cardiology/American Heart Association guidelines for management and increased adverse events. Ann Emerg Med.2007;50:489-96.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Derlet RW, Richards JR. Emergency department overcrowding in Florida, New York, and Texas. South Med J. 2002;95:846-9</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Derlet RW, Richards JR. Overcrowding in the nation's emergency departments: complex causes and disturbing effects.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Fatovich DM, Hirsch RL. Entry overload, emergency department overcrowding, and ambulance bypass. Emerg Med J. 2003;
+Ann Emerg Med. 2000;35:63-8.
+20:406-9</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Hwang U, Richardson LD, Sonuyi TO, Morrison RS. The effect of emergency department crowding on the management of pain in older adults with hip fracture. J Am Geriatr Soc. 2006;.
+54:270-5</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Institute of Medicine of the National Academies. Future of emergency care: Hospital-based emergency care at the breaking point. The National Academies Press 2006.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Kyriacou DN, Ricketts V, Dyne PL, McCollough MD, Talan DA. A 5-year time study analysis of emergency department patient care efficiency. Ann Emerg Med. 1999;34:326-35</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Pines JM, et al. ED crowding is associated with variable perceptions of care compromise. Acad Emerg Med. 2007;14:1176-81. .</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Pines JM, et al. Emergency department crowding is associated with poor care for patients with severe pain. Ann Emerg Med. 2008;51:6-7.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Schull MJ, et al. Emergency department crowding and thrombolysis delays in acute myocardial infarction. Ann Emerg Med. 2004;44:577-85.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Siegel B, et al. Enhancing work flow to reduce crowding. Jt Comm J Qual Patient Saf. 2007;33(11 Suppl):57-67.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Trzeciak S, Rivers EP. Emergency department overcrowding in the United States: an emerging threat to patient safety and public health. Emerg Med J. 2003;20:402-5</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="REF" codeSystem="2.16.840.1.113883.5.4" displayName="Reference"/>
+         <value xsi:type="ED" mediaType="text/plain">Wilper AP, Woolhandler S, Lasser KE, McCormick D, Cutrona SL, Bor DH, Himmelstein DU. Waits to see an emergency department physician: U.S. trends and predictors, 1997-2004. Health Aff (Millwood). 2008;.
+27:w84-95.</value>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="DEF" codeSystem="2.16.840.1.113883.3.560" displayName="Definition"/>
+         <value xsi:type="ED" mediaType="text/plain" nullFlavor="NI"/>
+      </measureAttribute>
+   </subjectOf>
+   <subjectOf>
+      <measureAttribute>
+         <code code="GUIDE" codeSystem="2.16.840.1.113883.5.4" displayName="Guidance"/>
+         <value xsi:type="ED" mediaType="text/plain">This measure uses a continuous variable.  The specification provides elements from the clinical electronic record required to calculate for each ED encounter, i.e., the length of time the patient was in the Emergency Department, also stated as: the Emergency Department departure time minus the Emergency Department arrival time. The calculation requires the median of all ED encounter durations.  This measure specification defines how to determine an individual Emergency Department stay. Reporting requires the mean of all patient stays ([Encounter: encounter ED].arrivaldatetime - [Encounter: encounter ED].dischargedatetime). The measure is stratified by (1) all patients discharged to a home setting, (2) all patients with mental disorders, (3) all patients transferred to an Acute care, critical access or federal health care facility, and (4) all patients transferred to observation status.</value>
+      </measureAttribute>
+   </subjectOf>
+   <componentOf>
+      <qualityMeasureSet classCode="ACT">
+         <id root="B1EB421F-C28C-453C-8DEE-7C6EFE318EB1"/>
+         <title>CLINICAL QUALITY MEASURE SET 2011-2012</title>
+      </qualityMeasureSet>
+   </componentOf>
+         
+      <!--
+         **************************************************************   
+         Population Criteria Section
+         **************************************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57026-7" codeSystem="2.16.840.1.113883.6.1" displayName="Population criteria"/>
+         <title>Population criteria</title>
+         <text>
+            <paragraph>
+               <caption>Population Criteria 1</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 1 =</content>
+                  <list>
+                     <item>AND: "ANY Encounter: Hospital Measures-Encounter ED" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 1=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 1"</item>
+                     <item>AND: "ANY Encounter: Hospital Measures-Encounter ED" during "Measurement period"</item>
+                     <item>AND:  NOT "ANY Encounter: Hospital Measures-Encounter Inpatient"  &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 1 =</content>
+                  <list>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter ED (Discharge)" - "Instance A of Encounter: Hospital Measures - Encounter ED (Arrival)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 1 =</content>
+                  <list>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')"</item>
+                  </list>
+               </item>
+            </list>
+            <paragraph>
+               <caption>Population Criteria 2</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 2 =</content>
+                  <list>
+                     <item>AND: "ANY Encounter: Hospital Measures-Encounter ED" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 2=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 2"</item>
+                     <item>AND: "Diagnosis active: Hospital Measures-Joint Commission Mental Disorders Value Set (ordinality: 'principal')" during "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                     <item>AND:  NOT "ANY Encounter: Hospital Measures-Encounter Inpatient"  &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 2 =</content>
+                  <list>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter ED (Discharge)" - "Instance A of Encounter: Hospital Measures - Encounter ED (Arrival)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 2 =</content>
+                  <list>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')"</item>
+                  </list>
+               </item>
+            </list>
+            <paragraph>
+               <caption>Population Criteria 3</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 3 =</content>
+                  <list>
+                     <item>AND: "ANY Encounter: Hospital Measures-Encounter ED" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 3=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 3"</item>
+                     <item>AND: "Transfer to: Hospital Measures-Acute care hospital"  &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 3 =</content>
+                  <list>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter ED (Discharge)" - "Instance A of Encounter: Hospital Measures - Encounter ED (Arrival)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 3 =</content>
+                  <list>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')"</item>
+                  </list>
+               </item>
+            </list>
+            <paragraph>
+               <caption>Population Criteria 4</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 4 =</content>
+                  <list>
+                     <item>AND: "ANY Encounter: Hospital Measures-Encounter ED" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 4=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 4"</item>
+                     <item>AND: "Transfer to: Hospital Measures-Observation status"  &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 4 =</content>
+                  <list>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter ED (Discharge)" - "Instance A of Encounter: Hospital Measures - Encounter ED (Arrival)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 4 =</content>
+                  <list>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')"</item>
+                  </list>
+               </item>
+            </list>
+            <paragraph>
+               <caption>Population Criteria 5</caption>
+            </paragraph>
+            <list>
+               <item>
+                  <content styleCode="Bold">Initial Patient Population 5 =</content>
+                  <list>
+                     <item>AND: "ANY Encounter: Hospital Measures-Encounter ED" during "Measurement period"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Denominator 5=</content>
+                  <list>
+                     <item>AND: "Initial Patient Population 5"</item>
+                     <item>AND:  NOT "Encounter: Hospital Measures-Encounter ED (arrival)" during "Measurement period"</item>
+                     <item>AND:  NOT "ANY Encounter: Hospital Measures-Encounter Inpatient"  &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                     <item>AND:  NOT "Diagnosis active: Hospital Measures-Joint Commission Mental Disorders Value Set (ordinality: 'principal')" during "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                     <item>AND: "ANY Transfer to: Hospital Measures-Acute care hospital" NOT   &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                     <item>AND: "ANY Transfer to: Hospital Measures-Observation status" NOT   &lt;= 6 hour(s) starts after end of "Instance A of Encounter: Hospital Measures - Encounter ED"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Numerator 5 =</content>
+                  <list>
+                     <item>AND: "Instance A of Encounter: Hospital Measures - Encounter ED (Discharge)" - "Instance A of Encounter: Hospital Measures - Encounter ED (Arrival)"</item>
+                  </list>
+               </item>
+               <item>
+                  <content styleCode="Bold">Exclusions 5 =</content>
+                  <list>
+                     <item>OR: "Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')"</item>
+                  </list>
+               </item>
+            </list>
+         </text><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="0D0C20F1-4E91-4329-9C0B-D5C0B1ED6652"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter ED</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="23EC60C5-C6DA-4F27-80AF-FBE4C56C6797"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter ED</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="BC484F07-66E7-4448-AC83-9F6626F4F2F0"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter ED</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="CD646D9E-1443-45C2-903F-D066CC71CF23"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter ED</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: population 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="3B7A8B8A-6C5D-4BB3-B0F5-FB3E6AF69909"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Initial Patient Population"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter ED</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="279F2F83-F991-4EFD-8C72-D39263E1B73F"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="0D0C20F1-4E91-4329-9C0B-D5C0B1ED6652"/>
+                     <title>Initial Patient Population 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter ED</title>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="4617037E-F85A-42DE-BF76-5222571659D2"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter Inpatient</title>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="6" unit="h" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="39246151-B141-4E31-A8F0-7CF4382F2684"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="23EC60C5-C6DA-4F27-80AF-FBE4C56C6797"/>
+                     <title>Initial Patient Population 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="16B8EB92-5A5E-46C2-B679-529679EDB4AB"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: Hospital Measures-Joint Commission Mental Disorders Value Set (ordinality: 'principal')</title>
+                           <value xsi:type="CD" code="1.3.6.1.4.1.33895.1.3.0.42" displayName="Hospital Measures-Joint Commission Mental Disorders Value Set Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SUBJ">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.8001" displayName="Hospital Measures-Principal"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="4617037E-F85A-42DE-BF76-5222571659D2"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter Inpatient</title>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="6" unit="h" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="9C7DD2D6-AE5A-425B-A6A6-10F194BE6BA9"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BC484F07-66E7-4448-AC83-9F6626F4F2F0"/>
+                     <title>Initial Patient Population 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.72"/>
+                     <title>Transfer to: Hospital Measures-Acute care hospital</title>
+                     <participant typeCode="DST">
+                        <roleParticipant classCode="LOCE">
+                           <code code="2.16.840.1.113883.3.666.05.684" displayName="Hospital Measures-Acute care hospital SNOMED-CT Code List"/>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="SAE">
+                        <pauseQuantity xsi:type="IVL_PQ">
+                           <high value="6" unit="h" inclusive="true"/>
+                        </pauseQuantity>
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="86628238-5F62-4028-AE1B-F1EA3C15078A"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="CD646D9E-1443-45C2-903F-D066CC71CF23"/>
+                     <title>Initial Patient Population 4</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.72"/>
+                     <title>Transfer to: Hospital Measures-Observation status</title>
+                     <participant typeCode="DST">
+                        <roleParticipant classCode="LOCE">
+                           <code code="2.16.840.1.113883.3.666.05.754" displayName="Hospital Measures-Observation status SNOMED-CT Code List"/>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="SAE">
+                        <pauseQuantity xsi:type="IVL_PQ">
+                           <high value="6" unit="h" inclusive="true"/>
+                        </pauseQuantity>
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: denominator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="FAEEF711-B486-425A-AC98-9BA5558B3A48"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="3B7A8B8A-6C5D-4BB3-B0F5-FB3E6AF69909"/>
+                     <title>Initial Patient Population 5</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>Encounter: Hospital Measures-Encounter ED (arrival)</title>
+                           <participant typeCode="LOC">
+                              <roleParticipant classCode="SDLOC">
+                                 <effectiveTime xsi:type="IVL_TS">
+                                    <low/>
+                                 </effectiveTime>
+                              </roleParticipant>
+                           </participant>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="5D027854-33EE-4F43-80F1-A1DE77A3026A"/>
+                                 <title>Measurement period</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="4617037E-F85A-42DE-BF76-5222571659D2"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                           <title>ANY Encounter: Hospital Measures-Encounter Inpatient</title>
+                           <sourceOf typeCode="SAE">
+                              <pauseQuantity xsi:type="IVL_PQ">
+                                 <high value="6" unit="h" inclusive="true"/>
+                              </pauseQuantity>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                              </observation>
+                           </sourceOf>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- diagnosis active pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.2"/>
+                     <id root="16B8EB92-5A5E-46C2-B679-529679EDB4AB"/>
+                     <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                           <title>Diagnosis active: Hospital Measures-Joint Commission Mental Disorders Value Set (ordinality: 'principal')</title>
+                           <value xsi:type="CD" code="1.3.6.1.4.1.33895.1.3.0.42" displayName="Hospital Measures-Joint Commission Mental Disorders Value Set Code List GROUPING"/>
+                           <sourceOf typeCode="REFR">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                 <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="SUBJ">
+                              <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                                 <code code="117363000" codeSystem="2.16.840.1.113883.6.96" displayName="Ordinal"/>
+                                 <value xsi:type="CD" code="2.16.840.1.113883.3.526.02.8001" displayName="Hospital Measures-Principal"/>
+                              </observation>
+                           </sourceOf>
+                           <sourceOf typeCode="DURING">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                                 <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                              </observation>
+                           </sourceOf>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- transfer to pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.72"/>
+                     <title>ANY Transfer to: Hospital Measures-Acute care hospital</title>
+                     <participant typeCode="DST">
+                        <roleParticipant classCode="LOCE">
+                           <code code="2.16.840.1.113883.3.666.05.684" displayName="Hospital Measures-Acute care hospital SNOMED-CT Code List"/>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="SAE">
+                        <pauseQuantity xsi:type="IVL_PQ">
+                           <high value="6" unit="h" inclusive="true"/>
+                        </pauseQuantity>
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true" actionNegationInd="true"><!-- transfer to pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.72"/>
+                     <title>ANY Transfer to: Hospital Measures-Observation status</title>
+                     <participant typeCode="DST">
+                        <roleParticipant classCode="LOCE">
+                           <code code="2.16.840.1.113883.3.666.05.754" displayName="Hospital Measures-Observation status SNOMED-CT Code List"/>
+                        </roleParticipant>
+                     </participant>
+                     <sourceOf typeCode="SAE">
+                        <pauseQuantity xsi:type="IVL_PQ">
+                           <high value="6" unit="h" inclusive="true"/>
+                        </pauseQuantity>
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED</title>
+                        </observation>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="49933939-c324-4e7b-8fd3-eef93100f697"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="279F2F83-F991-4EFD-8C72-D39263E1B73F"/>
+                     <title>Denominator 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BCAE677B-2C7F-4B2C-859A-F6C8D303E3FD"/>
+                     <title>Instance A of Encounter: Hospital Measures - Encounter ED (duration &lt;= 24  hours)</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="a2f086ad-d3ca-4a1e-8944-5368fe4f7835"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="39246151-B141-4E31-A8F0-7CF4382F2684"/>
+                     <title>Denominator 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BCAE677B-2C7F-4B2C-859A-F6C8D303E3FD"/>
+                     <title>Instance A of Encounter: Hospital Measures - Encounter ED (duration &lt;= 24  hours)</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="08e4d4d6-74c0-4210-904d-c7009bf860a6"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="9C7DD2D6-AE5A-425B-A6A6-10F194BE6BA9"/>
+                     <title>Denominator 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BCAE677B-2C7F-4B2C-859A-F6C8D303E3FD"/>
+                     <title>Instance A of Encounter: Hospital Measures - Encounter ED (duration &lt;= 24  hours)</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="ead73606-2978-4a41-a23b-631eacaec544"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="86628238-5F62-4028-AE1B-F1EA3C15078A"/>
+                     <title>Denominator 4</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BCAE677B-2C7F-4B2C-859A-F6C8D303E3FD"/>
+                     <title>Instance A of Encounter: Hospital Measures - Encounter ED (duration &lt;= 24  hours)</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: numerator 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="d6304f30-499b-47e3-b5aa-05d68399881b"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Numerator"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="FAEEF711-B486-425A-AC98-9BA5558B3A48"/>
+                     <title>Denominator 5</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="BCAE677B-2C7F-4B2C-859A-F6C8D303E3FD"/>
+                     <title>Instance A of Encounter: Hospital Measures - Encounter ED (duration &lt;= 24  hours)</title>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="a14962b7-f37e-4f09-8dce-f9fed7b92f81"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="279F2F83-F991-4EFD-8C72-D39263E1B73F"/>
+                     <title>Denominator 1</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1146" displayName="Hospital Measures-Expired"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="3c542106-0f02-4994-9ae7-47aad838f51d"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="39246151-B141-4E31-A8F0-7CF4382F2684"/>
+                     <title>Denominator 2</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1146" displayName="Hospital Measures-Expired"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="c5d0b784-1964-442e-99f5-83b98f5cb8e2"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="9C7DD2D6-AE5A-425B-A6A6-10F194BE6BA9"/>
+                     <title>Denominator 3</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1146" displayName="Hospital Measures-Expired"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="5b1a1300-d4e8-4409-ac5c-e306d2c92627"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="86628238-5F62-4028-AE1B-F1EA3C15078A"/>
+                     <title>Denominator 4</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1146" displayName="Hospital Measures-Expired"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry><!--
+            **************************************************************   
+            Population Criteria Section: exceptions 
+            **************************************************************
+      -->
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN.CRT" isCriterionInd="true">
+               <id root="c216b0bc-06bf-4dc8-abf5-f87f88aba4ae"/>
+               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+               <value xsi:type="CD" code="DENEXCEP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="HL7 Observation Value" displayName="Denominator Exception"/><!--  top and/or -->
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <id root="FAEEF711-B486-425A-AC98-9BA5558B3A48"/>
+                     <title>Denominator 5</title>
+                  </observation>
+               </sourceOf>
+               <sourceOf typeCode="PRCN">
+                  <conjunctionCode code="AND"/>
+                  <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+                     <templateId root="2.16.840.1.113883.3.560.1.4"/>
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                     <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+                     <sourceOf typeCode="COMP">
+                        <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                           <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                           <title>Instance A of Encounter: Hospital Measures - Encounter ED (discharge status: 'expired')</title>
+                           <dischargeDispositionCode code="2.16.840.1.113883.3.666.05.1146" displayName="Hospital Measures-Expired"/>
+                        </encounter>
+                     </sourceOf>
+                  </act>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+         
+      <!--
+         ******************************************   
+         Data Criteria Section
+         ******************************************
+      --><component typeCode="COMP">
+      <section>
+         <code code="57025-9" codeSystem="2.16.840.1.113883.6.1" displayName="Data criteria (QDS Data Elements)"/>
+         <title>Data criteria (QDS Data Elements)</title>
+         <text>
+            <list>
+               <item>
+                  <content>"Diagnosis active: Hospital Measures-Joint Commission Mental Disorders Value Set"</content> using "Hospital Measures-Joint Commission Mental Disorders Value Set Code List GROUPING (1.3.6.1.4.1.33895.1.3.0.42)"</item>
+               <item>
+                  <content>"Encounter: Hospital Measures-Encounter ED"</content> using "Hospital Measures-Encounter ED SNOMED-CT Code List (2.16.840.1.113883.3.666.05.627)"</item>
+               <item>
+                  <content>"Encounter: Hospital Measures-Encounter Inpatient"</content> using "Hospital Measures-Encounter Inpatient SNOMED-CT Code List (2.16.840.1.113883.3.666.05.625)"</item>
+               <item>
+                  <content>"Transfer to: Hospital Measures-Acute care hospital"</content> using "Hospital Measures-Acute care hospital SNOMED-CT Code List (2.16.840.1.113883.3.666.05.684)"</item>
+               <item>
+                  <content>"Transfer to: Hospital Measures-Observation status"</content> using "Hospital Measures-Observation status SNOMED-CT Code List (2.16.840.1.113883.3.666.05.754)"</item>
+               <item>
+                  <content>Attribute: "Discharge status: Expired"</content> using "Hospital Measures-Expired  Code List GROUPING (2.16.840.1.113883.3.666.05.1146)"</item>
+               <item>
+                  <content>Attribute: "Ordinality: Principal"</content> using "Hospital Measures-Principal SNOMED-CT Code List  (2.16.840.1.113883.3.526.02.8001)"</item>
+            </list>
+         </text>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.72"/>
+               <title>Transfer to: Hospital Measures-Acute care hospital</title>
+               <participant typeCode="DST">
+                  <roleParticipant classCode="LOCE">
+                     <code code="2.16.840.1.113883.3.666.05.684" displayName="Hospital Measures-Acute care hospital SNOMED-CT Code List"/>
+                  </roleParticipant>
+               </participant>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- diagnosis active pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.2"/>
+               <id root="16B8EB92-5A5E-46C2-B679-529679EDB4AB"/>
+               <code code="11450-4" displayName="Problem" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                     <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem"/>
+                     <title>Diagnosis active: Hospital Measures-Joint Commission Mental Disorders Value Set</title>
+                     <value xsi:type="CD" code="1.3.6.1.4.1.33895.1.3.0.42" displayName="Hospital Measures-Joint Commission Mental Disorders Value Set Code List GROUPING"/>
+                     <sourceOf typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true">
+                           <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                           <value xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96"/>
+                        </observation>
+                     </sourceOf>
+                  </observation>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.627" displayName="Hospital Measures-Encounter ED SNOMED-CT Code List"/>
+                     <title>Encounter: Hospital Measures-Encounter ED</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- encounter pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="4617037E-F85A-42DE-BF76-5222571659D2"/>
+               <code code="46240-8" displayName="Encounter list" codeSystem="2.16.840.1.113883.6.1"/>
+               <sourceOf typeCode="COMP">
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <code code="2.16.840.1.113883.3.666.05.625" displayName="Hospital Measures-Encounter Inpatient SNOMED-CT Code List"/>
+                     <title>Encounter: Hospital Measures-Encounter Inpatient</title>
+                  </encounter>
+               </sourceOf>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"><!-- transfer to pattern -->
+               <templateId root="2.16.840.1.113883.3.560.1.72"/>
+               <title>Transfer to: Hospital Measures-Observation status</title>
+               <participant typeCode="DST">
+                  <roleParticipant classCode="LOCE">
+                     <code code="2.16.840.1.113883.3.666.05.754" displayName="Hospital Measures-Observation status SNOMED-CT Code List"/>
+                  </roleParticipant>
+               </participant>
+            </act>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="BCAE677B-2C7F-4B2C-859A-F6C8D303E3FD"/>
+               <code>
+                  <originalText>Instace A of Encounter ED (Discharge) - Instace A of Encounter ED (Arrival)</originalText>
+               </code>
+               <derivationExpr>Encounter ED (Discharge) - Encounter ED (Arrival)</derivationExpr>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Encounter ED (Discharge)</localVariableName>
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+                     <effectiveTime>
+                        <high/>
+                     </effectiveTime>
+                  </encounter>
+               </sourceOf>
+			   <sourceOf typeCode="DRIV">
+                  <localVariableName>Encounter ED (Arrival)</localVariableName>
+                  <encounter classCode="ENC" moodCode="EVN" isCriterionInd="true">
+                     <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+					   <participant typeCode="LOC">
+						  <roleParticipant classCode="SDLOC">
+							 <effectiveTime xsi:type="IVL_TS">
+								<low/>
+							 </effectiveTime>
+						  </roleParticipant>
+					   </participant>
+                  </encounter>
+               </sourceOf>
+            </observation>
+         </entry>
+         <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="DEF">
+               <templateId root="2.16.840.1.113883.3.560.1.4"/>
+               <id root="EEF69F65-7990-44DA-BEC8-A6C4372F9200"/>
+               <sourceOf typeCode="DRIV">
+                  <localVariableName>Hospital Measures - Encounter ED</localVariableName>
+                  <observation classCode="OBS" moodCode="CRT">
+                     <id root="B66F1EB4-6CAF-4C6C-835B-A91F4AB9A796"/>
+                  </observation>
+               </sourceOf>
+            </observation>
+         </entry>
+      </section>
+   </component>
+   <component typeCode="COMP">
+      <section>
+         <title>Summary Calculation</title>
+         <text>
+            <content>Calculation is generic to all measures:</content>
+            <list>
+               <item>Calculate the final denominator by adding all that meet denominator criteria.</item>
+               <item>Subtract from the final denominator all that do not meet numerator criteria yet also meet exclusion criteria.  Note some measures do not have exclusion criteria.</item>
+               <item>The performance calculation is based on the "Measure scoring" from header information above:
+					        	<list>
+                     <item>For "Proportion" measures, the calculation is the number meeting numerator criteria divided by the final denominator.</item>
+                     <item>For "Ratio" and "Continuous Variable" measures, follow the calculation instructions in the Data Aggregation header information above, if present.</item>
+                  </list>
+               </item>
+               <item>For measures with multiple denominators, repeat this process for each denominator and report each result separately.</item>
+               <item>For measures with multiple patient populations, repeat this process for each patient population and report each result separately.</item>
+               <item>For measures with multiple numerators, calculate each numerator separately within each population using the paired exclusion.</item>
+            </list>
+         </text>
+      </section>
+   </component>
+</QualityMeasureDocument>
