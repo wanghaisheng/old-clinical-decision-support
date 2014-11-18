@@ -3,15 +3,15 @@
 ## 1.挑战
 鉴于CDS和eCQM质控指标紧密相关，拥有很多共同的需求，但是二者所采用的标准则是各异的，主要是表达患者数据和计算机化处理逻辑的方法是不同的
 
-| 类别 | 患者数据 | 处理逻辑 |
-| -- | -- | -- |
-| CDS | VMR | CDS knowledge artifact实施指南 |
-| ECQM | 	quality reporting data architecture物理模型quality data model 逻辑模型 | Health quality measure format HQMF 物理模型Quality data model 逻辑模型 |
+| 类别 | 患者数据|处理逻辑|     
+| -- | -- | -- |      
+| CDS | VMR | CDS knowledge artifact实施指南 |    
+| ECQM | quality reporting data architecture物理模型quality data model逻辑模型 | Health quality measure format HQMF 物理模型Quality data model逻辑模型 |
 
 
 ## 2.项目范围
 * 定义、确定 整合一下几类CDS和eCQM的标准
-    * A——mettadata元数据：确定两个领域公用的一些元数据，统一这些元数据的表达方式
+    * A——metadata元数据：确定两个领域公用的一些元数据，统一这些元数据的表达方式
     * B——患者数据模型:能够同时满足CDS和eCQM的需求
     * C——逻辑表达语言：开发一种能够表达两类逻辑的语言
 * 对已有的CDS和eCQM标准进行重构，形成统一的标准
@@ -218,7 +218,7 @@ Additional risks and mitigations may be identified during discovery phase.
 ## 8. 时间点           
 
 
-！[](CQF HL Timeline Graphic 20140410.jpg)
+![](material/CQF_HL_TimelineGraphic20140410.jpg)
 
 ## 9. 参考资料
 1. [原始网站](http://wiki.siframework.org/Clinical+Quality+Framework+Charter+and+Members)
