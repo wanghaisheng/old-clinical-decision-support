@@ -5,6 +5,7 @@
 
 | 类别 | 患者数据|处理逻辑|     
 | -- | -- | -- |      
+
 | CDS | VMR | CDS knowledge artifact实施指南 |    
 | ECQM | quality reporting data architecture物理模型quality data model逻辑模型 | Health quality measure format HQMF 物理模型Quality data model逻辑模型 |
 
